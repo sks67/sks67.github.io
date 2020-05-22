@@ -1,0 +1,5046 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+            <!-- Add jQuery library -->
+            <script src="resources/js/jquery-3.3.1.js"></script>
+            <script src="resources/js/bootstrap.js"></script>
+
+            <!-- Add lazy image loading library -->
+            <script src="resources/js/lazyload.js"></script>
+
+            <!--  Add purl-JS URL parsing extension -->
+            <script src="resources/js/purl.js"></script>
+
+            <!-- Add fancybox and pipeline fancybox extension -->
+            <link rel="stylesheet" href="resources/css/jquery.fancybox.css" type="text/css"
+                  media="screen"/>
+            <script src="resources/js/jquery.fancybox.js"></script>
+            <script src="resources/js/plotcmd.js"></script>
+
+            <!--  Add image holder library for missing plots -->
+            <script src="resources/js/holder.js"></script>
+
+            <!--  add FontAwesome -->
+            <link rel="stylesheet" href="resources/css/font-awesome.css">
+
+            <script src="resources/js/pipeline.js"></script>
+            <link href="resources/css/pipeline.css" rel="stylesheet" type="text/css">
+
+    
+
+<title>
+Topic Summary</title>
+</head>
+<body>
+
+
+
+<nav class="navbar navbar-default navbar-fixed-top hidden-print">
+    <div class="container-fluid">
+	    <div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+	    	<a class="navbar-brand" href="#">
+	    		<img alt="EVLA" 
+	    		     src="resources/img/evlalogo.png"/>
+	    	</a>
+	    </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-left">
+                <li class="">
+                	<a href="t1-1.html"><span class="glyphicon glyphicon-home"></span> Home</a>
+                </li>
+                <li class="active">
+                	<a href="t1-3.html">By Topic</a>
+                </li>
+                <li class="">
+                	<a href="t1-4.html">By Task</a>
+                </li>
+            </ul>
+			<p class="navbar-text navbar-right navbar-projectcode">Project Code N/A</p>
+        </div>
+    </div>
+</nav>
+
+
+<div id="app-container" class="container-fluid">
+	
+
+
+
+
+
+<style type="text/css">
+
+.table-header-rotated table{
+  table-layout: fixed;
+  width:100px;
+}
+
+.table-header-rotated caption{
+  text-align: left;
+}
+
+.table-header-rotated tbody {
+    display: block;
+    overflow-x: auto;
+}
+
+.table-header-rotated th.row-header{
+  width: auto;
+  font-size: 11px;
+  
+}
+
+.table-header-rotated td{
+  height: 20px;
+  width: 10px;
+  border-top: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 10px;
+}
+
+
+.table-header-rotated td.rotate-45{
+  height: 20px;
+  width: 10px;
+  border-top: 0px solid #dddddd;
+  border-left: 0px solid #dddddd;
+  border-right: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 10px;
+}
+</style>
+
+<h3>Warnings and Errors</h3>
+<table class="table table-bordered table-striped table-condensed"
+	   summary="Messages from tasks">
+	<thead>
+		<tr>
+			<th>Stage</th>
+			<th>Task</th>
+			<th>Type</th>
+			<th>Message</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="warning alert-warning">
+			<td><a href="t2-4m.html?sidebar=sidebar_stage1">1</a></td>
+			<td><a href="t2-4m.html?sidebar=sidebar_stage1">hifv_importdata</a></td>
+			<td>QA Warning</td>
+			<td>Unexpected entries were found in the HISTORY table of 13A-213_05_15_2013_continuum.ms. This measurement set may already be processed. If hanning smooth has already been applied in previous execution, invoking hifv_hanning in a following stage means smoothing twice.</td>
+		</tr>
+		<tr class="warning alert-warning">
+			<td><a href="t2-4m.html?sidebar=sidebar_stage1&ms=13A-213_05_15_2013_continuum.ms">1</a></td>
+			<td><a href="t2-4m.html?sidebar=sidebar_stage1&ms=13A-213_05_15_2013_continuum.ms">hifv_importdata</a></td>
+			<td>Warning</td>
+			<td>13A-213_05_15_2013_continuum.ms already in /mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822. Will import existing data.</td>
+		</tr>
+		<tr class="warning alert-warning">
+			<td><a href="t2-4m.html?sidebar=sidebar_stage3&ms=13A-213_05_15_2013_continuum.ms">3</a></td>
+			<td><a href="t2-4m.html?sidebar=sidebar_stage3&ms=13A-213_05_15_2013_continuum.ms">hifv_flagdata</a></td>
+			<td>Warning</td>
+			<td>Online ANOS flag file '/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.flagonline.txt' was not found. Online ANOSflagging for 13A-213_05_15_2013_continuum.ms disabled.</td>
+		</tr>
+		<tr class="warning alert-warning">
+			<td><a href="t2-4m.html?sidebar=sidebar_stage3&ms=13A-213_05_15_2013_continuum.ms">3</a></td>
+			<td><a href="t2-4m.html?sidebar=sidebar_stage3&ms=13A-213_05_15_2013_continuum.ms">hifv_flagdata</a></td>
+			<td>Warning</td>
+			<td>Online flag file '/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.flagonline.txt' was not found. Online flagging for 13A-213_05_15_2013_continuum.ms disabled.</td>
+		</tr>
+		<tr class="warning alert-warning">
+			<td><a href="t2-4m.html?sidebar=sidebar_stage3&ms=13A-213_05_15_2013_continuum.ms">3</a></td>
+			<td><a href="t2-4m.html?sidebar=sidebar_stage3&ms=13A-213_05_15_2013_continuum.ms">hifv_flagdata</a></td>
+			<td>Warning</td>
+			<td>Template flag file '/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.flagtemplate.txt' was not found. Template flagging for 13A-213_05_15_2013_continuum.ms disabled.</td>
+		</tr>
+		<tr class="warning alert-warning">
+			<td><a href="t2-4m.html?sidebar=sidebar_stage6&ms=13A-213_05_15_2013_continuum.ms">6</a></td>
+			<td><a href="t2-4m.html?sidebar=sidebar_stage6&ms=13A-213_05_15_2013_continuum.ms">hifv_testBPdcals</a></td>
+			<td>Warning</td>
+			<td>Antenna ea25, spws: 4,7 have a flagging fraction of 1.0.</td>
+		</tr>
+		<tr class="warning alert-warning">
+			<td><a href="t2-4m.html?sidebar=sidebar_stage6&ms=13A-213_05_15_2013_continuum.ms">6</a></td>
+			<td><a href="t2-4m.html?sidebar=sidebar_stage6&ms=13A-213_05_15_2013_continuum.ms">hifv_testBPdcals</a></td>
+			<td>Warning</td>
+			<td>Antenna ea25, spws: 0,1,2,4,7 have a flagging fraction of 1.0.</td>
+		</tr>
+		<tr class="warning alert-warning">
+			<td><a href="t2-4m.html?sidebar=sidebar_stage9&ms=13A-213_05_15_2013_continuum.ms">9</a></td>
+			<td><a href="t2-4m.html?sidebar=sidebar_stage9&ms=13A-213_05_15_2013_continuum.ms">hifv_semiFinalBPdcals</a></td>
+			<td>Warning</td>
+			<td>Antenna ea19, spws: 4 have a flagging fraction of 1.0.</td>
+		</tr>
+		<tr class="warning alert-warning">
+			<td><a href="t2-4m.html?sidebar=sidebar_stage9&ms=13A-213_05_15_2013_continuum.ms">9</a></td>
+			<td><a href="t2-4m.html?sidebar=sidebar_stage9&ms=13A-213_05_15_2013_continuum.ms">hifv_semiFinalBPdcals</a></td>
+			<td>Warning</td>
+			<td>Antenna ea25, spws: 0,1,2,3,4,7 have a flagging fraction of 1.0.</td>
+		</tr>
+		<tr class="warning alert-warning">
+			<td><a href="t2-4m.html?sidebar=sidebar_stage11&ms=13A-213_05_15_2013_continuum.ms">11</a></td>
+			<td><a href="t2-4m.html?sidebar=sidebar_stage11&ms=13A-213_05_15_2013_continuum.ms">hifv_semiFinalBPdcals</a></td>
+			<td>Warning</td>
+			<td>Antenna ea19, spws: 4 have a flagging fraction of 1.0.</td>
+		</tr>
+		<tr class="warning alert-warning">
+			<td><a href="t2-4m.html?sidebar=sidebar_stage11&ms=13A-213_05_15_2013_continuum.ms">11</a></td>
+			<td><a href="t2-4m.html?sidebar=sidebar_stage11&ms=13A-213_05_15_2013_continuum.ms">hifv_semiFinalBPdcals</a></td>
+			<td>Warning</td>
+			<td>Antenna ea25, spws: 0,1,2,3,4,5,6,7 have a flagging fraction of 1.0.</td>
+		</tr>
+		<tr class="warning alert-warning">
+			<td><a href="t2-4m.html?sidebar=sidebar_stage14&ms=13A-213_05_15_2013_continuum.ms">14</a></td>
+			<td><a href="t2-4m.html?sidebar=sidebar_stage14&ms=13A-213_05_15_2013_continuum.ms">hifv_finalcals</a></td>
+			<td>Warning</td>
+			<td>Antenna ea19, spws: 4 have a flagging fraction of 1.0.</td>
+		</tr>
+		<tr class="warning alert-warning">
+			<td><a href="t2-4m.html?sidebar=sidebar_stage14&ms=13A-213_05_15_2013_continuum.ms">14</a></td>
+			<td><a href="t2-4m.html?sidebar=sidebar_stage14&ms=13A-213_05_15_2013_continuum.ms">hifv_finalcals</a></td>
+			<td>Warning</td>
+			<td>Antenna ea25, spws: 0,1,2,3,4,5,6,7 have a flagging fraction of 1.0.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>Tasks by Topic</h3>
+<table class="table">
+	<thead>
+		<tr>
+			<th class="col-md-1">Topic</th>
+			<th class="col-md-8">Lowest Scoring Task</th>
+			<th class="col-md-2">Min Score</th>
+			<th class="col-md-1"></th>
+		</tr>
+	</thead>
+	<tbody>
+		
+			<tr>
+				<td><a href="t2-3-1m.html">Data Sets</a></td>
+				<td><a href="t2-4m.html?sidebar=sidebar_stage1">1. <strong>hifv_importdata</strong>: Register VLA measurement sets with the pipeline</a><span class="pull-right">1/1 have HISTORY</span></td>
+				<td><div class="progress" style="margin-bottom:0px;"><div class="progress-bar progress-bar-warning" role="progressbar" style="width:52.5%;"><span class="text-center"></span></div></div></td>
+				<td><span class="badge alert-warning">0.50</span></td>
+			</tr>
+		
+			<tr>
+				<td><a href="t2-3-2m.html">Calibration</a></td>
+				<td><a href="t2-4m.html?sidebar=sidebar_stage4">4. <strong>hifv_vlasetjy</strong>: Set calibrator model visibilities</a><span class="pull-right"></span></td>
+				<td><div class="progress" style="margin-bottom:0px;"><div class="progress-bar progress-bar-success" role="progressbar" style="width:100.0%;"><span class="text-center"></span></div></div></td>
+				<td><span class="badge alert-success">1.00</span></td>
+			</tr>
+		
+			<tr>
+				<td><a href="t2-3-3m.html">Flagging</a></td>
+				<td><a href="t2-4m.html?sidebar=sidebar_stage15">15. <strong>hifv_applycals</strong>: Apply calibrations from context</a><span class="pull-right">22.47% data flagged</span></td>
+				<td><div class="progress" style="margin-bottom:0px;"><div class="progress-bar progress-bar-info" role="progressbar" style="width:69.8192804501%;"><span class="text-center"></span></div></div></td>
+				<td><span class="badge alert-info">0.68</span></td>
+			</tr>
+		
+		
+		
+	</tbody>
+</table>
+
+
+
+    <h3>Flagging Summaries</h3>
+    <div class="col-md-6">
+    
+        
+        
+    
+         <h4>13A-213_05_15_2013_continuum.ms</h4>
+
+		
+		    <br>
+		     <h5>Flagging percentages for  Source name: 1331+305=3C286, Intents: TARGET </h5>
+	        <div style="width: 1700px; height: 250px; overflow: auto;">
+
+		    <table class="table table-header-rotated">
+		    <!-- <caption>Flagging percentages for  Source name: 1331+305=3C286, Intents: TARGET </caption> -->
+
+		    <thead>
+		    </thead>
+	    
+		    <tbody>
+		    <tr>
+		    <td class="rotate-45"><b>spw</b></td>
+		    
+		        <td class="rotate-45"><b>ea01</b></td>
+		        <td class="rotate-45"><b>ea02</b></td>
+		        <td class="rotate-45"><b>ea03</b></td>
+		        <td class="rotate-45"><b>ea04</b></td>
+		        <td class="rotate-45"><b>ea05</b></td>
+		        <td class="rotate-45"><b>ea06</b></td>
+		        <td class="rotate-45"><b>ea07</b></td>
+		        <td class="rotate-45"><b>ea08</b></td>
+		        <td class="rotate-45"><b>ea09</b></td>
+		        <td class="rotate-45"><b>ea10</b></td>
+		        <td class="rotate-45"><b>ea11</b></td>
+		        <td class="rotate-45"><b>ea12</b></td>
+		        <td class="rotate-45"><b>ea13</b></td>
+		        <td class="rotate-45"><b>ea14</b></td>
+		        <td class="rotate-45"><b>ea15</b></td>
+		        <td class="rotate-45"><b>ea16</b></td>
+		        <td class="rotate-45"><b>ea17</b></td>
+		        <td class="rotate-45"><b>ea18</b></td>
+		        <td class="rotate-45"><b>ea19</b></td>
+		        <td class="rotate-45"><b>ea21</b></td>
+		        <td class="rotate-45"><b>ea22</b></td>
+		        <td class="rotate-45"><b>ea23</b></td>
+		        <td class="rotate-45"><b>ea24</b></td>
+		        <td class="rotate-45"><b>ea25</b></td>
+		        <td class="rotate-45"><b>ea26</b></td>
+		        <td class="rotate-45"><b>ea27</b></td>
+		        <td class="rotate-45"><b>ea28</b></td>
+		    </tr>
+		
+		
+		        <tr>
+		        <th class="row-header">0</th>
+		    
+			            
+			            <td bgcolor="#58D3F7">
+						56.79
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						57.09
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						59.04
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						57.65
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						58.63
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						59.98
+			            </td>
+			            
+			            <td bgcolor="#2ECCFA">
+						60.14
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						56.80
+			            </td>
+			            
+			            <td bgcolor="#2ECCFA">
+						69.44
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						57.35
+			            </td>
+			            
+			            <td bgcolor="#2ECCFA">
+						63.27
+			            </td>
+			            
+			            <td bgcolor="#2ECCFA">
+						60.25
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						57.93
+			            </td>
+			            
+			            <td bgcolor="#2ECCFA">
+						62.07
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						57.73
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						57.01
+			            </td>
+			            
+			            <td bgcolor="#2ECCFA">
+						63.09
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						57.06
+			            </td>
+			            
+			            <td bgcolor="#2ECCFA">
+						60.65
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						57.26
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						59.79
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						57.02
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						57.79
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						58.22
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						57.05
+			            </td>
+			            
+			            <td bgcolor="#2ECCFA">
+						64.34
+			            </td>
+		
+		        <tr>
+		        <tr>
+		        <th class="row-header">1</th>
+		    
+			            
+			            <td bgcolor="#81DAF5">
+						45.88
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						48.55
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						49.33
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						50.31
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						50.23
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						47.19
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						52.65
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						46.13
+			            </td>
+			            
+			            <td bgcolor="#2ECCFA">
+						61.99
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						51.38
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						50.79
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						49.52
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						51.78
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						52.10
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						51.92
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						47.82
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						50.85
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						47.96
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						49.93
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						49.49
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						51.18
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						47.79
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						51.70
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						52.45
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.97
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						50.58
+			            </td>
+		
+		        <tr>
+		        <tr>
+		        <th class="row-header">2</th>
+		    
+			            
+			            <td bgcolor="#81DAF5">
+						46.18
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						47.36
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						49.37
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						48.51
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						49.27
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						47.63
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						50.50
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						46.38
+			            </td>
+			            
+			            <td bgcolor="#2ECCFA">
+						60.27
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						49.37
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						48.55
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						47.75
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						49.75
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						49.55
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						49.52
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						47.47
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						48.80
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						46.82
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						48.40
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						47.60
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						49.48
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						47.27
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						49.31
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						50.00
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						46.56
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						49.73
+			            </td>
+		
+		        <tr>
+		        <tr>
+		        <th class="row-header">3</th>
+		    
+			            
+			            <td bgcolor="#81DAF5">
+						45.18
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.26
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						48.68
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.44
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						47.46
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						46.04
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						46.66
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.67
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						57.12
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.77
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.37
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.41
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.66
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.88
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.89
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.43
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.74
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.25
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.53
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.19
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.83
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.42
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.47
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						46.23
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.40
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.51
+			            </td>
+		
+		        <tr>
+		        <tr>
+		        <th class="row-header">4</th>
+		    
+			            
+			            <td bgcolor="#2ECCFA">
+						68.40
+			            </td>
+			            
+			            <td bgcolor="#00BFFF">
+						70.76
+			            </td>
+			            
+			            <td bgcolor="#00BFFF">
+						74.71
+			            </td>
+			            
+			            <td bgcolor="#00BFFF">
+						70.13
+			            </td>
+			            
+			            <td bgcolor="#00BFFF">
+						72.42
+			            </td>
+			            
+			            <td bgcolor="#2ECCFA">
+						69.75
+			            </td>
+			            
+			            <td bgcolor="#00BFFF">
+						77.87
+			            </td>
+			            
+			            <td bgcolor="#2ECCFA">
+						68.81
+			            </td>
+			            
+			            <td bgcolor="#00BFFF">
+						72.42
+			            </td>
+			            
+			            <td bgcolor="#00BFFF">
+						71.60
+			            </td>
+			            
+			            <td bgcolor="#00BFFF">
+						71.33
+			            </td>
+			            
+			            <td bgcolor="#00BFFF">
+						70.38
+			            </td>
+			            
+			            <td bgcolor="#00BFFF">
+						72.31
+			            </td>
+			            
+			            <td bgcolor="#00BFFF">
+						71.94
+			            </td>
+			            
+			            <td bgcolor="#00BFFF">
+						71.44
+			            </td>
+			            
+			            <td bgcolor="#00BFFF">
+						71.05
+			            </td>
+			            
+			            <td bgcolor="#00BFFF">
+						72.03
+			            </td>
+			            
+			            <td bgcolor="#2ECCFA">
+						69.36
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#00BFFF">
+						70.39
+			            </td>
+			            
+			            <td bgcolor="#00BFFF">
+						71.98
+			            </td>
+			            
+			            <td bgcolor="#00BFFF">
+						70.42
+			            </td>
+			            
+			            <td bgcolor="#00BFFF">
+						72.95
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#00BFFF">
+						71.88
+			            </td>
+			            
+			            <td bgcolor="#2ECCFA">
+						68.27
+			            </td>
+			            
+			            <td bgcolor="#00BFFF">
+						71.65
+			            </td>
+		
+		        <tr>
+		        <tr>
+		        <th class="row-header">5</th>
+		    
+			            
+			            <td bgcolor="#81DAF5">
+						45.35
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.73
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						48.44
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						46.18
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						48.03
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						46.14
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						48.15
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.75
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						58.23
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						46.87
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						46.12
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.72
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						46.74
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						46.79
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						47.14
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.76
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						46.49
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.66
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						46.48
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.71
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						46.88
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						46.29
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						46.58
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						47.39
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.49
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						46.45
+			            </td>
+		
+		        <tr>
+		        <tr>
+		        <th class="row-header">6</th>
+		    
+			            
+			            <td bgcolor="#81DAF5">
+						45.27
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.37
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						48.22
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.71
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						47.51
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						46.02
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						46.68
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.65
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						57.24
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.79
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.54
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.65
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.92
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.88
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.91
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.69
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.76
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.35
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.70
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.30
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.90
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.57
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.68
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						46.30
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.65
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.84
+			            </td>
+		
+		        <tr>
+		        <tr>
+		        <th class="row-header">7</th>
+		    
+			            
+			            <td bgcolor="#58D3F7">
+						53.98
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						56.90
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						57.71
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						56.17
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						56.61
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						54.69
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						58.44
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						54.22
+			            </td>
+			            
+			            <td bgcolor="#2ECCFA">
+						66.65
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						57.45
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						55.08
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						55.24
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						57.22
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						58.54
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						57.93
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						56.49
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						56.98
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						53.76
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						55.38
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						54.86
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						58.37
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						55.01
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						56.03
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						58.35
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						53.28
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						58.72
+			            </td>
+		
+		        <tr>
+	    
+		    </tbody>
+		    </table>
+
+	        </div>
+		    <br>
+		     <h5>Flagging percentages for  Source name: J1923-2104, Intents: PHASE </h5>
+	        <div style="width: 1700px; height: 250px; overflow: auto;">
+
+		    <table class="table table-header-rotated">
+		    <!-- <caption>Flagging percentages for  Source name: J1923-2104, Intents: PHASE </caption> -->
+
+		    <thead>
+		    </thead>
+	    
+		    <tbody>
+		    <tr>
+		    <td class="rotate-45"><b>spw</b></td>
+		    
+		        <td class="rotate-45"><b>ea01</b></td>
+		        <td class="rotate-45"><b>ea02</b></td>
+		        <td class="rotate-45"><b>ea03</b></td>
+		        <td class="rotate-45"><b>ea04</b></td>
+		        <td class="rotate-45"><b>ea05</b></td>
+		        <td class="rotate-45"><b>ea06</b></td>
+		        <td class="rotate-45"><b>ea07</b></td>
+		        <td class="rotate-45"><b>ea08</b></td>
+		        <td class="rotate-45"><b>ea09</b></td>
+		        <td class="rotate-45"><b>ea10</b></td>
+		        <td class="rotate-45"><b>ea11</b></td>
+		        <td class="rotate-45"><b>ea12</b></td>
+		        <td class="rotate-45"><b>ea13</b></td>
+		        <td class="rotate-45"><b>ea14</b></td>
+		        <td class="rotate-45"><b>ea15</b></td>
+		        <td class="rotate-45"><b>ea16</b></td>
+		        <td class="rotate-45"><b>ea17</b></td>
+		        <td class="rotate-45"><b>ea18</b></td>
+		        <td class="rotate-45"><b>ea19</b></td>
+		        <td class="rotate-45"><b>ea21</b></td>
+		        <td class="rotate-45"><b>ea22</b></td>
+		        <td class="rotate-45"><b>ea23</b></td>
+		        <td class="rotate-45"><b>ea24</b></td>
+		        <td class="rotate-45"><b>ea25</b></td>
+		        <td class="rotate-45"><b>ea26</b></td>
+		        <td class="rotate-45"><b>ea27</b></td>
+		        <td class="rotate-45"><b>ea28</b></td>
+		    </tr>
+		
+		
+		        <tr>
+		        <th class="row-header">0</th>
+		    
+			            
+			            <td bgcolor="#58D3F7">
+						55.88
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						56.70
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						57.29
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						56.90
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						57.31
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						59.16
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						59.37
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						55.74
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						57.90
+			            </td>
+			            
+			            <td bgcolor="#2ECCFA">
+						63.46
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						59.62
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						56.99
+			            </td>
+			            
+			            <td bgcolor="#2ECCFA">
+						62.04
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						57.57
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						56.23
+			            </td>
+			            
+			            <td bgcolor="#2ECCFA">
+						63.01
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						55.87
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						59.48
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						57.71
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						59.32
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						55.61
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						56.88
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						56.32
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						55.87
+			            </td>
+			            
+			            <td bgcolor="#2ECCFA">
+						64.17
+			            </td>
+		
+		        <tr>
+		        <tr>
+		        <th class="row-header">1</th>
+		    
+			            
+			            <td bgcolor="#81DAF5">
+						45.72
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						49.16
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						48.92
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						49.35
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						51.17
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						47.38
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						50.60
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.90
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						50.78
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						50.10
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						47.78
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						50.55
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						50.95
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						50.75
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						48.33
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						50.23
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						47.22
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						50.52
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						48.45
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						50.21
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						48.85
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						50.37
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						50.39
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.28
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						49.84
+			            </td>
+		
+		        <tr>
+		        <tr>
+		        <th class="row-header">2</th>
+		    
+			            
+			            <td bgcolor="#81DAF5">
+						48.46
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						52.36
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						51.66
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						52.60
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						54.19
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						50.62
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						53.64
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						48.43
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						53.74
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						52.94
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						51.07
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						53.15
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						53.52
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						53.48
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						51.74
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						53.40
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						50.18
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						53.92
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						51.58
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						53.13
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						51.94
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						53.50
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						53.34
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						47.52
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						52.99
+			            </td>
+		
+		        <tr>
+		        <tr>
+		        <th class="row-header">3</th>
+		    
+			            
+			            <td bgcolor="#81DAF5">
+						44.38
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						44.66
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						46.64
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						44.34
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						46.30
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.75
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.54
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						44.90
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.15
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						44.49
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						44.78
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.07
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.17
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.25
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						44.96
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						44.72
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						44.43
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						49.76
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						44.49
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						44.83
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						44.32
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.24
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						44.54
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						44.67
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						44.71
+			            </td>
+		
+		        <tr>
+		        <tr>
+		        <th class="row-header">4</th>
+		    
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						99.66
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						99.42
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						99.63
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						99.62
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						99.63
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						99.67
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						99.66
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+		
+		        <tr>
+		        <tr>
+		        <th class="row-header">5</th>
+		    
+			            
+			            <td bgcolor="#81DAF5">
+						48.69
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						49.11
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						50.98
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						48.65
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						49.10
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						49.86
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						49.78
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						48.89
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						49.27
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						48.39
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						48.11
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						49.27
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						49.56
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						49.72
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						49.19
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						49.29
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						47.36
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						50.59
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						48.58
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						49.03
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						46.85
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						49.34
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						49.22
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						48.72
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						49.18
+			            </td>
+		
+		        <tr>
+		        <tr>
+		        <th class="row-header">6</th>
+		    
+			            
+			            <td bgcolor="#81DAF5">
+						44.30
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						44.45
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						46.57
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						44.31
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						46.34
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.59
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.31
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						44.83
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						44.90
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						44.47
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						44.67
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						44.73
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						44.93
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						44.95
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						44.85
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						44.66
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						44.43
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						48.14
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						44.35
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						44.47
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						44.52
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.14
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						44.50
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						44.57
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						44.60
+			            </td>
+		
+		        <tr>
+		        <tr>
+		        <th class="row-header">7</th>
+		    
+			            
+			            <td bgcolor="#58D3F7">
+						55.36
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						55.52
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						57.39
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						55.06
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						55.30
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						56.49
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						55.92
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						55.68
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						55.94
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						54.82
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						54.17
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						55.55
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						56.65
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						56.11
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						56.10
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						55.67
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						53.86
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						55.24
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						54.55
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						55.79
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						53.36
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						55.67
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						55.52
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						55.53
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						55.89
+			            </td>
+		
+		        <tr>
+	    
+		    </tbody>
+		    </table>
+
+	        </div>
+		    <br>
+		     <h5>Flagging percentages for  Source name: NGC6822_2, Intents: TARGET </h5>
+	        <div style="width: 1700px; height: 250px; overflow: auto;">
+
+		    <table class="table table-header-rotated">
+		    <!-- <caption>Flagging percentages for  Source name: NGC6822_2, Intents: TARGET </caption> -->
+
+		    <thead>
+		    </thead>
+	    
+		    <tbody>
+		    <tr>
+		    <td class="rotate-45"><b>spw</b></td>
+		    
+		        <td class="rotate-45"><b>ea01</b></td>
+		        <td class="rotate-45"><b>ea02</b></td>
+		        <td class="rotate-45"><b>ea03</b></td>
+		        <td class="rotate-45"><b>ea04</b></td>
+		        <td class="rotate-45"><b>ea05</b></td>
+		        <td class="rotate-45"><b>ea06</b></td>
+		        <td class="rotate-45"><b>ea07</b></td>
+		        <td class="rotate-45"><b>ea08</b></td>
+		        <td class="rotate-45"><b>ea09</b></td>
+		        <td class="rotate-45"><b>ea10</b></td>
+		        <td class="rotate-45"><b>ea11</b></td>
+		        <td class="rotate-45"><b>ea12</b></td>
+		        <td class="rotate-45"><b>ea13</b></td>
+		        <td class="rotate-45"><b>ea14</b></td>
+		        <td class="rotate-45"><b>ea15</b></td>
+		        <td class="rotate-45"><b>ea16</b></td>
+		        <td class="rotate-45"><b>ea17</b></td>
+		        <td class="rotate-45"><b>ea18</b></td>
+		        <td class="rotate-45"><b>ea19</b></td>
+		        <td class="rotate-45"><b>ea21</b></td>
+		        <td class="rotate-45"><b>ea22</b></td>
+		        <td class="rotate-45"><b>ea23</b></td>
+		        <td class="rotate-45"><b>ea24</b></td>
+		        <td class="rotate-45"><b>ea25</b></td>
+		        <td class="rotate-45"><b>ea26</b></td>
+		        <td class="rotate-45"><b>ea27</b></td>
+		        <td class="rotate-45"><b>ea28</b></td>
+		    </tr>
+		
+		
+		        <tr>
+		        <th class="row-header">0</th>
+		    
+			            
+			            <td bgcolor="#A9E2F3">
+						34.09
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						34.09
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						34.09
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						33.94
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						34.09
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						37.97
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						37.03
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						33.76
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						33.76
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						43.98
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						38.38
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						33.94
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						40.86
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						33.94
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						33.76
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						42.70
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						33.94
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						38.00
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						33.76
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						38.50
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						33.94
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						33.94
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						33.94
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						33.76
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.33
+			            </td>
+		
+		        <tr>
+		        <tr>
+		        <th class="row-header">1</th>
+		    
+			            
+			            <td bgcolor="#E0F2F7">
+						18.89
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.89
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.89
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.89
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.89
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.88
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+		
+		        <tr>
+		        <tr>
+		        <th class="row-header">2</th>
+		    
+			            
+			            <td bgcolor="#E0F2F7">
+						19.24
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.24
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.24
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.39
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.24
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.59
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.39
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.04
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.39
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.04
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.39
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.04
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.04
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.04
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.39
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.39
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.04
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.39
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.04
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						20.23
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.04
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.39
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.39
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.39
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.39
+			            </td>
+		
+		        <tr>
+		        <tr>
+		        <th class="row-header">3</th>
+		    
+			            
+			            <td bgcolor="#E0F2F7">
+						18.89
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.89
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.89
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.89
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.89
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.88
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+		
+		        <tr>
+		        <tr>
+		        <th class="row-header">4</th>
+		    
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+		
+		        <tr>
+		        <tr>
+		        <th class="row-header">5</th>
+		    
+			            
+			            <td bgcolor="#E0F2F7">
+						18.89
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.89
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.89
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.89
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.89
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.70
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.88
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.70
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.70
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+		
+		        <tr>
+		        <tr>
+		        <th class="row-header">6</th>
+		    
+			            
+			            <td bgcolor="#E0F2F7">
+						18.89
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.89
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.89
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.89
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.89
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.88
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.69
+			            </td>
+		
+		        <tr>
+		        <tr>
+		        <th class="row-header">7</th>
+		    
+			            
+			            <td bgcolor="#A9E2F3">
+						30.16
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						30.16
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						30.16
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						29.99
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						30.16
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						30.16
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						29.99
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						29.99
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						29.99
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						29.99
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						29.99
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						29.99
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						30.64
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						29.99
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						29.99
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						29.99
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						29.99
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						29.99
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						29.99
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						31.02
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						29.99
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						29.99
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						30.67
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						29.99
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						30.64
+			            </td>
+		
+		        <tr>
+	    
+		    </tbody>
+		    </table>
+
+	        </div>
+		    <br>
+		     <h5>Flagging percentages for  Source name: NGC6822_1, Intents: TARGET </h5>
+	        <div style="width: 1700px; height: 250px; overflow: auto;">
+
+		    <table class="table table-header-rotated">
+		    <!-- <caption>Flagging percentages for  Source name: NGC6822_1, Intents: TARGET </caption> -->
+
+		    <thead>
+		    </thead>
+	    
+		    <tbody>
+		    <tr>
+		    <td class="rotate-45"><b>spw</b></td>
+		    
+		        <td class="rotate-45"><b>ea01</b></td>
+		        <td class="rotate-45"><b>ea02</b></td>
+		        <td class="rotate-45"><b>ea03</b></td>
+		        <td class="rotate-45"><b>ea04</b></td>
+		        <td class="rotate-45"><b>ea05</b></td>
+		        <td class="rotate-45"><b>ea06</b></td>
+		        <td class="rotate-45"><b>ea07</b></td>
+		        <td class="rotate-45"><b>ea08</b></td>
+		        <td class="rotate-45"><b>ea09</b></td>
+		        <td class="rotate-45"><b>ea10</b></td>
+		        <td class="rotate-45"><b>ea11</b></td>
+		        <td class="rotate-45"><b>ea12</b></td>
+		        <td class="rotate-45"><b>ea13</b></td>
+		        <td class="rotate-45"><b>ea14</b></td>
+		        <td class="rotate-45"><b>ea15</b></td>
+		        <td class="rotate-45"><b>ea16</b></td>
+		        <td class="rotate-45"><b>ea17</b></td>
+		        <td class="rotate-45"><b>ea18</b></td>
+		        <td class="rotate-45"><b>ea19</b></td>
+		        <td class="rotate-45"><b>ea21</b></td>
+		        <td class="rotate-45"><b>ea22</b></td>
+		        <td class="rotate-45"><b>ea23</b></td>
+		        <td class="rotate-45"><b>ea24</b></td>
+		        <td class="rotate-45"><b>ea25</b></td>
+		        <td class="rotate-45"><b>ea26</b></td>
+		        <td class="rotate-45"><b>ea27</b></td>
+		        <td class="rotate-45"><b>ea28</b></td>
+		    </tr>
+		
+		
+		        <tr>
+		        <th class="row-header">0</th>
+		    
+			            
+			            <td bgcolor="#A9E2F3">
+						33.80
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						33.80
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						33.80
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						33.80
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						33.80
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						37.71
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						36.92
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						33.62
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						33.62
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						43.88
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						38.27
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						33.80
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						40.76
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						33.80
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						33.62
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						42.60
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						33.80
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						37.89
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						33.62
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						50.18
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						33.80
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						33.80
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						33.80
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						33.62
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.23
+			            </td>
+		
+		        <tr>
+		        <tr>
+		        <th class="row-header">1</th>
+		    
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						35.10
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+		
+		        <tr>
+		        <tr>
+		        <th class="row-header">2</th>
+		    
+			            
+			            <td bgcolor="#E0F2F7">
+						18.90
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.90
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.90
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.25
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.90
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.25
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.25
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.90
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.25
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.90
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.25
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.90
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.90
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.90
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.25
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.25
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.90
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.25
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.90
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						35.38
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.90
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.25
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.25
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.25
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						19.25
+			            </td>
+		
+		        <tr>
+		        <tr>
+		        <th class="row-header">3</th>
+		    
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						35.10
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+		
+		        <tr>
+		        <tr>
+		        <th class="row-header">4</th>
+		    
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+		
+		        <tr>
+		        <tr>
+		        <th class="row-header">5</th>
+		    
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						35.10
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+		
+		        <tr>
+		        <tr>
+		        <th class="row-header">6</th>
+		    
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						35.10
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+			            
+			            <td bgcolor="#E0F2F7">
+						18.55
+			            </td>
+		
+		        <tr>
+		        <tr>
+		        <th class="row-header">7</th>
+		    
+			            
+			            <td bgcolor="#CEECF5">
+						29.87
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						29.87
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						29.87
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						29.87
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						29.87
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						29.87
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						29.87
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						29.87
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						29.87
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						29.87
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						29.87
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						29.87
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						30.51
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						29.87
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						29.87
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						29.87
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						29.87
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						29.87
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						29.87
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						44.12
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						29.87
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						29.87
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						30.54
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						29.87
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						30.51
+			            </td>
+		
+		        <tr>
+	    
+		    </tbody>
+		    </table>
+
+	        </div>
+		    <br>
+		     <h5>Flagging percentages for  Source name: NGC6822_3, Intents: TARGET </h5>
+	        <div style="width: 1700px; height: 250px; overflow: auto;">
+
+		    <table class="table table-header-rotated">
+		    <!-- <caption>Flagging percentages for  Source name: NGC6822_3, Intents: TARGET </caption> -->
+
+		    <thead>
+		    </thead>
+	    
+		    <tbody>
+		    <tr>
+		    <td class="rotate-45"><b>spw</b></td>
+		    
+		        <td class="rotate-45"><b>ea01</b></td>
+		        <td class="rotate-45"><b>ea02</b></td>
+		        <td class="rotate-45"><b>ea03</b></td>
+		        <td class="rotate-45"><b>ea04</b></td>
+		        <td class="rotate-45"><b>ea05</b></td>
+		        <td class="rotate-45"><b>ea06</b></td>
+		        <td class="rotate-45"><b>ea07</b></td>
+		        <td class="rotate-45"><b>ea08</b></td>
+		        <td class="rotate-45"><b>ea09</b></td>
+		        <td class="rotate-45"><b>ea10</b></td>
+		        <td class="rotate-45"><b>ea11</b></td>
+		        <td class="rotate-45"><b>ea12</b></td>
+		        <td class="rotate-45"><b>ea13</b></td>
+		        <td class="rotate-45"><b>ea14</b></td>
+		        <td class="rotate-45"><b>ea15</b></td>
+		        <td class="rotate-45"><b>ea16</b></td>
+		        <td class="rotate-45"><b>ea17</b></td>
+		        <td class="rotate-45"><b>ea18</b></td>
+		        <td class="rotate-45"><b>ea19</b></td>
+		        <td class="rotate-45"><b>ea21</b></td>
+		        <td class="rotate-45"><b>ea22</b></td>
+		        <td class="rotate-45"><b>ea23</b></td>
+		        <td class="rotate-45"><b>ea24</b></td>
+		        <td class="rotate-45"><b>ea25</b></td>
+		        <td class="rotate-45"><b>ea26</b></td>
+		        <td class="rotate-45"><b>ea27</b></td>
+		        <td class="rotate-45"><b>ea28</b></td>
+		    </tr>
+		
+		
+		        <tr>
+		        <th class="row-header">0</th>
+		    
+			            
+			            <td bgcolor="#A9E2F3">
+						36.04
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						36.04
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						36.04
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						36.04
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						36.04
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						39.83
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						39.06
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						35.87
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						35.87
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						45.79
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						40.36
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						36.04
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						42.77
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						36.04
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						35.87
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						44.55
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						36.04
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						40.00
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						35.87
+			            </td>
+			            
+			            <td bgcolor="#58D3F7">
+						53.21
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						36.04
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						36.04
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						36.04
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						35.87
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						47.09
+			            </td>
+		
+		        <tr>
+		        <tr>
+		        <th class="row-header">1</th>
+		    
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						39.05
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+		
+		        <tr>
+		        <tr>
+		        <th class="row-header">2</th>
+		    
+			            
+			            <td bgcolor="#CEECF5">
+						21.65
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.65
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.65
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.99
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.65
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.99
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.99
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.65
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.99
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.65
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.99
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.65
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.65
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.65
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.99
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.99
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.65
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.99
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.65
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						39.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.65
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.99
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.99
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.99
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.99
+			            </td>
+		
+		        <tr>
+		        <tr>
+		        <th class="row-header">3</th>
+		    
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						39.05
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+		
+		        <tr>
+		        <tr>
+		        <th class="row-header">4</th>
+		    
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+		
+		        <tr>
+		        <tr>
+		        <th class="row-header">5</th>
+		    
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						39.05
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+		
+		        <tr>
+		        <tr>
+		        <th class="row-header">6</th>
+		    
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						39.05
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+			            
+			            <td bgcolor="#CEECF5">
+						21.31
+			            </td>
+		
+		        <tr>
+		        <tr>
+		        <th class="row-header">7</th>
+		    
+			            
+			            <td bgcolor="#A9E2F3">
+						32.25
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						32.25
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						32.25
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						32.25
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						32.25
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						32.25
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						32.25
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						32.25
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						32.25
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						32.25
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						32.25
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						32.25
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						32.87
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						32.25
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						32.25
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						32.25
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						32.25
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						32.25
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						32.25
+			            </td>
+			            
+			            <td bgcolor="#81DAF5">
+						47.52
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						32.25
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						32.25
+			            </td>
+			            
+			            <td bgcolor="#0489B1">
+						100.00
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						32.90
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						32.25
+			            </td>
+			            
+			            <td bgcolor="#A9E2F3">
+						32.87
+			            </td>
+		
+		        <tr>
+	    
+		    </tbody>
+		    </table>
+
+	        </div>
+    
+
+
+	
+	<div class="footer">
+		
+	</div>
+</div>
+
+</body>
+</html>

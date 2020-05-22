@@ -1,0 +1,24 @@
+2020-05-15 02:33:26	INFO	hifv_hanning::pipeline.infrastructure.basetask::	Starting execution for stage 2
+2020-05-15 02:33:27	INFO	hifv_hanning::pipeline.infrastructure.basetask::	Equivalent CASA call: hifv_hanning(pipelinemode="automatic")
+2020-05-15 02:33:27	SEVERE	pipeline.infrastructure.basetask::getvarcol::SDM_NUM_BIN	Exception Reported: TableProxy::getVarColumn: column SDM_NUM_BIN does not exist
+2020-05-15 02:33:27	INFO	hifv_hanning::pipeline.infrastructure.jobrequest::	Executing hanningsmooth(vis='13A-213_05_15_2013_continuum.ms', outputvis='temphanning.ms', datacolumn='data')
+2020-05-15 02:33:27	INFO	hanningsmooth::::	
+2020-05-15 02:33:27	INFO	hanningsmooth::::+	##########################################
+2020-05-15 02:33:27	INFO	hanningsmooth::::+	##### Begin Task: hanningsmooth      #####
+2020-05-15 02:33:27	INFO	hanningsmooth::::	hanningsmooth(vis="/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms",outputvis="temphanning.ms",keepmms=True,field="",spw="",
+2020-05-15 02:33:27	INFO	hanningsmooth::::+	        scan="",antenna="",correlation="",timerange="",intent="",
+2020-05-15 02:33:27	INFO	hanningsmooth::::+	        array="",uvrange="",observation="",feed="",datacolumn="data")
+2020-05-15 02:33:27	INFO	MSTransformManager::parseMsSpecParams	Input file name is /mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms
+2020-05-15 02:33:27	INFO	MSTransformManager::parseMsSpecParams	Data column is DATA
+2020-05-15 02:33:27	INFO	MSTransformManager::parseMsSpecParams	Output file name is temphanning.ms
+2020-05-15 02:33:27	INFO	MSTransformManager::parseFreqTransParams	Hanning Smooth is activated
+2020-05-15 02:33:27	INFO	MSTransformManager::colCheckInfo	Adding DATA column to output MS from input DATA column
+2020-05-15 02:33:27	INFO	MSTransformManager::open	Select data
+2020-05-15 02:33:27	INFO	MSTransformManager::createOutputMSStructure	Create output MS structure
+2020-05-15 02:33:31	INFO	hanningsmooth::::	Apply Hanning smoothing on data
+2020-05-15 02:36:48	INFO	hanningsmooth::::	CASA Version 5.6.1-8  
+2020-05-15 02:36:48	INFO	hanningsmooth::::	
+2020-05-15 02:36:48	INFO	hanningsmooth::::	##### End Task: hanningsmooth        #####
+2020-05-15 02:36:48	INFO	hanningsmooth::::+	##########################################
+2020-05-15 02:36:48	INFO	pipeline.hifv.tasks.hanning.hanning::pipeline.hifv.tasks.hanning.hanning::	Removing original VIS /mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms
+2020-05-15 02:36:48	INFO	pipeline.hifv.tasks.hanning.hanning::pipeline.hifv.tasks.hanning.hanning::	Renaming temphanning.ms to /mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms

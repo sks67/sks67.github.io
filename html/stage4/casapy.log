@@ -1,0 +1,71 @@
+2020-05-15 02:44:21	INFO	hifv_vlasetjy::pipeline.infrastructure.basetask::	Starting execution for stage 4
+2020-05-15 02:44:21	INFO	hifv_vlasetjy::pipeline.infrastructure.basetask::	Equivalent CASA call: hifv_vlasetjy(fluxdensity=-1, scalebychan=True, spix=0, reffreq='1GHz')
+2020-05-15 02:44:21	INFO	pipeline.infrastructure.basetask::msmetadata_cmpt.cc::open	Performing internal consistency checks on /mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms...
+2020-05-15 02:44:21	INFO	pipeline.infrastructure.basetask::MSMetaData::_computeScanAndSubScanProperties 	Computing scan and subscan properties...
+2020-05-15 02:44:21	INFO	hifv_vlasetjy::pipeline.hifv.tasks.setmodel.vlasetjy::	Center freq for spw 0 = 1052000000.0, observing band = L
+2020-05-15 02:44:21	INFO	hifv_vlasetjy::pipeline.hifv.tasks.setmodel.vlasetjy::	Setting model for field 1 spw 0 using 3C286_L.im
+2020-05-15 02:44:21	INFO	hifv_vlasetjy::pipeline.hifv.tasks.setmodel.vlasetjy::	Center freq for spw 1 = 1180000000.0, observing band = L
+2020-05-15 02:44:21	INFO	hifv_vlasetjy::pipeline.hifv.tasks.setmodel.vlasetjy::	Setting model for field 1 spw 1 using 3C286_L.im
+2020-05-15 02:44:21	INFO	hifv_vlasetjy::pipeline.hifv.tasks.setmodel.vlasetjy::	Center freq for spw 2 = 1308000000.0, observing band = L
+2020-05-15 02:44:21	INFO	hifv_vlasetjy::pipeline.hifv.tasks.setmodel.vlasetjy::	Setting model for field 1 spw 2 using 3C286_L.im
+2020-05-15 02:44:21	INFO	hifv_vlasetjy::pipeline.hifv.tasks.setmodel.vlasetjy::	Center freq for spw 3 = 1436000000.0, observing band = L
+2020-05-15 02:44:21	INFO	hifv_vlasetjy::pipeline.hifv.tasks.setmodel.vlasetjy::	Setting model for field 1 spw 3 using 3C286_L.im
+2020-05-15 02:44:21	INFO	hifv_vlasetjy::pipeline.hifv.tasks.setmodel.vlasetjy::	Center freq for spw 4 = 1564000000.0, observing band = L
+2020-05-15 02:44:21	INFO	hifv_vlasetjy::pipeline.hifv.tasks.setmodel.vlasetjy::	Setting model for field 1 spw 4 using 3C286_L.im
+2020-05-15 02:44:21	INFO	hifv_vlasetjy::pipeline.hifv.tasks.setmodel.vlasetjy::	Center freq for spw 5 = 1692000000.0, observing band = L
+2020-05-15 02:44:21	INFO	hifv_vlasetjy::pipeline.hifv.tasks.setmodel.vlasetjy::	Setting model for field 1 spw 5 using 3C286_L.im
+2020-05-15 02:44:21	INFO	hifv_vlasetjy::pipeline.hifv.tasks.setmodel.vlasetjy::	Center freq for spw 6 = 1820000000.0, observing band = L
+2020-05-15 02:44:21	INFO	hifv_vlasetjy::pipeline.hifv.tasks.setmodel.vlasetjy::	Setting model for field 1 spw 6 using 3C286_L.im
+2020-05-15 02:44:21	INFO	hifv_vlasetjy::pipeline.hifv.tasks.setmodel.vlasetjy::	Center freq for spw 7 = 1948000000.0, observing band = L
+2020-05-15 02:44:21	INFO	hifv_vlasetjy::pipeline.hifv.tasks.setmodel.vlasetjy::	Setting model for field 1 spw 7 using 3C286_L.im
+2020-05-15 02:44:21	INFO	hifv_vlasetjy::pipeline.infrastructure.jobrequest::	Executing setjy(vis='13A-213_05_15_2013_continuum.ms', field='1', spw='0,1,2,3,4,5,6,7', selectdata=False, scalebychan=True, standard='Perley-Butler 2017', model='3C286_L.im', listmodels=False, fluxdensity=-1, usescratch=True)
+2020-05-15 02:44:21	INFO	setjy::::	
+2020-05-15 02:44:21	INFO	setjy::::+	##########################################
+2020-05-15 02:44:21	INFO	setjy::::+	##### Begin Task: setjy              #####
+2020-05-15 02:44:21	INFO	setjy::::	setjy(vis="/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms",field="1",spw="0,1,2,3,4,5,6,7",selectdata=False,timerange="",
+2020-05-15 02:44:21	INFO	setjy::::+	        scan="",intent="",observation="",scalebychan=True,standard="Perley-Butler 2017",
+2020-05-15 02:44:21	INFO	setjy::::+	        model="3C286_L.im",modimage="",listmodels=False,fluxdensity=-1,spix=0.0,
+2020-05-15 02:44:21	INFO	setjy::::+	        reffreq="1GHz",polindex=[],polangle=[],rotmeas=0.0,fluxdict={},
+2020-05-15 02:44:21	INFO	setjy::::+	        useephemdir=False,interpolation="nearest",usescratch=True,ismms=False)
+2020-05-15 02:44:21	INFO	setjy::::	{'field': '1', 'spw': '0,1,2,3,4,5,6,7'}
+2020-05-15 02:44:21	INFO	Imager::open() 	Opening MeasurementSet /mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms
+2020-05-15 02:44:21	INFO		Clearing all model records in MS header.
+2020-05-15 02:44:22	INFO	VisSetUtil::addScrCols	Adding MODEL_DATA column(s).
+2020-05-15 02:44:40	INFO	VisSetUtil::initScrCols	Initializing MODEL_DATA to (unity).
+2020-05-15 02:45:36	INFO	VisSetUtil::initScrCols	Initialized 3967704 rows.
+2020-05-15 02:45:36	INFO		Clearing all model records in MS header.
+2020-05-15 02:45:38	INFO	setjy::::	Using /mnt/ufs18/rs-033/ChomiukLab/casa-pipeline-release-5.6.1-8.el7/data/nrao/VLA/CalModels/3C286_L.im for modimage.
+2020-05-15 02:45:38	INFO	setjy::::	CASA Version 5.6.1-8  
+2020-05-15 02:45:38	INFO	setjy::::	
+2020-05-15 02:45:38	INFO	imager::setjy()	Using channel dependent flux densities
+2020-05-15 02:45:38	INFO		Clearing all model records in MS header.
+2020-05-15 02:45:38	INFO	imager::data selection	Selected 497016 out of 3967704 rows.
+2020-05-15 02:45:38	INFO	imager::setjy()	1331+305=3C286 (fld ind 1) spw 0  [I=17.802, Q=0, U=0, V=0] Jy @ 9.88e+08Hz, (Perley-Butler 2017)
+2020-05-15 02:45:38	INFO	imager::setjy()	1331+305=3C286 (fld ind 1) spw 1  [I=16.835, Q=0, U=0, V=0] Jy @ 1.116e+09Hz, (Perley-Butler 2017)
+2020-05-15 02:45:38	INFO	imager::setjy()	1331+305=3C286 (fld ind 1) spw 2  [I=15.987, Q=0, U=0, V=0] Jy @ 1.244e+09Hz, (Perley-Butler 2017)
+2020-05-15 02:45:38	INFO	imager::setjy()	1331+305=3C286 (fld ind 1) spw 3  [I=15.237, Q=0, U=0, V=0] Jy @ 1.372e+09Hz, (Perley-Butler 2017)
+2020-05-15 02:45:38	INFO	imager::setjy()	1331+305=3C286 (fld ind 1) spw 4  [I=14.567, Q=0, U=0, V=0] Jy @ 1.5e+09Hz, (Perley-Butler 2017)
+2020-05-15 02:45:38	INFO	imager::setjy()	1331+305=3C286 (fld ind 1) spw 5  [I=13.963, Q=0, U=0, V=0] Jy @ 1.628e+09Hz, (Perley-Butler 2017)
+2020-05-15 02:45:38	INFO	imager::setjy()	1331+305=3C286 (fld ind 1) spw 6  [I=13.417, Q=0, U=0, V=0] Jy @ 1.756e+09Hz, (Perley-Butler 2017)
+2020-05-15 02:45:38	INFO	imager::setjy()	1331+305=3C286 (fld ind 1) spw 7  [I=12.92, Q=0, U=0, V=0] Jy @ 1.884e+09Hz, (Perley-Butler 2017)
+2020-05-15 02:45:41	INFO	imager::setjy()	Using model image /mnt/ufs18/rs-033/ChomiukLab/casa-pipeline-release-5.6.1-8.el7/data/nrao/VLA/CalModels/3C286_L.im
+2020-05-15 02:45:41	INFO	imager::setjy()	Scaling spw(s) [0, 1, 2, 3, 4, 5, 6, 7]'s model image by channel to  I = 17.8054, 14.5639, 12.4628 Jy @(9.87522e+08, 1.50052e+09, 2.01252e+09)Hz (LSRK) for visibility prediction (a few representative values are shown).
+2020-05-15 02:45:41	INFO	imager::setjy()	The model image's reference pixel is 0.000254726 arcsec from 1331+305=3C286's phase center.
+2020-05-15 02:45:41	INFO		Clearing all model records in MS header.
+2020-05-15 02:45:41	INFO	imager::data selection	Selected 62127 out of 3967704 rows.
+2020-05-15 02:45:43	INFO		Clearing all model records in MS header.
+2020-05-15 02:45:43	INFO	imager::data selection	Selected 62127 out of 3967704 rows.
+2020-05-15 02:45:44	INFO		Clearing all model records in MS header.
+2020-05-15 02:45:44	INFO	imager::data selection	Selected 62127 out of 3967704 rows.
+2020-05-15 02:45:46	INFO		Clearing all model records in MS header.
+2020-05-15 02:45:46	INFO	imager::data selection	Selected 62127 out of 3967704 rows.
+2020-05-15 02:45:48	INFO		Clearing all model records in MS header.
+2020-05-15 02:45:48	INFO	imager::data selection	Selected 62127 out of 3967704 rows.
+2020-05-15 02:45:50	INFO		Clearing all model records in MS header.
+2020-05-15 02:45:50	INFO	imager::data selection	Selected 62127 out of 3967704 rows.
+2020-05-15 02:45:51	INFO		Clearing all model records in MS header.
+2020-05-15 02:45:51	INFO	imager::data selection	Selected 62127 out of 3967704 rows.
+2020-05-15 02:45:53	INFO		Clearing all model records in MS header.
+2020-05-15 02:45:53	INFO	imager::data selection	Selected 62127 out of 3967704 rows.
+2020-05-15 02:45:55	INFO	setjy::::	##### End Task: setjy                #####
+2020-05-15 02:45:55	INFO	setjy::::+	##########################################

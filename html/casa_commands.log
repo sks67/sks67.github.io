@@ -1,0 +1,618 @@
+raise Error('The casa commands log is not executable!')
+
+# This file contains CASA commands run by the pipeline. Although all commands
+# required to calibrate the data are included here, this file cannot be
+# executed, nor does it contain heuristic and flagging calculations performed
+# by pipeline code. This file is useful to understand which CASA commands are
+# being run by each pipeline task. If one wishes to re-run the pipeline, one
+# should use the pipeline script linked on the front page or By Task page of
+# the weblog. Some stages may not have any commands listed here, e.g.
+# hifa_importdata if conversion from ASDM to MS is not required.
+
+# hifv_importdata(vis=['13A-213_05_15_2013_continuum.ms'], createmms='automatic', asis='Receiver CalAtmosphere', ocorr_mode='co', nocopy=False, overwrite=False)
+#
+# If required, ASDMs are converted to MeasurementSets.
+#
+
+# hifv_hanning(pipelinemode="automatic")
+#
+# No comment registered for hifv_hanning
+#
+hanningsmooth(vis='13A-213_05_15_2013_continuum.ms', outputvis='temphanning.ms',
+              datacolumn='data')
+
+# hifv_flagdata(tbuff=0.0, flagbackup=False, scan=True, fracspw=0.05, intents='*POINTING*,*FOCUS*,*ATMOSPHERE*,*SIDEBAND_RATIO*, *UNKNOWN*, *SYSTEM_CONFIGURATION*, *UNSPECIFIED#UNSPECIFIED*', clip=True, baseband=True, shadow=True, quack=True, edgespw=True, autocorr=True, hm_tbuff='1.5int', template=True, online=True)
+#
+# No comment registered for hifv_flagdata
+#
+flagdata(vis='13A-213_05_15_2013_continuum.ms', mode='summary', name='before')
+flagdata(vis='13A-213_05_15_2013_continuum.ms', mode='list', inpfile='13A-
+         213_05_15_2013_continuum.flagcmds.txt', tbuff=[7.5], action='apply',
+         flagbackup=False, savepars=False)
+
+# hifv_vlasetjy(fluxdensity=-1, scalebychan=True, spix=0, reffreq='1GHz')
+#
+# No comment registered for hifv_vlasetjy
+#
+setjy(vis='13A-213_05_15_2013_continuum.ms', field='1', spw='0,1,2,3,4,5,6,7',
+      selectdata=False, scalebychan=True, standard='Perley-Butler 2017',
+      model='3C286_L.im', listmodels=False, fluxdensity=-1, usescratch=True)
+
+# hifv_priorcals(tecmaps=False)
+#
+# No comment registered for hifv_priorcals
+#
+gencal(vis='13A-213_05_15_2013_continuum.ms', caltable='13A-
+       213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl', caltype='gc',
+       parameter=[])
+plotweather(vis='13A-213_05_15_2013_continuum.ms', seasonal_weight=0.5,
+            doPlot=True)
+gencal(vis='13A-213_05_15_2013_continuum.ms', caltable='13A-
+       213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl',
+       caltype='opac', spw='0,1,2,3,4,5,6,7', parameter=[0.0051175740330522126,
+       0.0052499274743767919, 0.0053309657060359892, 0.0054081229554515872,
+       0.0054590718200621469, 0.0055090611826937421, 0.0055452796810068032,
+       0.00558095112285784])
+gencal(vis='13A-213_05_15_2013_continuum.ms', caltable='13A-
+       213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl', caltype='rq',
+       parameter=[])
+gencal(vis='13A-213_05_15_2013_continuum.ms', caltable='13A-
+       213_05_15_2013_continuum.ms.hifv_priorcals.s5_5.swpow.tbl',
+       caltype='swpow', parameter=[])
+gencal(vis='13A-213_05_15_2013_continuum.ms', caltable='13A-
+       213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl',
+       caltype='antpos', parameter=[])
+
+# hifv_testBPdcals(weakbp=False)
+#
+# No comment registered for hifv_testBPdcals
+#
+gaincal(vis='13A-213_05_15_2013_continuum.ms', caltable='13A-
+        213_05_15_2013_continuum.ms.hifv_testBPdcals.s6_1.testdelayinitialgain.tbl',
+        field='1',
+        spw='0:42~86,1:42~86,2:42~86,3:42~86,4:42~86,5:42~86,6:42~86,7:42~86',
+        selectdata=True, scan='2,3', solint='int', combine='scan', preavg=-1.0,
+        refant='ea13,ea26,ea14,ea24,ea15,ea22,ea07,ea25,ea10,ea28,ea11,ea17,ea02,ea04,ea19,ea21,ea16,ea05,ea12,ea23,ea18,ea03,ea06,ea09,ea01,ea08,ea27',
+        minblperant=4, minsnr=3.0, solnorm=False, gaintype='G', smodel=[],
+        calmode='p', append=False, docallib=False, gaintable=['13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl'],
+        gainfield=[''], interp=['linear'], spwmap=[], parang=True)
+gaincal(vis='13A-213_05_15_2013_continuum.ms', caltable='13A-
+        213_05_15_2013_continuum.ms.hifv_testBPdcals.s6_2.testdelay.tbl',
+        field='1', selectdata=True, scan='2,3', solint='inf', combine='scan',
+        preavg=-1.0,
+        refant='ea13,ea26,ea14,ea24,ea15,ea22,ea07,ea25,ea10,ea28,ea11,ea17,ea02,ea04,ea19,ea21,ea16,ea05,ea12,ea23,ea18,ea03,ea06,ea09,ea01,ea08,ea27',
+        minblperant=4, minsnr=3.0, solnorm=False, gaintype='K', smodel=[],
+        calmode='p', append=False, docallib=False, gaintable=['13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_testBPdcals.s6_1.testdelayinitialgain.tbl'],
+        gainfield=[''], interp=['linear'], spwmap=[], parang=True)
+gaincal(vis='13A-213_05_15_2013_continuum.ms', caltable='13A-
+        213_05_15_2013_continuum.ms.hifv_testBPdcals.s6_3.testBPdinitialgain.tbl',
+        field='1',
+        spw='0:42~86,1:42~86,2:42~86,3:42~86,4:42~86,5:42~86,6:42~86,7:42~86',
+        selectdata=True, scan='2,3', solint='int', combine='scan', preavg=-1.0,
+        refant='ea13,ea26,ea14,ea24,ea15,ea22,ea07,ea25,ea10,ea28,ea11,ea17,ea02,ea04,ea19,ea21,ea16,ea05,ea12,ea23,ea18,ea03,ea06,ea09,ea01,ea08,ea27',
+        minblperant=4, minsnr=5.0, solnorm=False, gaintype='G', smodel=[],
+        calmode='ap', append=False, docallib=False, gaintable=['13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_testBPdcals.s6_2.testdelay.tbl'],
+        gainfield=[''], interp=['linear'], spwmap=[], parang=True)
+bandpass(vis='13A-213_05_15_2013_continuum.ms', caltable='13A-
+         213_05_15_2013_continuum.ms.hifv_testBPdcals.s6_4.testBPcal.tbl',
+         field='1', selectdata=True, scan='2,3', solint='inf', combine='scan',
+         refant='ea13,ea26,ea14,ea24,ea15,ea22,ea07,ea25,ea10,ea28,ea11,ea17,ea02,ea04,ea19,ea21,ea16,ea05,ea12,ea23,ea18,ea03,ea06,ea09,ea01,ea08,ea27',
+         minblperant=4, minsnr=5.0, solnorm=False, bandtype='B', smodel=[],
+         append=False, fillgaps=0, docallib=False, gaintable=['13A-
+         213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_testBPdcals.s6_2.testdelay.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_testBPdcals.s6_3.testBPdinitialgain.tbl'],
+         gainfield=[''], interp=['linear'], spwmap=[], parang=True)
+flagdata(vis='13A-
+         213_05_15_2013_continuum.ms.hifv_testBPdcals.s6_4.testBPcal.tbl',
+         mode='clip', correlation='ABS_ALL', clipminmax=[0.0, 2.0],
+         datacolumn='CPARAM', clipoutside=True, action='apply',
+         flagbackup=False, savepars=False)
+applycal(vis='13A-213_05_15_2013_continuum.ms', selectdata=True, scan='2,3',
+         docallib=False, gaintable=['13A-
+         213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_testBPdcals.s6_2.testdelay.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_testBPdcals.s6_3.testBPdinitialgain.tbl',
+         '13A-213_05_15_2013_continuum.ms.hifv_testBPdcals.s6_4.testBPcal.tbl'],
+         gainfield=[''], interp=['linear', 'linear', 'linear', 'linear',
+         'linear', 'linear', 'linear,linearflag'], spwmap=[], calwt=[False,
+         False, False, False, False, False, False], parang=True,
+         applymode='calflagstrict', flagbackup=True)
+
+# hifv_flagbaddef(doflagundernspwlimit=False)
+#
+# No comment registered for hifv_flagbaddef
+#
+
+# hifv_checkflag(pipelinemode="automatic")
+#
+# No comment registered for hifv_checkflag
+#
+flagdata(vis='13A-213_05_15_2013_continuum.ms', mode='summary')
+flagdata(vis='13A-213_05_15_2013_continuum.ms', mode='rflag', field='1',
+         correlation='ABS_LL,RR', scan='2,3', datacolumn='corrected',
+         ntime='scan', combinescans=False, extendflags=False, winsize=3,
+         timedevscale=4.0, freqdevscale=4.0, action='apply', flagbackup=False,
+         savepars=True)
+flagdata(vis='13A-213_05_15_2013_continuum.ms', mode='summary')
+
+# hifv_semiFinalBPdcals(weakbp=False)
+#
+# No comment registered for hifv_semiFinalBPdcals
+#
+gaincal(vis='13A-213_05_15_2013_continuum.ms', caltable='13A-
+        213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s9_1.semiFinaldelayinitialgain.tbl',
+        field='1',
+        spw='0:42~86,1:42~86,2:42~86,3:42~86,4:42~86,5:42~86,6:42~86,7:42~86',
+        selectdata=True, scan='2,3', solint='int', combine='scan', preavg=-1.0,
+        refant='ea13,ea26,ea14,ea24,ea15,ea22,ea07,ea10,ea28,ea11,ea17,ea02,ea04,ea21,ea19,ea05,ea25,ea16,ea12,ea23,ea18,ea03,ea06,ea09,ea01,ea08,ea27',
+        minblperant=4, minsnr=3.0, solnorm=False, gaintype='G', smodel=[],
+        calmode='p', append=False, docallib=False, gaintable=['13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl'],
+        gainfield=[''], interp=['linear'], spwmap=[], parang=True)
+gaincal(vis='13A-213_05_15_2013_continuum.ms', caltable='13A-
+        213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s9_2.delay.tbl',
+        field='1', selectdata=True, scan='2,3', solint='inf', combine='scan',
+        preavg=-1.0,
+        refant='ea13,ea26,ea14,ea24,ea15,ea22,ea07,ea10,ea28,ea11,ea17,ea02,ea04,ea21,ea19,ea05,ea25,ea16,ea12,ea23,ea18,ea03,ea06,ea09,ea01,ea08,ea27',
+        minblperant=4, minsnr=3.0, solnorm=False, gaintype='K', smodel=[],
+        calmode='p', append=False, docallib=False, gaintable=['13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s9_1.semiFinaldelayinitialgain.tbl'],
+        gainfield=[''], interp=['linear'], spwmap=[], parang=True)
+gaincal(vis='13A-213_05_15_2013_continuum.ms', caltable='13A-
+        213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s9_3.BPinitialgain.tbl',
+        field='1',
+        spw='0:42~86,1:42~86,2:42~86,3:42~86,4:42~86,5:42~86,6:42~86,7:42~86',
+        selectdata=True, scan='2,3', solint='int', combine='scan', preavg=-1.0,
+        refant='ea13,ea26,ea14,ea24,ea15,ea22,ea07,ea10,ea28,ea11,ea17,ea02,ea04,ea21,ea19,ea05,ea25,ea16,ea12,ea23,ea18,ea03,ea06,ea09,ea01,ea08,ea27',
+        minblperant=4, minsnr=3.0, solnorm=False, gaintype='G', smodel=[],
+        calmode='p', append=False, docallib=False, gaintable=['13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s9_2.delay.tbl'],
+        gainfield=[''], interp=['linear'], spwmap=[], parang=True)
+bandpass(vis='13A-213_05_15_2013_continuum.ms', caltable='13A-
+         213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s9_4.BPcal.tbl',
+         field='1', selectdata=True, scan='2,3', solint='inf', combine='scan',
+         refant='ea13,ea26,ea14,ea24,ea15,ea22,ea07,ea10,ea28,ea11,ea17,ea02,ea04,ea21,ea19,ea05,ea25,ea16,ea12,ea23,ea18,ea03,ea06,ea09,ea01,ea08,ea27',
+         minblperant=4, minsnr=5.0, solnorm=False, bandtype='B', smodel=[],
+         append=False, fillgaps=0, docallib=False, gaintable=['13A-
+         213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s9_2.delay.tbl',
+         '13A-
+         213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s9_3.BPinitialgain.tbl'],
+         gainfield=[''], interp=['linear'], spwmap=[], parang=True)
+applycal(vis='13A-213_05_15_2013_continuum.ms', selectdata=True,
+         scan='2,3,4,5,9,13,17', docallib=False, gaintable=['13A-
+         213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s9_2.delay.tbl',
+         '13A-
+         213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s9_4.BPcal.tbl'],
+         gainfield=[''], interp=['linear', 'linear', 'linear', 'linear',
+         'linear', 'linear,linearflag'], spwmap=[], calwt=[False, False, False,
+         False, False, False], parang=True, applymode='calflagstrict',
+         flagbackup=True)
+
+# hifv_checkflag(checkflagmode='semi')
+#
+# No comment registered for hifv_checkflag
+#
+flagdata(vis='13A-213_05_15_2013_continuum.ms', mode='summary')
+flagdata(vis='13A-213_05_15_2013_continuum.ms', mode='rflag', field='1,2',
+         correlation='ABS_LL,RR', scan='2,3,4,5,9,13,17',
+         datacolumn='corrected', ntime='scan', combinescans=False,
+         extendflags=False, winsize=3, timedevscale=4.0, freqdevscale=4.0,
+         action='apply', flagbackup=False, savepars=True)
+flagdata(vis='13A-213_05_15_2013_continuum.ms', mode='summary')
+
+# hifv_semiFinalBPdcals(weakbp=False)
+#
+# No comment registered for hifv_semiFinalBPdcals
+#
+gaincal(vis='13A-213_05_15_2013_continuum.ms', caltable='13A-
+        213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_1.semiFinaldelayinitialgain.tbl',
+        field='1',
+        spw='0:42~86,1:42~86,2:42~86,3:42~86,4:42~86,5:42~86,6:42~86,7:42~86',
+        selectdata=True, scan='2,3', solint='int', combine='scan', preavg=-1.0,
+        refant='ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea04,ea02,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea25,ea27',
+        minblperant=4, minsnr=3.0, solnorm=False, gaintype='G', smodel=[],
+        calmode='p', append=False, docallib=False, gaintable=['13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl'],
+        gainfield=[''], interp=['linear'], spwmap=[], parang=True)
+gaincal(vis='13A-213_05_15_2013_continuum.ms', caltable='13A-
+        213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_2.delay.tbl',
+        field='1', selectdata=True, scan='2,3', solint='inf', combine='scan',
+        preavg=-1.0,
+        refant='ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea04,ea02,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea25,ea27',
+        minblperant=4, minsnr=3.0, solnorm=False, gaintype='K', smodel=[],
+        calmode='p', append=False, docallib=False, gaintable=['13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_1.semiFinaldelayinitialgain.tbl'],
+        gainfield=[''], interp=['linear'], spwmap=[], parang=True)
+gaincal(vis='13A-213_05_15_2013_continuum.ms', caltable='13A-
+        213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_3.BPinitialgain.tbl',
+        field='1',
+        spw='0:42~86,1:42~86,2:42~86,3:42~86,4:42~86,5:42~86,6:42~86,7:42~86',
+        selectdata=True, scan='2,3', solint='int', combine='scan', preavg=-1.0,
+        refant='ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea04,ea02,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea25,ea27',
+        minblperant=4, minsnr=3.0, solnorm=False, gaintype='G', smodel=[],
+        calmode='p', append=False, docallib=False, gaintable=['13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_2.delay.tbl'],
+        gainfield=[''], interp=['linear'], spwmap=[], parang=True)
+bandpass(vis='13A-213_05_15_2013_continuum.ms', caltable='13A-
+         213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_4.BPcal.tbl',
+         field='1', selectdata=True, scan='2,3', solint='inf', combine='scan',
+         refant='ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea04,ea02,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea25,ea27',
+         minblperant=4, minsnr=5.0, solnorm=False, bandtype='B', smodel=[],
+         append=False, fillgaps=0, docallib=False, gaintable=['13A-
+         213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_2.delay.tbl',
+         '13A-
+         213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_3.BPinitialgain.tbl'],
+         gainfield=[''], interp=['linear'], spwmap=[], parang=True)
+applycal(vis='13A-213_05_15_2013_continuum.ms', selectdata=True,
+         scan='2,3,4,5,9,13,17', docallib=False, gaintable=['13A-
+         213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_2.delay.tbl',
+         '13A-
+         213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_4.BPcal.tbl'],
+         gainfield=[''], interp=['linear', 'linear', 'linear', 'linear',
+         'linear', 'linear,linearflag'], spwmap=[], calwt=[False, False, False,
+         False, False, False], parang=True, applymode='calflagstrict',
+         flagbackup=True)
+
+# hifv_solint(pipelinemode="automatic")
+#
+# No comment registered for hifv_solint
+#
+split(vis='13A-213_05_15_2013_continuum.ms', outputvis='calibrators.ms',
+      keepmms=True, scan='2,3,4,5,9,13,17', datacolumn='corrected',
+      keepflags=False, width=1, timebin='0s')
+gaincal(vis='calibrators.ms', caltable='13A-
+        213_05_15_2013_continuum.ms.hifv_solint.s12_1.testgaincal.tbl',
+        field='1', selectdata=True, scan='2,3,4,5,9,13,17', solint='int',
+        combine='scan', preavg=-1.0,
+        refant='ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea02,ea04,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea27,ea25',
+        minblperant=4, minsnr=5.0, solnorm=False, gaintype='G', smodel=[],
+        calmode='ap', append=False, gaintable=[[]], gainfield=[''], interp=[''],
+        spwmap=[], parang=True)
+gaincal(vis='calibrators.ms', caltable='13A-
+        213_05_15_2013_continuum.ms.hifv_solint.s12_1.testgaincal.tbl',
+        field='2', selectdata=True, scan='2,3,4,5,9,13,17', solint='int',
+        combine='scan', preavg=-1.0,
+        refant='ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea02,ea04,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea27,ea25',
+        minblperant=4, minsnr=5.0, solnorm=False, gaintype='G', smodel=[],
+        calmode='ap', append=True, gaintable=[[]], gainfield=[''], interp=[''],
+        spwmap=[], parang=True)
+gaincal(vis='calibrators.ms', caltable='13A-
+        213_05_15_2013_continuum.ms.hifv_solint.s12_1.testgaincal3.tbl',
+        field='1', selectdata=True, scan='2,3,4,5,9,13,17', solint='15.0s',
+        combine='scan', preavg=-1.0,
+        refant='ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea02,ea04,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea27,ea25',
+        minblperant=4, minsnr=5.0, solnorm=False, gaintype='G', smodel=[],
+        calmode='ap', append=False, gaintable=[[]], gainfield=[''], interp=[''],
+        spwmap=[], parang=True)
+gaincal(vis='calibrators.ms', caltable='13A-
+        213_05_15_2013_continuum.ms.hifv_solint.s12_1.testgaincal3.tbl',
+        field='2', selectdata=True, scan='2,3,4,5,9,13,17', solint='15.0s',
+        combine='scan', preavg=-1.0,
+        refant='ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea02,ea04,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea27,ea25',
+        minblperant=4, minsnr=5.0, solnorm=False, gaintype='G', smodel=[],
+        calmode='ap', append=True, gaintable=[[]], gainfield=[''], interp=[''],
+        spwmap=[], parang=True)
+
+# hifv_fluxboot2(fitorder=-1)
+#
+# No comment registered for hifv_fluxboot2
+#
+setjy(vis='calibrators.ms', field='1', spw='0,1,2,3,4,5,6,7', selectdata=False,
+      scalebychan=True, standard='Perley-Butler 2017', model='3C286_L.im',
+      listmodels=False, fluxdensity=-1, usescratch=True)
+gaincal(vis='calibrators.ms', caltable='fluxphaseshortgaincal.g', field='1',
+        selectdata=True, solint='5.0s', combine='scan', preavg=-1.0,
+        refant='ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea02,ea04,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea27,ea25',
+        minblperant=4, minsnr=3.0, solnorm=False, gaintype='G', smodel=[],
+        calmode='p', append=False, gaintable=[[]], gainfield=[''], interp=[''],
+        spwmap=[], parang=True)
+gaincal(vis='calibrators.ms', caltable='fluxphaseshortgaincal.g', field='2',
+        selectdata=True, solint='5.0s', combine='scan', preavg=-1.0,
+        refant='ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea02,ea04,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea27,ea25',
+        minblperant=4, minsnr=3.0, solnorm=False, gaintype='G', smodel=[],
+        calmode='p', append=True, gaintable=[[]], gainfield=[''], interp=[''],
+        spwmap=[], parang=True)
+gaincal(vis='calibrators.ms', caltable='fluxflag.g', field='"1331+305=3C286"',
+        selectdata=False, solint='353.500000094s', combine='scan', preavg=-1.0,
+        refant='ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea02,ea04,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea27,ea25',
+        minblperant=4, minsnr=5.0, solnorm=True, gaintype='G', smodel=[],
+        calmode='ap', append=False, gaintable=['fluxphaseshortgaincal.g'],
+        gainfield=[''], interp=['linear'], spwmap=[], parang=True)
+gaincal(vis='calibrators.ms', caltable='fluxflag.g', field='J1923-2104',
+        selectdata=False, solint='353.500000094s', combine='scan', preavg=-1.0,
+        refant='ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea02,ea04,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea27,ea25',
+        minblperant=4, minsnr=5.0, solnorm=True, gaintype='G', smodel=[],
+        calmode='ap', append=True, gaintable=['fluxphaseshortgaincal.g'],
+        gainfield=[''], interp=['linear'], spwmap=[], parang=True)
+flagdata(vis='fluxflag.g', mode='clip', correlation='ABS_ALL', clipminmax=[0.9,
+         1.1], datacolumn='CPARAM', clipoutside=True, action='apply',
+         flagbackup=False, savepars=False)
+applycal(vis='calibrators.ms', selectdata=False, docallib=False,
+         gaintable=['fluxflag.g'], gainfield=[''], interp=['linear'], spwmap=[],
+         calwt=[False], parang=False, applymode='flagonlystrict',
+         flagbackup=True)
+gaincal(vis='calibrators.ms', caltable='fluxgaincal.g', field='1',
+        selectdata=True, solint='353.500000094s', combine='scan', preavg=-1.0,
+        refant='ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea02,ea04,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea27,ea25',
+        minblperant=4, minsnr=5.0, solnorm=False, gaintype='G', smodel=[],
+        calmode='ap', append=False, gaintable=['fluxphaseshortgaincal.g'],
+        gainfield=[''], interp=['linear'], spwmap=[], parang=True)
+gaincal(vis='calibrators.ms', caltable='fluxgaincal.g', field='2',
+        selectdata=True, solint='353.500000094s', combine='scan', preavg=-1.0,
+        refant='ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea02,ea04,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea27,ea25',
+        minblperant=4, minsnr=5.0, solnorm=False, gaintype='G', smodel=[],
+        calmode='ap', append=True, gaintable=['fluxphaseshortgaincal.g'],
+        gainfield=[''], interp=['linear'], spwmap=[], parang=True)
+fluxscale(vis='calibrators.ms', caltable='fluxgaincal.g',
+          fluxtable='fluxgaincalFcal.g', reference=['1'], transfer=[''],
+          append=False, refspwmap=[-1], fitorder=2)
+setjy(vis='calibrators.ms', field='J1923-2104', spw='0,1,2,3,4,5,6,7',
+      selectdata=False, scalebychan=True, standard='manual', listmodels=False,
+      fluxdensity=[1.7248971557290884, 0, 0, 0], spix=[0.040681148526621233,
+      -0.62197920327157386], reffreq='1457209350.38Hz', usescratch=True)
+setjy(vis='13A-213_05_15_2013_continuum.ms', field='J1923-2104',
+      spw='0,1,2,3,4,5,6,7', selectdata=False, scalebychan=True,
+      standard='manual', listmodels=False, fluxdensity=[1.7248971557290884, 0,
+      0, 0], spix=[0.040681148526621233, -0.62197920327157386],
+      reffreq='1457209350.38Hz', usescratch=True)
+
+# hifv_finalcals(weakbp=False)
+#
+# No comment registered for hifv_finalcals
+#
+gaincal(vis='13A-213_05_15_2013_continuum.ms', caltable='13A-
+        213_05_15_2013_continuum.ms.hifv_finalcals.s14_1.finaldelayinitialgain.tbl',
+        field='1',
+        spw='0:42~86,1:42~86,2:42~86,3:42~86,4:42~86,5:42~86,6:42~86,7:42~86',
+        selectdata=True, scan='2,3', solint='int', combine='scan', preavg=-1.0,
+        refant='ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea02,ea04,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea27,ea25',
+        minblperant=4, minsnr=3.0, solnorm=False, gaintype='G', smodel=[],
+        calmode='p', append=False, docallib=False, gaintable=['13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl'],
+        gainfield=[''], interp=['linear'], spwmap=[], parang=True)
+gaincal(vis='13A-213_05_15_2013_continuum.ms', caltable='13A-
+        213_05_15_2013_continuum.ms.hifv_finalcals.s14_2.finaldelay.tbl',
+        field='1', selectdata=True, scan='2,3', solint='inf', combine='scan',
+        preavg=-1.0,
+        refant='ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea02,ea04,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea27,ea25',
+        minblperant=4, minsnr=3.0, solnorm=False, gaintype='K', smodel=[],
+        calmode='p', append=False, docallib=False, gaintable=['13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_finalcals.s14_1.finaldelayinitialgain.tbl'],
+        gainfield=[''], interp=['linear'], spwmap=[], parang=True)
+gaincal(vis='13A-213_05_15_2013_continuum.ms', caltable='13A-
+        213_05_15_2013_continuum.ms.hifv_finalcals.s14_3.finalBPinitialgain.tbl',
+        field='1',
+        spw='0:42~86,1:42~86,2:42~86,3:42~86,4:42~86,5:42~86,6:42~86,7:42~86',
+        selectdata=True, solint='int', combine='scan', preavg=-1.0,
+        refant='ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea02,ea04,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea27,ea25',
+        minblperant=4, minsnr=3.0, solnorm=False, gaintype='G', smodel=[],
+        calmode='p', append=False, docallib=False, gaintable=['13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_finalcals.s14_2.finaldelay.tbl'],
+        gainfield=[''], interp=['linear'], spwmap=[], parang=True)
+bandpass(vis='13A-213_05_15_2013_continuum.ms', caltable='13A-
+         213_05_15_2013_continuum.ms.hifv_finalcals.s14_4.finalBPcal.tbl',
+         field='1', selectdata=True, scan='2,3', solint='inf', combine='scan',
+         refant='ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea02,ea04,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea27,ea25',
+         minblperant=4, minsnr=5.0, solnorm=False, bandtype='B', smodel=[],
+         append=False, fillgaps=0, docallib=False, gaintable=['13A-
+         213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_finalcals.s14_2.finaldelay.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_finalcals.s14_3.finalBPinitialgain.tbl'],
+         gainfield=[''], interp=['linear'], spwmap=[], parang=True)
+gaincal(vis='13A-213_05_15_2013_continuum.ms', caltable='13A-
+        213_05_15_2013_continuum.ms.hifv_finalcals.s14_5.averagephasegain.tbl',
+        field='1', selectdata=True, solint='inf', combine='scan', preavg=-1.0,
+        refant='ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea02,ea04,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea27,ea25',
+        refantmode='strict', minblperant=4, minsnr=1.0, solnorm=False,
+        gaintype='G', smodel=[], calmode='p', append=False, docallib=False,
+        gaintable=['13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl',
+        '13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_finalcals.s14_2.finaldelay.tbl', '13A-
+        213_05_15_2013_continuum.ms.hifv_finalcals.s14_4.finalBPcal.tbl'],
+        gainfield=[''], interp=['linear'], spwmap=[], parang=True)
+flagdata(vis='13A-
+         213_05_15_2013_continuum.ms.hifv_finalcals.s14_5.averagephasegain.tbl',
+         mode='unflag', action='apply', flagbackup=False, savepars=False)
+applycal(vis='13A-213_05_15_2013_continuum.ms', selectdata=True,
+         scan='2,3,4,5,9,13,17', docallib=False, gaintable=['13A-
+         213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_finalcals.s14_2.finaldelay.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_finalcals.s14_4.finalBPcal.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_finalcals.s14_5.averagephasegain.tbl'],
+         gainfield=[''], interp=['linear'], spwmap=[], calwt=[False, False,
+         False, False, False, False, False], parang=True,
+         applymode='calflagstrict', flagbackup=True)
+split(vis='13A-213_05_15_2013_continuum.ms', outputvis='finalcalibrators.ms',
+      keepmms=True, scan='2,3,4,5,9,13,17', datacolumn='corrected',
+      keepflags=False, width=1, timebin='0s')
+setjy(vis='finalcalibrators.ms', field='1', spw='0,1,2,3,4,5,6,7',
+      selectdata=False, scalebychan=True, standard='Perley-Butler 2017',
+      model='3C286_L.im', listmodels=False, fluxdensity=-1, usescratch=True)
+setjy(vis='finalcalibrators.ms', field='J1923-2104', spw='0,1,2,3,4,5,6,7',
+      selectdata=False, scalebychan=True, standard='manual', listmodels=False,
+      fluxdensity=[1.7248971557290884, 0, 0, 0], spix=[0.040681148526621233,
+      -0.62197920327157386], reffreq='1457209350.38Hz', usescratch=True)
+gaincal(vis='finalcalibrators.ms', caltable='13A-
+        213_05_15_2013_continuum.ms.hifv_finalcals.s14_6.phaseshortgaincal.tbl',
+        field='1', selectdata=True, solint='5.0s', combine='scan', preavg=-1.0,
+        refant='ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea02,ea04,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea27,ea25',
+        refantmode='strict', minblperant=4, minsnr=3.0, solnorm=False,
+        gaintype='G', smodel=[], calmode='p', append=False, gaintable=[[]],
+        gainfield=[''], interp=[''], spwmap=[], parang=True)
+gaincal(vis='finalcalibrators.ms', caltable='13A-
+        213_05_15_2013_continuum.ms.hifv_finalcals.s14_6.phaseshortgaincal.tbl',
+        field='2', selectdata=True, solint='5.0s', combine='scan', preavg=-1.0,
+        refant='ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea02,ea04,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea27,ea25',
+        refantmode='strict', minblperant=4, minsnr=3.0, solnorm=False,
+        gaintype='G', smodel=[], calmode='p', append=True, gaintable=[[]],
+        gainfield=[''], interp=[''], spwmap=[], parang=True)
+gaincal(vis='finalcalibrators.ms', caltable='13A-
+        213_05_15_2013_continuum.ms.hifv_finalcals.s14_7.finalampgaincal.tbl',
+        field='1', selectdata=True, solint='353.500000094s', combine='scan',
+        preavg=-1.0,
+        refant='ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea02,ea04,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea27,ea25',
+        refantmode='strict', minblperant=4, minsnr=5.0, solnorm=False,
+        gaintype='G', smodel=[], calmode='ap', append=False, gaintable=['13A-
+        213_05_15_2013_continuum.ms.hifv_finalcals.s14_6.phaseshortgaincal.tbl'],
+        gainfield=[''], interp=['linear'], spwmap=[], parang=True)
+gaincal(vis='finalcalibrators.ms', caltable='13A-
+        213_05_15_2013_continuum.ms.hifv_finalcals.s14_7.finalampgaincal.tbl',
+        field='2', selectdata=True, solint='353.500000094s', combine='scan',
+        preavg=-1.0,
+        refant='ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea02,ea04,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea27,ea25',
+        refantmode='strict', minblperant=4, minsnr=5.0, solnorm=False,
+        gaintype='G', smodel=[], calmode='ap', append=True, gaintable=['13A-
+        213_05_15_2013_continuum.ms.hifv_finalcals.s14_6.phaseshortgaincal.tbl'],
+        gainfield=[''], interp=['linear'], spwmap=[], parang=True)
+gaincal(vis='finalcalibrators.ms', caltable='13A-
+        213_05_15_2013_continuum.ms.hifv_finalcals.s14_8.finalphasegaincal.tbl',
+        field='1', selectdata=True, solint='353.500000094s', combine='scan',
+        preavg=-1.0,
+        refant='ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea02,ea04,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea27,ea25',
+        refantmode='strict', minblperant=4, minsnr=3.0, solnorm=False,
+        gaintype='G', smodel=[], calmode='p', append=False, gaintable=['13A-
+        213_05_15_2013_continuum.ms.hifv_finalcals.s14_7.finalampgaincal.tbl'],
+        gainfield=[''], interp=['linear'], spwmap=[], parang=True)
+gaincal(vis='finalcalibrators.ms', caltable='13A-
+        213_05_15_2013_continuum.ms.hifv_finalcals.s14_8.finalphasegaincal.tbl',
+        field='2', selectdata=True, solint='353.500000094s', combine='scan',
+        preavg=-1.0,
+        refant='ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea02,ea04,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea27,ea25',
+        refantmode='strict', minblperant=4, minsnr=3.0, solnorm=False,
+        gaintype='G', smodel=[], calmode='p', append=True, gaintable=['13A-
+        213_05_15_2013_continuum.ms.hifv_finalcals.s14_7.finalampgaincal.tbl'],
+        gainfield=[''], interp=['linear'], spwmap=[], parang=True)
+
+# hifv_applycals(flagdetailedsum=True, gainmap=False, flagbackup=True, flagsum=True)
+#
+# No comment registered for hifv_applycals
+#
+flagdata(vis='13A-213_05_15_2013_continuum.ms', mode='summary')
+applycal(vis='13A-213_05_15_2013_continuum.ms', antenna='*&*', gaintable=['13A-
+         213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_finalcals.s14_2.finaldelay.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_finalcals.s14_4.finalBPcal.tbl', '13A-
+         213_05_15_2013_continuum.ms.hifv_finalcals.s14_5.averagephasegain.tbl',
+         '13A-
+         213_05_15_2013_continuum.ms.hifv_finalcals.s14_7.finalampgaincal.tbl',
+         '13A-
+         213_05_15_2013_continuum.ms.hifv_finalcals.s14_8.finalphasegaincal.tbl'],
+         gainfield=['', '', '', '', '', '', '', '', ''], interp=['linear',
+         'linear', 'linear', 'linear', 'linear', 'linear,linearflag', 'linear',
+         'linear', 'linear'], spwmap=[[], [], [], [], [], [], [], [], []],
+         calwt=[False, False, False, False, False, False, False, False, False],
+         parang=True, applymode='calflagstrict', flagbackup=True)
+flagdata(vis='13A-213_05_15_2013_continuum.ms', mode='summary')
+flagdata(vis='13A-213_05_15_2013_continuum.ms', mode='list', inpfile=["spw='0'
+         fieldcnt=True mode='summary' name='AntSpw000", "spw='1' fieldcnt=True
+         mode='summary' name='AntSpw001", "spw='2' fieldcnt=True mode='summary'
+         name='AntSpw002", "spw='3' fieldcnt=True mode='summary'
+         name='AntSpw003", "spw='4' fieldcnt=True mode='summary'
+         name='AntSpw004", "spw='5' fieldcnt=True mode='summary'
+         name='AntSpw005", "spw='6' fieldcnt=True mode='summary'
+         name='AntSpw006", "spw='7' fieldcnt=True mode='summary'
+         name='AntSpw007"], flagbackup=False)
+
+# hifv_targetflag(intents='*CALIBRATE*,*TARGET*')
+#
+# No comment registered for hifv_targetflag
+#
+flagdata(vis='13A-213_05_15_2013_continuum.ms', mode='summary')
+flagdata(vis='13A-213_05_15_2013_continuum.ms', mode='rflag',
+         correlation='ABS_LL,RR', intent='*CALIBRATE*', datacolumn='corrected',
+         ntime='scan', combinescans=False, extendflags=False, winsize=3,
+         timedevscale=4.0, freqdevscale=4.0, action='apply', flagbackup=True,
+         savepars=True)
+flagdata(vis='13A-213_05_15_2013_continuum.ms', mode='rflag',
+         correlation='ABS_LL,RR', intent='*TARGET*', datacolumn='corrected',
+         ntime='scan', combinescans=False, extendflags=False, winsize=3,
+         timedevscale=4.0, freqdevscale=4.0, action='apply', flagbackup=True,
+         savepars=True)
+flagdata(vis='13A-213_05_15_2013_continuum.ms', mode='summary')
+
+# hifv_statwt(datacolumn='corrected')
+#
+# No comment registered for hifv_statwt
+#
+flagdata(vis='13A-213_05_15_2013_continuum.ms', mode='summary', name='before')

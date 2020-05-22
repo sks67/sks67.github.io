@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<!--
+    Stellar by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Sumit Sarbadhicary</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    </head>
+  <body>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+      <!-- Header -->
+      <!--<header id="header" class="alt">
+	  <span class="logo"><img src="images/logo.svg" alt="" /></span>
+	  <h1>Stellar</h1>
+	  <p>Just another free, fully responsive site template<br />
+	    built by <a href="https://twitter.com/ajlkn">@ajlkn</a> for <a href="https://html5up.net">HTML5 UP</a>.</p>
+	  </header>
+
+      <!-- Nav -->
+      <nav id="nav">
+	  <ul>
+	    <li><a href="#intro" class="active"><b>About Me</b></a></li>
+	    <li><a href="#first"><b>Research</b></a></li>
+	    <li><a href="SKSarbadhicary_CV.pdf"><b>C.V.</b></a></li>
+	    <li><a href="#second"><b>Publications</b></a></li>
+	    <li><a href="#third"><b>Outreach</b></a></li>
+	    </ul>
+	  </nav>
+
+      <!-- Main -->
+      <div id="main">
+
+	<!-- Introduction -->
+	<section id="intro" class="main">
+	  <div class="spotlight">
+	    <div class="content">
+	      <header class="major">
+		<h2><b>Sumit K. Sarbadhicary</b></h2>
+		<h4><b>Postdoctoral Researcher, Astrophysics</b><br/>
+		  Michigan State University<br/><b>Email</b>: sarbadhi(at)msu(dot)edu</h4>
+		</header>
+<p>I am currently working with Prof. Laura Chomiuk on multiwavelength transients and variable phenomena as part of the <a href="http://web.pa.msu.edu/people/chomiuk/ChilesVerdes/">CHILES-VERDES</a> collaboration. My dissertation research involved the study of supernova progenitors, supernova remnants and pulsating variables (e.g. RR Lyrae, Cepheids) using large surveys in the Local Group galaxies.</p>
+
+										</div>
+	    <span class="image"><img src="images/mypic2.jpg" alt="" /></span>
+	    </div>
+	  </section>
+
+	<!-- First Section -->
+	<section id="first" class="main">
+	  <header class="major special">
+	      <h2><b>Research</b></h2>
+	      
+	      </header>
+	  <h3><b>Progenitors of supernovae</b></h3>
+	  <p><div class="image left"><img src="MC_DTD_MB10.png" alt="" /><div><font size="2">The DTD for a sample of 77 SNRs in the Magellanic Clouds (<a href="http://adsabs.harvard.edu/abs/2010MNRAS.407.1314M"><b>Maoz & Badenes 2010</b>)</a></font></div></div>Many unanswered questions remain about the origins of supernovae (SNe). We know Type Ia SNe are explosions of CO white-dwarfs in a binary system, but what is the nature of that binary companion? Does the white-dwarf need to reach Chandrasekhar Mass to explode as a Type Ia? We also know that Core-collapse SNe mark the demise of massive stars, but do all massive stars produce a CC SN, or do some fizzle out in a weak explosion, or directly collapse to black holes? The feasability of these different formation scenarios can be quantified by the <b>delay-time distribution (DTD)</b> - the hypothetical SN rate vs time since a brief burst of star formation. This is like an <a href="https://en.wikipedia.org/wiki/Impulse_response">impulse-response function</a>, and can be measured from a survey of objects and set of star-formation histories. The DTD tells you the observed distribution of timescales on which stars produce supernovae, which can be directly compared with predictions of stellar evolution models. My focus has been to measure this in the Local Group galaxies, where we have the most reliable, detailed maps of spatially-resolved stellar populations, thanks to <i>Hubble</i> and ground-based telescopes.</p>
+	  <h3><b>Supernova Remnants in the Local Group</b></h3>
+<p><div class="image right"><img src="Sarb17_VisTime.png" alt="" z/><div><font size="2">Observationally constrained visibility times of SNRs in M33 <a href="http://adsabs.harvard.edu/abs/2017MNRAS.464.2326S">(<b>Sarbadhicary et al 2017</b></a>)</font></div></div>Supernova remnants (SNRs) are the leftover plasma of hot gas and stellar material expelled by the supernova. The properties of SNRs depend mostly on the energetics of the original supernova, and  the interaction of the SNR shock with the surrounding medium. This shock interaction accelerates ions and electrons to very high energies, which produce synchrotron emission that makes SNRs visible in radio wavelengths. We statistically modeled this process for an entire population of SNRs, and constrained it with SNR catalogs, gas and stellar maps of the host galaxy. This allows us to use SNRs like a SN survey in the Local Group, and extract relevant information about SNe, such as the visibility times of the SNR sample (see figure) and the SN rate - a crucial input for measuring the DTD in the Local Group and understanding the formation scenarios of SNe. (For details, see <a href="http://adsabs.harvard.edu/abs/2017MNRAS.464.2326S">Sarbadhicary et. al 2017</a>)</p>
+<p>I am also assisting Jessica Maldonado, Daniel Huizenga and Laura Chomiuk at MSU to compile Local Group SNR catalogs with properly understood selection effects, using deep radio images from <a href="https://science.nrao.edu/facilities/vla">Jansky Very Large Array (JVLA)</a> and <a href="https://www.narrabri.atnf.csiro.au/">Australian Telescope Compact Array (ATCA)</a>.
+  <h3><b>Progenitors of Pulsating Variable stars</b></h3>
+  Coming soon.
+
+  </section>
+	<!-- Second Section -->
+	        <section id="second" class="main">
+		          <header class="major special">
+			            <h2><b>Publications</b></h2>
+				    </header>
+			   <h2>First-author</h2>
+                                                             <ol>
+                                                               <li><b>Sarbadhicary, S.</b>, Chomiuk L., Badenes C., Tremou E., Soderberg, A. M., Sjouwerman L.<i>The two most recent thermonuclear supernovae in the Local Group: radio constraints on their progenitors and evolution</i>, 2017, Accepted for publication in ApJ, <a href="https://arxiv.org/abs/1709.05346">[arXiv:1709.05346]</a></li>
+                                                               <li><b>Sarbadhicary, S.</b>, Badenes C., Chomiuk L., Caprioli D., Huizenga D., <i>Supernova Remnants in the Local Group I: A model for the radio luminosity function and visibility times of supernova remnants</i>, 2017, MNRAS, 464, 2326 <a href="http://adsabs.harvard.edu/abs/2017MNRAS.464.2326S">[ADS]</a></li>
+                                                               </ol>
+                                                                <h2>Co-author</h2>
+                                                                <ol>
+                                                                  <li>Launey, K. D., <b>Sarbadhicary, S.</b>, Dytrych P., Draayer J. P., <i>Program in C for studying characteristic properties of two-body interactions in the framework of spectral distribution theory</i>, 2014, Computer Physics Communications, 185, 284 <a href="http://adsabs.harvard.edu/abs/2014CoPhC.185..254L">[ADS]</a></li>
+                                                                  </ol>
+								</section>
+
+
+		<!-- Third Section -->
+		<section id="third" class="main">
+		  <header class="major special">
+		    <h2><b>Outreach</b></h2>
+		    </header>
+		  
+		  <h3><b>2016 White House Frontiers Conference: Astronomy Night</b></h3>
+		  <p><span class="image left"><img src="WHFrontiers_MyPic.jpg"></span>I participated in the public Astronomy Night event at Allegheny Observatory, which was a part of former-President Barack Obama's <a href="http://www.frontiersconference.org/">White House Frontiers Conference</a> in Pittsburgh. The event celebrated the spirit of innovation and discovery in science, and was open to the general public. Attendees included kids from local Pittsburgh schools, amateur astronomers, and NASA officials. I was mainly in charge of an 8-inch telescope mounted on the observatory lawn, pointed at the <a href="https://apod.nasa.gov/apod/ap130605.html">Ring nebula</a>. I also prepared a poster on black holes and gravitational waves, and occasionally answered questions on various astrophysical topics in the "Meet the Astronomers" tent.</p>
+		  <h3><b>Investing Now</b></h3>
+		  <p><a href="http://www.engineering.pitt.edu/investingnow/"><i>Investing Now</i></a> is an annual high-school outreach program at the University of Pittsburgh mainly for students from groups that were historically under-represented in science, technology, engineering and mathematics. In 2017, I was part of a team of grad students who demonstrated basic physics concepts through a series of demonstrations. I was in charge of experiments on electrostatics phenomena like attraction/repulsion, grounding, static discharge, Van-de-graff generator and the Faraday cage effect.<br></br>
+		    <h3><b>Astrosnacks</b></h3>
+		    <p>I started a weekly seminar with Sukhdeep Singh (Carnegie Mellon University) called <i>Astrosnacks</i> in 2014 where students from University of Pittsburgh and Carnegie Mellon University give research talks to a student-only audience. The goal is provide an informal setting where students can improve their scientific presentation skills through practice and feedback from their peers. Astrosnacks also features guest student speakers from other universities, review talks and various career-related lectures.</p> 
+
+		    </section>
+
+
+		</div>
+
+      <!-- Footer -->
+      <footer id="footer">
+	<p class="copyright">&copy; Sumit Sarbadhicary. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+	</footer>
+
+      </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="assets/js/main.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,660 @@
+2020-05-15 03:36:15	INFO	hifv_semiFinalBPdcals::pipeline.infrastructure.basetask::	Starting execution for stage 11
+2020-05-15 03:36:15	INFO	hifv_semiFinalBPdcals::pipeline.infrastructure.basetask::	Equivalent CASA call: hifv_semiFinalBPdcals(weakbp=False)
+2020-05-15 03:36:24	INFO	hifv_semiFinalBPdcals::pipeline.infrastructure.jobrequest::	Executing flagdata(vis='13A-213_05_15_2013_continuum.ms', mode='summary', field='1,2', flagbackup=False, savepars=False)
+2020-05-15 03:36:24	INFO	flagdata::::	
+2020-05-15 03:36:24	INFO	flagdata::::+	##########################################
+2020-05-15 03:36:24	INFO	flagdata::::+	##### Begin Task: flagdata           #####
+2020-05-15 03:36:24	INFO	flagdata::::	flagdata(vis="/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms",mode="summary",autocorr=False,inpfile="",reason="any",
+2020-05-15 03:36:24	INFO	flagdata::::+	        tbuff=0.0,spw="",field="1,2",antenna="",uvrange="",
+2020-05-15 03:36:24	INFO	flagdata::::+	        timerange="",correlation="",scan="",intent="",array="",
+2020-05-15 03:36:24	INFO	flagdata::::+	        observation="",feed="",clipminmax=[],datacolumn="DATA",clipoutside=True,
+2020-05-15 03:36:24	INFO	flagdata::::+	        channelavg=False,chanbin=1,timeavg=False,timebin="0s",clipzeros=False,
+2020-05-15 03:36:24	INFO	flagdata::::+	        quackinterval=1.0,quackmode="beg",quackincrement=False,tolerance=0.0,addantenna="",
+2020-05-15 03:36:24	INFO	flagdata::::+	        lowerlimit=0.0,upperlimit=90.0,ntime="scan",combinescans=False,timecutoff=4.0,
+2020-05-15 03:36:24	INFO	flagdata::::+	        freqcutoff=3.0,timefit="line",freqfit="poly",maxnpieces=7,flagdimension="freqtime",
+2020-05-15 03:36:24	INFO	flagdata::::+	        usewindowstats="none",halfwin=1,extendflags=True,winsize=3,timedev="",
+2020-05-15 03:36:24	INFO	flagdata::::+	        freqdev="",timedevscale=5.0,freqdevscale=5.0,spectralmax=1000000.0,spectralmin=0.0,
+2020-05-15 03:36:24	INFO	flagdata::::+	        antint_ref_antenna="",minchanfrac=0.6,verbose=False,extendpols=True,growtime=50.0,
+2020-05-15 03:36:24	INFO	flagdata::::+	        growfreq=50.0,growaround=False,flagneartime=False,flagnearfreq=False,minrel=0.0,
+2020-05-15 03:36:24	INFO	flagdata::::+	        maxrel=1.0,minabs=0,maxabs=-1,spwchan=False,spwcorr=False,
+2020-05-15 03:36:24	INFO	flagdata::::+	        basecnt=False,fieldcnt=False,name="Summary",action="apply",display="",
+2020-05-15 03:36:24	INFO	flagdata::::+	        flagbackup=False,savepars=False,cmdreason="",outfile="",overwrite=True,
+2020-05-15 03:36:24	INFO	flagdata::::+	        writeflags=True)
+2020-05-15 03:36:24	INFO	AgentFlagger::open	Table type is Measurement Set
+2020-05-15 03:36:24	INFO	flagdata::::	Summary mode is active
+2020-05-15 03:36:24	INFO	flagdata::::	Initializing the agents
+2020-05-15 03:36:24	INFO	Summary::setAgentParameters 	 display is: 
+2020-05-15 03:36:24	INFO	AgentFlagger::initAgents	There are 1 valid agents in list
+2020-05-15 03:36:24	INFO	flagdata::::	Running the agentflagger tool
+2020-05-15 03:36:25	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:25	INFO	FlagMSHandler::	Chunk = 1 [progress: 3%], Observation = 0, Array = 0, Scan = 2, Field = 1 (1331+305=3C286), Spw = 0, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 37206
+2020-05-15 03:36:25	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:25	INFO	FlagMSHandler::	Chunk = 2 [progress: 6%], Observation = 0, Array = 0, Scan = 2, Field = 1 (1331+305=3C286), Spw = 1, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 37206
+2020-05-15 03:36:25	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:25	INFO	FlagMSHandler::	Chunk = 3 [progress: 10%], Observation = 0, Array = 0, Scan = 2, Field = 1 (1331+305=3C286), Spw = 2, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 37206
+2020-05-15 03:36:26	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:26	INFO	FlagMSHandler::	Chunk = 4 [progress: 13%], Observation = 0, Array = 0, Scan = 2, Field = 1 (1331+305=3C286), Spw = 3, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 37206
+2020-05-15 03:36:26	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:26	INFO	FlagMSHandler::	Chunk = 5 [progress: 16%], Observation = 0, Array = 0, Scan = 2, Field = 1 (1331+305=3C286), Spw = 4, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 37206
+2020-05-15 03:36:26	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:26	INFO	FlagMSHandler::	Chunk = 6 [progress: 20%], Observation = 0, Array = 0, Scan = 2, Field = 1 (1331+305=3C286), Spw = 5, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 37206
+2020-05-15 03:36:27	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:27	INFO	FlagMSHandler::	Chunk = 7 [progress: 23%], Observation = 0, Array = 0, Scan = 2, Field = 1 (1331+305=3C286), Spw = 6, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 37206
+2020-05-15 03:36:27	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:27	INFO	FlagMSHandler::	Chunk = 8 [progress: 27%], Observation = 0, Array = 0, Scan = 2, Field = 1 (1331+305=3C286), Spw = 7, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 37206
+2020-05-15 03:36:28	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:28	INFO	FlagMSHandler::	Chunk = 9 [progress: 29%], Observation = 0, Array = 0, Scan = 3, Field = 1 (1331+305=3C286), Spw = 0, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 24921
+2020-05-15 03:36:28	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:28	INFO	FlagMSHandler::	Chunk = 10 [progress: 31%], Observation = 0, Array = 0, Scan = 3, Field = 1 (1331+305=3C286), Spw = 1, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 24921
+2020-05-15 03:36:28	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:28	INFO	FlagMSHandler::	Chunk = 11 [progress: 33%], Observation = 0, Array = 0, Scan = 3, Field = 1 (1331+305=3C286), Spw = 2, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 24921
+2020-05-15 03:36:28	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:28	INFO	FlagMSHandler::	Chunk = 12 [progress: 36%], Observation = 0, Array = 0, Scan = 3, Field = 1 (1331+305=3C286), Spw = 3, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 24921
+2020-05-15 03:36:29	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:29	INFO	FlagMSHandler::	Chunk = 13 [progress: 38%], Observation = 0, Array = 0, Scan = 3, Field = 1 (1331+305=3C286), Spw = 4, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 24921
+2020-05-15 03:36:29	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:29	INFO	FlagMSHandler::	Chunk = 14 [progress: 40%], Observation = 0, Array = 0, Scan = 3, Field = 1 (1331+305=3C286), Spw = 5, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 24921
+2020-05-15 03:36:29	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:29	INFO	FlagMSHandler::	Chunk = 15 [progress: 42%], Observation = 0, Array = 0, Scan = 3, Field = 1 (1331+305=3C286), Spw = 6, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 24921
+2020-05-15 03:36:29	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:29	INFO	FlagMSHandler::	Chunk = 16 [progress: 45%], Observation = 0, Array = 0, Scan = 3, Field = 1 (1331+305=3C286), Spw = 7, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 24921
+2020-05-15 03:36:30	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:30	INFO	FlagMSHandler::	Chunk = 17 [progress: 47%], Observation = 0, Array = 0, Scan = 4, Field = 2 (J1923-2104), Spw = 0, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 27027
+2020-05-15 03:36:30	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:30	INFO	FlagMSHandler::	Chunk = 18 [progress: 50%], Observation = 0, Array = 0, Scan = 4, Field = 2 (J1923-2104), Spw = 1, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 27027
+2020-05-15 03:36:30	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:30	INFO	FlagMSHandler::	Chunk = 19 [progress: 52%], Observation = 0, Array = 0, Scan = 4, Field = 2 (J1923-2104), Spw = 2, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 27027
+2020-05-15 03:36:30	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:30	INFO	FlagMSHandler::	Chunk = 20 [progress: 55%], Observation = 0, Array = 0, Scan = 4, Field = 2 (J1923-2104), Spw = 3, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 27027
+2020-05-15 03:36:31	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:31	INFO	FlagMSHandler::	Chunk = 21 [progress: 57%], Observation = 0, Array = 0, Scan = 4, Field = 2 (J1923-2104), Spw = 4, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 27027
+2020-05-15 03:36:31	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:31	INFO	FlagMSHandler::	Chunk = 22 [progress: 60%], Observation = 0, Array = 0, Scan = 4, Field = 2 (J1923-2104), Spw = 5, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 27027
+2020-05-15 03:36:31	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:31	INFO	FlagMSHandler::	Chunk = 23 [progress: 62%], Observation = 0, Array = 0, Scan = 4, Field = 2 (J1923-2104), Spw = 6, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 27027
+2020-05-15 03:36:31	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:31	INFO	FlagMSHandler::	Chunk = 24 [progress: 64%], Observation = 0, Array = 0, Scan = 4, Field = 2 (J1923-2104), Spw = 7, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 27027
+2020-05-15 03:36:32	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:32	INFO	FlagMSHandler::	Chunk = 25 [progress: 66%], Observation = 0, Array = 0, Scan = 5, Field = 2 (J1923-2104), Spw = 0, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 12285
+2020-05-15 03:36:32	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:32	INFO	FlagMSHandler::	Chunk = 26 [progress: 67%], Observation = 0, Array = 0, Scan = 5, Field = 2 (J1923-2104), Spw = 1, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 12285
+2020-05-15 03:36:32	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:32	INFO	FlagMSHandler::	Chunk = 27 [progress: 68%], Observation = 0, Array = 0, Scan = 5, Field = 2 (J1923-2104), Spw = 2, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 12285
+2020-05-15 03:36:32	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:32	INFO	FlagMSHandler::	Chunk = 28 [progress: 69%], Observation = 0, Array = 0, Scan = 5, Field = 2 (J1923-2104), Spw = 3, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 12285
+2020-05-15 03:36:32	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:32	INFO	FlagMSHandler::	Chunk = 29 [progress: 70%], Observation = 0, Array = 0, Scan = 5, Field = 2 (J1923-2104), Spw = 4, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 12285
+2020-05-15 03:36:32	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:32	INFO	FlagMSHandler::	Chunk = 30 [progress: 71%], Observation = 0, Array = 0, Scan = 5, Field = 2 (J1923-2104), Spw = 5, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 12285
+2020-05-15 03:36:32	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:32	INFO	FlagMSHandler::	Chunk = 31 [progress: 72%], Observation = 0, Array = 0, Scan = 5, Field = 2 (J1923-2104), Spw = 6, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 12285
+2020-05-15 03:36:33	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:33	INFO	FlagMSHandler::	Chunk = 32 [progress: 73%], Observation = 0, Array = 0, Scan = 5, Field = 2 (J1923-2104), Spw = 7, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 12285
+2020-05-15 03:36:33	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:33	INFO	FlagMSHandler::	Chunk = 33 [progress: 75%], Observation = 0, Array = 0, Scan = 9, Field = 2 (J1923-2104), Spw = 0, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 11934
+2020-05-15 03:36:33	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:33	INFO	FlagMSHandler::	Chunk = 34 [progress: 76%], Observation = 0, Array = 0, Scan = 9, Field = 2 (J1923-2104), Spw = 1, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 11934
+2020-05-15 03:36:33	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:33	INFO	FlagMSHandler::	Chunk = 35 [progress: 77%], Observation = 0, Array = 0, Scan = 9, Field = 2 (J1923-2104), Spw = 2, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 11934
+2020-05-15 03:36:33	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:33	INFO	FlagMSHandler::	Chunk = 36 [progress: 78%], Observation = 0, Array = 0, Scan = 9, Field = 2 (J1923-2104), Spw = 3, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 11934
+2020-05-15 03:36:33	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:33	INFO	FlagMSHandler::	Chunk = 37 [progress: 79%], Observation = 0, Array = 0, Scan = 9, Field = 2 (J1923-2104), Spw = 4, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 11934
+2020-05-15 03:36:33	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:33	INFO	FlagMSHandler::	Chunk = 38 [progress: 80%], Observation = 0, Array = 0, Scan = 9, Field = 2 (J1923-2104), Spw = 5, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 11934
+2020-05-15 03:36:33	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:33	INFO	FlagMSHandler::	Chunk = 39 [progress: 81%], Observation = 0, Array = 0, Scan = 9, Field = 2 (J1923-2104), Spw = 6, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 11934
+2020-05-15 03:36:34	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:34	INFO	FlagMSHandler::	Chunk = 40 [progress: 82%], Observation = 0, Array = 0, Scan = 9, Field = 2 (J1923-2104), Spw = 7, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 11934
+2020-05-15 03:36:34	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:34	INFO	FlagMSHandler::	Chunk = 41 [progress: 83%], Observation = 0, Array = 0, Scan = 13, Field = 2 (J1923-2104), Spw = 0, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 11934
+2020-05-15 03:36:34	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:34	INFO	FlagMSHandler::	Chunk = 42 [progress: 84%], Observation = 0, Array = 0, Scan = 13, Field = 2 (J1923-2104), Spw = 1, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 11934
+2020-05-15 03:36:34	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:34	INFO	FlagMSHandler::	Chunk = 43 [progress: 85%], Observation = 0, Array = 0, Scan = 13, Field = 2 (J1923-2104), Spw = 2, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 11934
+2020-05-15 03:36:34	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:34	INFO	FlagMSHandler::	Chunk = 44 [progress: 86%], Observation = 0, Array = 0, Scan = 13, Field = 2 (J1923-2104), Spw = 3, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 11934
+2020-05-15 03:36:34	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:34	INFO	FlagMSHandler::	Chunk = 45 [progress: 88%], Observation = 0, Array = 0, Scan = 13, Field = 2 (J1923-2104), Spw = 4, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 11934
+2020-05-15 03:36:34	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:34	INFO	FlagMSHandler::	Chunk = 46 [progress: 89%], Observation = 0, Array = 0, Scan = 13, Field = 2 (J1923-2104), Spw = 5, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 11934
+2020-05-15 03:36:34	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:34	INFO	FlagMSHandler::	Chunk = 47 [progress: 90%], Observation = 0, Array = 0, Scan = 13, Field = 2 (J1923-2104), Spw = 6, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 11934
+2020-05-15 03:36:35	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:35	INFO	FlagMSHandler::	Chunk = 48 [progress: 91%], Observation = 0, Array = 0, Scan = 13, Field = 2 (J1923-2104), Spw = 7, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 11934
+2020-05-15 03:36:35	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:35	INFO	FlagMSHandler::	Chunk = 49 [progress: 92%], Observation = 0, Array = 0, Scan = 17, Field = 2 (J1923-2104), Spw = 0, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 11934
+2020-05-15 03:36:35	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:35	INFO	FlagMSHandler::	Chunk = 50 [progress: 93%], Observation = 0, Array = 0, Scan = 17, Field = 2 (J1923-2104), Spw = 1, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 11934
+2020-05-15 03:36:35	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:35	INFO	FlagMSHandler::	Chunk = 51 [progress: 94%], Observation = 0, Array = 0, Scan = 17, Field = 2 (J1923-2104), Spw = 2, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 11934
+2020-05-15 03:36:35	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:35	INFO	FlagMSHandler::	Chunk = 52 [progress: 95%], Observation = 0, Array = 0, Scan = 17, Field = 2 (J1923-2104), Spw = 3, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 11934
+2020-05-15 03:36:35	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:35	INFO	FlagMSHandler::	Chunk = 53 [progress: 96%], Observation = 0, Array = 0, Scan = 17, Field = 2 (J1923-2104), Spw = 4, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 11934
+2020-05-15 03:36:35	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:35	INFO	FlagMSHandler::	Chunk = 54 [progress: 97%], Observation = 0, Array = 0, Scan = 17, Field = 2 (J1923-2104), Spw = 5, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 11934
+2020-05-15 03:36:35	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:35	INFO	FlagMSHandler::	Chunk = 55 [progress: 98%], Observation = 0, Array = 0, Scan = 17, Field = 2 (J1923-2104), Spw = 6, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 11934
+2020-05-15 03:36:35	INFO	FlagMSHandler::	------------------------------------------------------------------------------------ 
+2020-05-15 03:36:35	INFO	FlagMSHandler::	Chunk = 56 [progress: 100%], Observation = 0, Array = 0, Scan = 17, Field = 2 (J1923-2104), Spw = 7, Channels = 128, Corrs = [ RR RL LR LL ], Total Rows = 11934
+2020-05-15 03:36:36	INFO	FlagMSHandler::nextChunk 	==================================================================================== 
+2020-05-15 03:36:36	INFO	Summary::getResult 	 antenna ea01 flagged: 1.9913e+07 total: 4.16399e+07 (47.8%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 antenna ea02 flagged: 2.05014e+07 total: 4.16399e+07 (49.2%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 antenna ea03 flagged: 2.13356e+07 total: 4.16399e+07 (51.2%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 antenna ea04 flagged: 2.05101e+07 total: 4.16399e+07 (49.3%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 antenna ea05 flagged: 2.10258e+07 total: 4.16399e+07 (50.5%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 antenna ea06 flagged: 2.05631e+07 total: 4.16399e+07 (49.4%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 antenna ea07 flagged: 2.15203e+07 total: 4.16399e+07 (51.7%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 antenna ea08 flagged: 2.00262e+07 total: 4.16399e+07 (48.1%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 antenna ea09 flagged: 3.20932e+07 total: 4.16399e+07 (77.1%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 antenna ea10 flagged: 2.08965e+07 total: 4.16399e+07 (50.2%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 antenna ea11 flagged: 2.09038e+07 total: 4.16399e+07 (50.2%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 antenna ea12 flagged: 2.04969e+07 total: 4.16399e+07 (49.2%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 antenna ea13 flagged: 2.09112e+07 total: 4.16399e+07 (50.2%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 antenna ea14 flagged: 2.1225e+07 total: 4.16399e+07 (51%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 antenna ea15 flagged: 2.0957e+07 total: 4.16399e+07 (50.3%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 antenna ea16 flagged: 2.05032e+07 total: 4.16399e+07 (49.2%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 antenna ea17 flagged: 2.10609e+07 total: 4.16399e+07 (50.6%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 antenna ea18 flagged: 2.00031e+07 total: 4.16399e+07 (48%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 antenna ea19 flagged: 2.33561e+07 total: 4.16399e+07 (56.1%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 antenna ea21 flagged: 2.03507e+07 total: 4.16399e+07 (48.9%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 antenna ea22 flagged: 2.1026e+07 total: 4.16399e+07 (50.5%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 antenna ea23 flagged: 2.01647e+07 total: 4.16399e+07 (48.4%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 antenna ea24 flagged: 2.08927e+07 total: 4.16399e+07 (50.2%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 antenna ea25 flagged: 3.71952e+07 total: 4.16399e+07 (89.3%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 antenna ea26 flagged: 2.08828e+07 total: 4.16399e+07 (50.2%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 antenna ea27 flagged: 1.99047e+07 total: 4.16399e+07 (47.8%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 antenna ea28 flagged: 2.12159e+07 total: 4.16399e+07 (51%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 array 0 flagged: 2.94718e+08 total: 5.62139e+08 (52.4%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 correlation LL flagged: 7.67969e+07 total: 1.40535e+08 (54.6%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 correlation LR flagged: 6.91469e+07 total: 1.40535e+08 (49.2%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 correlation RL flagged: 7.09624e+07 total: 1.40535e+08 (50.5%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 correlation RR flagged: 7.78113e+07 total: 1.40535e+08 (55.4%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 field 1331+305=3C286 flagged: 1.27685e+08 total: 2.54472e+08 (50.2%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 field J1923-2104 flagged: 1.67032e+08 total: 3.07667e+08 (54.3%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 observation 0 flagged: 2.94718e+08 total: 5.62139e+08 (52.4%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 scan 13 flagged: 1.75738e+07 total: 4.88817e+07 (36%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 scan 17 flagged: 1.91755e+07 total: 4.88817e+07 (39.2%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 scan 2 flagged: 1.02492e+08 total: 1.52396e+08 (67.3%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 scan 3 flagged: 2.51937e+07 total: 1.02076e+08 (24.7%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 scan 4 flagged: 9.74708e+07 total: 1.10703e+08 (88%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 scan 5 flagged: 1.53431e+07 total: 5.03194e+07 (30.5%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 scan 9 flagged: 1.74689e+07 total: 4.88817e+07 (35.7%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 spw 0 flagged: 4.21813e+07 total: 7.02674e+07 (60%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 spw 1 flagged: 3.59528e+07 total: 7.02674e+07 (51.2%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 spw 2 flagged: 3.65795e+07 total: 7.02674e+07 (52.1%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 spw 3 flagged: 3.1716e+07 total: 7.02674e+07 (45.1%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 spw 4 flagged: 4.28938e+07 total: 7.02674e+07 (61%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 spw 5 flagged: 3.3439e+07 total: 7.02674e+07 (47.6%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 spw 6 flagged: 3.16858e+07 total: 7.02674e+07 (45.1%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 spw 7 flagged: 4.02696e+07 total: 7.02674e+07 (57.3%)
+2020-05-15 03:36:36	INFO	Summary::getResult 	 Total Flagged: 2.94718e+08 Total Counts: 5.62139e+08 (52.4%)
+2020-05-15 03:36:36	INFO	flagdata::::	Flags are not written to the MS. (action='calculate')
+2020-05-15 03:36:36	INFO	flagdata::::	##### End Task: flagdata             #####
+2020-05-15 03:36:36	INFO	flagdata::::+	##########################################
+2020-05-15 03:36:36	INFO	pipeline.hif.heuristics.findrefant::pipeline.hif.heuristics.findrefant::	Get good antennas {'ea23': 21475223.0, 'ea15': 20682896.0, 'ea14': 20414886.0, 'ea17': 20579011.0, 'ea16': 21136715.0, 'ea11': 20736093.0, 'ea10': 20743455.0, 'ea13': 20728768.0, 'ea12': 21142998.0, 'ea19': 18283862.0, 'ea18': 21636807.0, 'ea24': 20747248.0, 'ea25': 4444721.0, 'ea01': 21726942.0, 'ea21': 21289246.0, 'ea08': 21613746.0, 'ea09': 9546753.0, 'ea28': 20424027.0, 'ea22': 20613922.0, 'ea02': 21138522.0, 'ea03': 20304313.0, 'ea26': 20757137.0, 'ea27': 21735267.0, 'ea06': 21076849.0, 'ea07': 20119624.0, 'ea04': 21129882.0, 'ea05': 20614179.0}
+2020-05-15 03:36:36	INFO	pipeline.hif.heuristics.findrefant::pipeline.hif.heuristics.findrefant::	Get good antenna score {'ea15': 25.692722891326802, 'ea14': 25.359795304101855, 'ea17': 25.563674787155826, 'ea16': 26.256466276673756, 'ea11': 25.758805309361968, 'ea10': 25.767950538633826, 'ea13': 25.749706042258417, 'ea12': 26.264271149740189, 'ea19': 22.712593040609992, 'ea18': 26.877690943479095, 'ea05': 25.60736120701899, 'ea24': 25.77266228199543, 'ea25': 5.5213247207867289, 'ea27': 27.0, 'ea07': 24.993014716589403, 'ea08': 26.84904409041766, 'ea09': 11.859174814829743, 'ea28': 25.371150444114626, 'ea04': 26.247978182186582, 'ea02': 26.258710969596095, 'ea03': 25.222439227454625, 'ea26': 25.784946603140416, 'ea01': 26.989658512131459, 'ea06': 26.182099488356872, 'ea21': 26.445943452178433, 'ea22': 25.607041956282384, 'ea23': 26.676967943388963}
+2020-05-15 03:36:36	INFO	pipeline.hif.heuristics.findrefant::pipeline.hif.heuristics.findrefant::	Antenna ea01 flagging score 26.9896585121 total score 36.2022302202
+2020-05-15 03:36:36	INFO	pipeline.hif.heuristics.findrefant::pipeline.hif.heuristics.findrefant::	Antenna ea02 flagging score 26.2587109696 total score 48.5276921942
+2020-05-15 03:36:36	INFO	pipeline.hif.heuristics.findrefant::pipeline.hif.heuristics.findrefant::	Antenna ea03 flagging score 25.2224392275 total score 41.9181274572
+2020-05-15 03:36:36	INFO	pipeline.hif.heuristics.findrefant::pipeline.hif.heuristics.findrefant::	Antenna ea04 flagging score 26.2479781822 total score 48.5330801166
+2020-05-15 03:36:36	INFO	pipeline.hif.heuristics.findrefant::pipeline.hif.heuristics.findrefant::	Antenna ea05 flagging score 25.607361207 total score 46.2180212907
+2020-05-15 03:36:36	INFO	pipeline.hif.heuristics.findrefant::pipeline.hif.heuristics.findrefant::	Antenna ea06 flagging score 26.1820994884 total score 39.3615252621
+2020-05-15 03:36:36	INFO	pipeline.hif.heuristics.findrefant::pipeline.hif.heuristics.findrefant::	Antenna ea07 flagging score 24.9930147166 total score 50.2012690595
+2020-05-15 03:36:36	INFO	pipeline.hif.heuristics.findrefant::pipeline.hif.heuristics.findrefant::	Antenna ea08 flagging score 26.8490440904 total score 31.6620820448
+2020-05-15 03:36:36	INFO	pipeline.hif.heuristics.findrefant::pipeline.hif.heuristics.findrefant::	Antenna ea09 flagging score 11.8591748148 total score 38.2295993773
+2020-05-15 03:36:36	INFO	pipeline.hif.heuristics.findrefant::pipeline.hif.heuristics.findrefant::	Antenna ea10 flagging score 25.7679505386 total score 50.1959679603
+2020-05-15 03:36:36	INFO	pipeline.hif.heuristics.findrefant::pipeline.hif.heuristics.findrefant::	Antenna ea11 flagging score 25.7588053094 total score 49.1924735694
+2020-05-15 03:36:36	INFO	pipeline.hif.heuristics.findrefant::pipeline.hif.heuristics.findrefant::	Antenna ea12 flagging score 26.2642711497 total score 45.7485053949
+2020-05-15 03:36:36	INFO	pipeline.hif.heuristics.findrefant::pipeline.hif.heuristics.findrefant::	Antenna ea13 flagging score 25.7497060423 total score 52.3722839632
+2020-05-15 03:36:36	INFO	pipeline.hif.heuristics.findrefant::pipeline.hif.heuristics.findrefant::	Antenna ea14 flagging score 25.3597953041 total score 51.563472702
+2020-05-15 03:36:36	INFO	pipeline.hif.heuristics.findrefant::pipeline.hif.heuristics.findrefant::	Antenna ea15 flagging score 25.6927228913 total score 51.4338953662
+2020-05-15 03:36:36	INFO	pipeline.hif.heuristics.findrefant::pipeline.hif.heuristics.findrefant::	Antenna ea16 flagging score 26.2564662767 total score 45.9940697114
+2020-05-15 03:36:36	INFO	pipeline.hif.heuristics.findrefant::pipeline.hif.heuristics.findrefant::	Antenna ea17 flagging score 25.5636747872 total score 49.0104845678
+2020-05-15 03:36:36	INFO	pipeline.hif.heuristics.findrefant::pipeline.hif.heuristics.findrefant::	Antenna ea18 flagging score 26.8776909435 total score 44.7421263757
+2020-05-15 03:36:36	INFO	pipeline.hif.heuristics.findrefant::pipeline.hif.heuristics.findrefant::	Antenna ea19 flagging score 22.7125930406 total score 44.8079816023
+2020-05-15 03:36:36	INFO	pipeline.hif.heuristics.findrefant::pipeline.hif.heuristics.findrefant::	Antenna ea21 flagging score 26.4459434522 total score 47.4055211809
+2020-05-15 03:36:36	INFO	pipeline.hif.heuristics.findrefant::pipeline.hif.heuristics.findrefant::	Antenna ea22 flagging score 25.6070419563 total score 50.9626759331
+2020-05-15 03:36:36	INFO	pipeline.hif.heuristics.findrefant::pipeline.hif.heuristics.findrefant::	Antenna ea23 flagging score 26.6769679434 total score 45.6625747566
+2020-05-15 03:36:36	INFO	pipeline.hif.heuristics.findrefant::pipeline.hif.heuristics.findrefant::	Antenna ea24 flagging score 25.772662282 total score 51.4098811675
+2020-05-15 03:36:36	INFO	pipeline.hif.heuristics.findrefant::pipeline.hif.heuristics.findrefant::	Antenna ea25 flagging score 5.52132472079 total score 30.1384584728
+2020-05-15 03:36:36	INFO	pipeline.hif.heuristics.findrefant::pipeline.hif.heuristics.findrefant::	Antenna ea26 flagging score 25.7849466031 total score 52.2236235177
+2020-05-15 03:36:36	INFO	pipeline.hif.heuristics.findrefant::pipeline.hif.heuristics.findrefant::	Antenna ea27 flagging score 27.0 total score 27.0
+2020-05-15 03:36:36	INFO	pipeline.hif.heuristics.findrefant::pipeline.hif.heuristics.findrefant::	Antenna ea28 flagging score 25.3711504441 total score 49.5808637758
+2020-05-15 03:36:36	INFO	pipeline.infrastructure.callibrary::pipeline.infrastructure.callibrary::	Consolidating calibrations for 13A-213_05_15_2013_continuum.ms
+2020-05-15 03:36:36	INFO	pipeline.infrastructure.jobrequest::pipeline.infrastructure.jobrequest::	Executing gaincal(vis='13A-213_05_15_2013_continuum.ms', caltable='13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_1.semiFinaldelayinitialgain.tbl', field='1', spw='0:42~86,1:42~86,2:42~86,3:42~86,4:42~86,5:42~86,6:42~86,7:42~86', selectdata=True, scan='2,3', solint='int', combine='scan', preavg=-1.0, refant='ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea04,ea02,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea25,ea27', minblperant=4, minsnr=3.0, solnorm=False, gaintype='G', smodel=[], calmode='p', append=False, docallib=False, gaintable=['13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl', '13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl', '13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl', '13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl'], gainfield=[''], interp=[''], spwmap=[], parang=True)
+2020-05-15 03:36:36	INFO	gaincal::::	
+2020-05-15 03:36:36	INFO	gaincal::::+	##########################################
+2020-05-15 03:36:36	INFO	gaincal::::+	##### Begin Task: gaincal            #####
+2020-05-15 03:36:36	INFO	gaincal::::	gaincal(vis="/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms",caltable="13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_1.semiFinaldelayinitialgain.tbl",field="1",spw="0:42~86,1:42~86,2:42~86,3:42~86,4:42~86,5:42~86,6:42~86,7:42~86",intent="",
+2020-05-15 03:36:36	INFO	gaincal::::+	        selectdata=True,timerange="",uvrange="",antenna="",scan="2,3",
+2020-05-15 03:36:36	INFO	gaincal::::+	        observation="",msselect="",solint="int",combine="scan",preavg=-1.0,
+2020-05-15 03:36:36	INFO	gaincal::::+	        refant="ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea04,ea02,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea25,ea27",refantmode="flex",minblperant=4,minsnr=3.0,solnorm=False,
+2020-05-15 03:36:36	INFO	gaincal::::+	        normtype="mean",gaintype="G",smodel=[],calmode="p",solmode="",
+2020-05-15 03:36:36	INFO	gaincal::::+	        rmsthresh=[],append=False,splinetime=3600.0,npointaver=3,phasewrap=180.0,
+2020-05-15 03:36:36	INFO	gaincal::::+	        docallib=False,callib="",gaintable=['/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl', '/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl', '/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl', '/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl'],gainfield=[''],interp=[''],
+2020-05-15 03:36:36	INFO	gaincal::::+	        spwmap=[],parang=True)
+2020-05-15 03:36:36	INFO	gaincal::calibrater::open	****Using NEW VI2-driven calibrater tool****
+2020-05-15 03:36:36	INFO	gaincal::calibrater::open	Opening MS: /mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms for calibration.
+2020-05-15 03:36:36	INFO	gaincal::Calibrater::	Initializing nominal selection to the whole MS.
+2020-05-15 03:36:36	INFO	gaincal::::	NB: gaincal automatically excludes auto-correlations.
+2020-05-15 03:36:36	INFO	calibrater::setdata	Beginning selectvis--(MSSelection version)-------
+2020-05-15 03:36:36	INFO	calibrater::reset	Reseting solve/apply state
+2020-05-15 03:36:36	INFO	Calibrater::selectvis	Performing selection on MeasurementSet
+2020-05-15 03:36:36	INFO	Calibrater::selectvis+	 Selecting on spw: '0:42~86,1:42~86,2:42~86,3:42~86,4:42~86,5:42~86,6:42~86,7:42~86'
+2020-05-15 03:36:36	INFO	Calibrater::selectvis+	 Selecting on scan: '2,3'
+2020-05-15 03:36:36	INFO	Calibrater::selectvis+	 Selecting on field: '1'
+2020-05-15 03:36:36	INFO	Calibrater::selectvis+	 Selecting with TaQL: 'ANTENNA1!=ANTENNA2'
+2020-05-15 03:36:36	INFO	Calibrater::selectvis	By selection 3967704 rows are reduced to 497016
+2020-05-15 03:36:36	INFO	Calibrater::selectvis	Frequency selection: 
+2020-05-15 03:36:36	INFO	Calibrater::selectvis	.  Spw 0:42~86 (45 channels, step by 1)
+2020-05-15 03:36:36	INFO	Calibrater::selectvis+	.  Spw 1:42~86 (45 channels, step by 1)
+2020-05-15 03:36:36	INFO	Calibrater::selectvis+	.  Spw 2:42~86 (45 channels, step by 1)
+2020-05-15 03:36:36	INFO	Calibrater::selectvis+	.  Spw 3:42~86 (45 channels, step by 1)
+2020-05-15 03:36:36	INFO	Calibrater::selectvis+	.  Spw 4:42~86 (45 channels, step by 1)
+2020-05-15 03:36:36	INFO	Calibrater::selectvis+	.  Spw 5:42~86 (45 channels, step by 1)
+2020-05-15 03:36:36	INFO	Calibrater::selectvis+	.  Spw 6:42~86 (45 channels, step by 1)
+2020-05-15 03:36:36	INFO	Calibrater::selectvis+	.  Spw 7:42~86 (45 channels, step by 1)
+2020-05-15 03:36:36	INFO	calibrater::setdata	chanmode=none nchan=1 start=0 step=1 mStart='0km/s' mStep='0km/s' msSelect='ANTENNA1!=ANTENNA2'
+2020-05-15 03:36:36	INFO	calibrater::setapply	Beginning setapply--(MSSelection version)-------
+2020-05-15 03:36:36	INFO	Calibrater::setapply(type, applypar)	Arranging to APPLY:
+2020-05-15 03:36:36	INFO	Calibrater::setapply(type, applypar)	.   EGainCurve: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl select= interp=linear spwmap=[-1] calWt=true
+2020-05-15 03:36:36	INFO	calibrater::setapply	Beginning setapply--(MSSelection version)-------
+2020-05-15 03:36:36	INFO	Calibrater::setapply(type, applypar)	Arranging to APPLY:
+2020-05-15 03:36:36	INFO	Calibrater::setapply(type, applypar)	.   TOpac: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl select= interp=linear spwmap=[-1] calWt=true
+2020-05-15 03:36:36	INFO	calibrater::setapply	Beginning setapply--(MSSelection version)-------
+2020-05-15 03:36:36	INFO	Calibrater::setapply(type, applypar)	Arranging to APPLY:
+2020-05-15 03:36:47	INFO	Calibrater::setapply(type, applypar)	.   G EVLASWPOW: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl select= interp=linear spwmap=[-1] calWt=true
+2020-05-15 03:36:47	INFO	calibrater::setapply	Beginning setapply--(MSSelection version)-------
+2020-05-15 03:36:47	INFO	Calibrater::setapply(type, applypar)	Arranging to APPLY:
+2020-05-15 03:36:47	INFO		 (KAntPos Jones: Overriding with spwmap=[0] since KAntPos Jones is not spw-dependent)
+2020-05-15 03:36:47	INFO		 (KAntPos Jones: Enforcing calWt()=false for phase/delay-like terms)
+2020-05-15 03:36:47	INFO		No VLATrDelCorr keyword in the antpos caltable; turning trop delay correction OFF.
+2020-05-15 03:36:47	INFO	Calibrater::setapply(type, applypar)	.   KAntPos Jones: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl select= interp=linear spwmap=[0] calWt=false
+2020-05-15 03:36:47	INFO	calibrater::setapply	Beginning setapply--(MSSelection version)-------
+2020-05-15 03:36:47	INFO	Calibrater::setapply(type, applypar)	Arranging to APPLY:
+2020-05-15 03:36:47	INFO	Calibrater::setapply(type, applypar)	.   P Jones <pre-computed>
+2020-05-15 03:36:47	INFO	calibrater::setsolve	Beginning setsolve--(MSSelection version)-------
+2020-05-15 03:36:47	INFO	Calibrater::setsolve	Arranging to SOLVE:
+2020-05-15 03:36:47	INFO	Calibrater::setsolve	.   G Jones: table=13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_1.semiFinaldelayinitialgain.tbl append=false solint=int refantmode='flex' refant='ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea04,ea02,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea25,ea27' minsnr=3 apmode=P solnorm=false
+2020-05-15 03:36:47	INFO	calibrater::solve	Beginning solve-----------------------------
+2020-05-15 03:36:47	INFO	Calibrater::solve	The following calibration terms are arranged for apply:
+2020-05-15 03:36:47	INFO	Calibrater::solve	.   KAntPos Jones: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl select= interp=linear spwmap=[0] calWt=false
+2020-05-15 03:36:47	INFO	Calibrater::solve	.   G EVLASWPOW: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl select= interp=linear spwmap=[-1] calWt=true
+2020-05-15 03:36:47	INFO	Calibrater::solve	.   P Jones <pre-computed>
+2020-05-15 03:36:47	INFO	Calibrater::solve	.   EGainCurve: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl select= interp=linear spwmap=[-1] calWt=true
+2020-05-15 03:36:47	INFO	Calibrater::solve	.   TOpac: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl select= interp=linear spwmap=[-1] calWt=true
+2020-05-15 03:36:47	INFO	Calibrater::solve	The following calibration term is arranged for solve:
+2020-05-15 03:36:47	INFO	Calibrater::solve	.   G Jones: table=13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_1.semiFinaldelayinitialgain.tbl append=false solint=int refantmode='flex' refant='ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea04,ea02,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea25,ea27' minsnr=3 apmode=P solnorm=false
+2020-05-15 03:36:47	INFO	ChannelAverageTVI::parseConfiguration	Channel bin is [-1, -1, -1, -1, -1, -1, -1, -1]
+2020-05-15 03:36:47	INFO	Calibrater::solve	For solint = int, found 1416 solution intervals.
+2020-05-15 03:37:09	INFO	Calibrater::solve	  Found good G Jones solutions in 954 solution intervals.
+2020-05-15 03:37:09	INFO		Applying refant: ea13 (ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea04,ea02,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea25,ea27) refantmode = flex (hold alternate refants' phase constant) when refant flagged
+2020-05-15 03:37:09	INFO		At 2013/05/15/09:13:17.5 (Spw=0, Fld=1), using refant ea11 (id=10) (alternate)
+2020-05-15 03:37:09	INFO		At 2013/05/15/09:13:17.5 (Spw=1, Fld=1), using refant ea11 (id=10) (alternate)
+2020-05-15 03:37:09	INFO		At 2013/05/15/09:13:17.5 (Spw=2, Fld=1), using refant ea11 (id=10) (alternate)
+2020-05-15 03:37:09	INFO		At 2013/05/15/09:13:17.5 (Spw=3, Fld=1), using refant ea11 (id=10) (alternate)
+2020-05-15 03:37:09	INFO		At 2013/05/15/09:13:22.5 (Spw=4, Fld=1), using refant ea24 (id=22) (alternate)
+2020-05-15 03:37:09	INFO		At 2013/05/15/09:19:17.5 (Spw=4, Fld=1), using refant ea26 (id=24) (alternate)
+2020-05-15 03:37:09	INFO		At 2013/05/15/09:19:32.5 (Spw=4, Fld=1), using refant ea26 (id=24) (alternate)
+2020-05-15 03:37:09	INFO		At 2013/05/15/09:19:47.5 (Spw=4, Fld=1), using refant ea14 (id=13) (alternate)
+2020-05-15 03:37:09	INFO		At 2013/05/15/09:20:07.5 (Spw=4, Fld=1), using refant ea15 (id=14) (alternate)
+2020-05-15 03:37:09	INFO		At 2013/05/15/09:20:37.5 (Spw=4, Fld=1), using refant ea14 (id=13) (alternate)
+2020-05-15 03:37:09	INFO		At 2013/05/15/09:20:52.5 (Spw=4, Fld=1), using refant ea26 (id=24) (alternate)
+2020-05-15 03:37:09	INFO		At 2013/05/15/09:21:27.5 (Spw=4, Fld=1), using refant ea26 (id=24) (alternate)
+2020-05-15 03:37:09	INFO		At 2013/05/15/09:23:02.5 (Spw=4, Fld=1), using refant ea26 (id=24) (alternate)
+2020-05-15 03:37:09	INFO		At 2013/05/15/09:13:17.5 (Spw=5, Fld=1), using refant ea11 (id=10) (alternate)
+2020-05-15 03:37:09	INFO		At 2013/05/15/09:13:17.5 (Spw=6, Fld=1), using refant ea11 (id=10) (alternate)
+2020-05-15 03:37:09	INFO		At 2013/05/15/09:13:17.5 (Spw=7, Fld=1), using refant ea11 (id=10) (alternate)
+2020-05-15 03:37:09	INFO		 NB: An alternate refant was used at least once to maintain
+2020-05-15 03:37:09	INFO	+	  phase continuity where the user's preferred refant drops out.
+2020-05-15 03:37:09	INFO	+	  Alternate refants are held constant in phase (_not_ zeroed)
+2020-05-15 03:37:09	INFO	+	  during these periods, and the preferred refant may return at
+2020-05-15 03:37:09	INFO	+	  a non-zero phase.  This is generally harmless.
+2020-05-15 03:37:09	INFO		Enforcing apmode on solutions.
+2020-05-15 03:37:22	INFO		Writing solutions to table: 13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_1.semiFinaldelayinitialgain.tbl
+2020-05-15 03:37:23	INFO	calibrater::solve	Finished solving.
+2020-05-15 03:37:23	INFO	gaincal::::	Calibration solve statistics per spw:  (expected/attempted/succeeded):
+2020-05-15 03:37:23	INFO	gaincal::::	  Spw 0: 177/120/120
+2020-05-15 03:37:23	INFO	gaincal::::	  Spw 1: 177/120/120
+2020-05-15 03:37:23	INFO	gaincal::::	  Spw 2: 177/120/120
+2020-05-15 03:37:23	INFO	gaincal::::	  Spw 3: 177/120/120
+2020-05-15 03:37:23	INFO	gaincal::::	  Spw 4: 177/116/114
+2020-05-15 03:37:23	INFO	gaincal::::	  Spw 5: 177/120/120
+2020-05-15 03:37:23	INFO	gaincal::::	  Spw 6: 177/120/120
+2020-05-15 03:37:23	INFO	gaincal::::	  Spw 7: 177/120/120
+2020-05-15 03:37:24	INFO	gaincal::::	##### End Task: gaincal              #####
+2020-05-15 03:37:24	INFO	gaincal::::+	##########################################
+2020-05-15 03:37:24	INFO	pipeline.infrastructure.callibrary::pipeline.infrastructure.callibrary::	Consolidating calibrations for 13A-213_05_15_2013_continuum.ms
+2020-05-15 03:37:24	INFO	pipeline.infrastructure.jobrequest::pipeline.infrastructure.jobrequest::	Executing gaincal(vis='13A-213_05_15_2013_continuum.ms', caltable='13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_2.delay.tbl', field='1', selectdata=True, scan='2,3', solint='inf', combine='scan', preavg=-1.0, refant='ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea04,ea02,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea25,ea27', minblperant=4, minsnr=3.0, solnorm=False, gaintype='K', smodel=[], calmode='p', append=False, docallib=False, gaintable=['13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl', '13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl', '13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl', '13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl', '13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_1.semiFinaldelayinitialgain.tbl'], gainfield=[''], interp=[''], spwmap=[], parang=True)
+2020-05-15 03:37:24	INFO	gaincal::::	
+2020-05-15 03:37:24	INFO	gaincal::::+	##########################################
+2020-05-15 03:37:24	INFO	gaincal::::+	##### Begin Task: gaincal            #####
+2020-05-15 03:37:24	INFO	gaincal::::	gaincal(vis="/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms",caltable="13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_2.delay.tbl",field="1",spw="",intent="",
+2020-05-15 03:37:24	INFO	gaincal::::+	        selectdata=True,timerange="",uvrange="",antenna="",scan="2,3",
+2020-05-15 03:37:24	INFO	gaincal::::+	        observation="",msselect="",solint="inf",combine="scan",preavg=-1.0,
+2020-05-15 03:37:24	INFO	gaincal::::+	        refant="ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea04,ea02,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea25,ea27",refantmode="flex",minblperant=4,minsnr=3.0,solnorm=False,
+2020-05-15 03:37:24	INFO	gaincal::::+	        normtype="mean",gaintype="K",smodel=[],calmode="p",solmode="",
+2020-05-15 03:37:24	INFO	gaincal::::+	        rmsthresh=[],append=False,splinetime=3600.0,npointaver=3,phasewrap=180.0,
+2020-05-15 03:37:24	INFO	gaincal::::+	        docallib=False,callib="",gaintable=['/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl', '/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl', '/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl', '/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl', '13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_1.semiFinaldelayinitialgain.tbl'],gainfield=[''],interp=[''],
+2020-05-15 03:37:24	INFO	gaincal::::+	        spwmap=[],parang=True)
+2020-05-15 03:37:24	INFO	gaincal::calibrater::open	****Using NEW VI2-driven calibrater tool****
+2020-05-15 03:37:24	INFO	gaincal::calibrater::open	Opening MS: /mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms for calibration.
+2020-05-15 03:37:24	INFO	gaincal::Calibrater::	Initializing nominal selection to the whole MS.
+2020-05-15 03:37:24	INFO	gaincal::::	NB: gaincal automatically excludes auto-correlations.
+2020-05-15 03:37:24	INFO	calibrater::setdata	Beginning selectvis--(MSSelection version)-------
+2020-05-15 03:37:24	INFO	calibrater::reset	Reseting solve/apply state
+2020-05-15 03:37:24	INFO	Calibrater::selectvis	Performing selection on MeasurementSet
+2020-05-15 03:37:24	INFO	Calibrater::selectvis+	 Selecting on scan: '2,3'
+2020-05-15 03:37:24	INFO	Calibrater::selectvis+	 Selecting on field: '1'
+2020-05-15 03:37:24	INFO	Calibrater::selectvis+	 Selecting with TaQL: 'ANTENNA1!=ANTENNA2'
+2020-05-15 03:37:25	INFO	Calibrater::selectvis	By selection 3967704 rows are reduced to 497016
+2020-05-15 03:37:25	INFO	Calibrater::selectvis	Frequency selection: Selecting all channels in all spws.
+2020-05-15 03:37:25	INFO	calibrater::setdata	chanmode=none nchan=1 start=0 step=1 mStart='0km/s' mStep='0km/s' msSelect='ANTENNA1!=ANTENNA2'
+2020-05-15 03:37:25	INFO	calibrater::setapply	Beginning setapply--(MSSelection version)-------
+2020-05-15 03:37:25	INFO	Calibrater::setapply(type, applypar)	Arranging to APPLY:
+2020-05-15 03:37:25	INFO	Calibrater::setapply(type, applypar)	.   EGainCurve: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl select= interp=linear spwmap=[-1] calWt=true
+2020-05-15 03:37:25	INFO	calibrater::setapply	Beginning setapply--(MSSelection version)-------
+2020-05-15 03:37:25	INFO	Calibrater::setapply(type, applypar)	Arranging to APPLY:
+2020-05-15 03:37:25	INFO	Calibrater::setapply(type, applypar)	.   TOpac: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl select= interp=linear spwmap=[-1] calWt=true
+2020-05-15 03:37:25	INFO	calibrater::setapply	Beginning setapply--(MSSelection version)-------
+2020-05-15 03:37:25	INFO	Calibrater::setapply(type, applypar)	Arranging to APPLY:
+2020-05-15 03:37:35	INFO	Calibrater::setapply(type, applypar)	.   G EVLASWPOW: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl select= interp=linear spwmap=[-1] calWt=true
+2020-05-15 03:37:35	INFO	calibrater::setapply	Beginning setapply--(MSSelection version)-------
+2020-05-15 03:37:35	INFO	Calibrater::setapply(type, applypar)	Arranging to APPLY:
+2020-05-15 03:37:35	INFO		 (KAntPos Jones: Overriding with spwmap=[0] since KAntPos Jones is not spw-dependent)
+2020-05-15 03:37:35	INFO		 (KAntPos Jones: Enforcing calWt()=false for phase/delay-like terms)
+2020-05-15 03:37:35	INFO		No VLATrDelCorr keyword in the antpos caltable; turning trop delay correction OFF.
+2020-05-15 03:37:35	INFO	Calibrater::setapply(type, applypar)	.   KAntPos Jones: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl select= interp=linear spwmap=[0] calWt=false
+2020-05-15 03:37:35	INFO	calibrater::setapply	Beginning setapply--(MSSelection version)-------
+2020-05-15 03:37:35	INFO	Calibrater::setapply(type, applypar)	Arranging to APPLY:
+2020-05-15 03:37:36	INFO	Calibrater::setapply(type, applypar)	.   G Jones: table=13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_1.semiFinaldelayinitialgain.tbl select= interp=linear spwmap=[-1] calWt=true
+2020-05-15 03:37:36	INFO	calibrater::setapply	Beginning setapply--(MSSelection version)-------
+2020-05-15 03:37:36	INFO	Calibrater::setapply(type, applypar)	Arranging to APPLY:
+2020-05-15 03:37:36	INFO	Calibrater::setapply(type, applypar)	.   P Jones <pre-computed>
+2020-05-15 03:37:36	INFO	calibrater::setsolve	Beginning setsolve--(MSSelection version)-------
+2020-05-15 03:37:36	INFO	Calibrater::setsolve	Arranging to SOLVE:
+2020-05-15 03:37:36	INFO	Calibrater::setsolve	.   K Jones: table=13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_2.delay.tbl append=false solint=inf refantmode='flex' refant='ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea04,ea02,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea25,ea27' minsnr=3 apmode=P solnorm=false
+2020-05-15 03:37:36	INFO	calibrater::solve	Beginning solve-----------------------------
+2020-05-15 03:37:36	INFO	Calibrater::solve	The following calibration terms are arranged for apply:
+2020-05-15 03:37:36	INFO	Calibrater::solve	.   KAntPos Jones: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl select= interp=linear spwmap=[0] calWt=false
+2020-05-15 03:37:36	INFO	Calibrater::solve	.   G EVLASWPOW: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl select= interp=linear spwmap=[-1] calWt=true
+2020-05-15 03:37:36	INFO	Calibrater::solve	.   G Jones: table=13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_1.semiFinaldelayinitialgain.tbl select= interp=linear spwmap=[-1] calWt=true
+2020-05-15 03:37:36	INFO	Calibrater::solve	.   P Jones <pre-computed>
+2020-05-15 03:37:36	INFO	Calibrater::solve	.   EGainCurve: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl select= interp=linear spwmap=[-1] calWt=true
+2020-05-15 03:37:36	INFO	Calibrater::solve	.   TOpac: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl select= interp=linear spwmap=[-1] calWt=true
+2020-05-15 03:37:36	INFO	Calibrater::solve	The following calibration term is arranged for solve:
+2020-05-15 03:37:36	INFO	Calibrater::solve	.   K Jones: table=13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_2.delay.tbl append=false solint=inf refantmode='flex' refant='ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea04,ea02,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea25,ea27' minsnr=3 apmode=P solnorm=false
+2020-05-15 03:37:36	INFO	Calibrater::solve	For solint = inf, found 8 solution intervals.
+2020-05-15 03:38:16	INFO	Calibrater::solve	  Found good K Jones solutions in 8 solution intervals.
+2020-05-15 03:38:16	INFO		Writing solutions to table: 13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_2.delay.tbl
+2020-05-15 03:38:16	INFO	calibrater::solve	Finished solving.
+2020-05-15 03:38:16	INFO	gaincal::::	Calibration solve statistics per spw:  (expected/attempted/succeeded):
+2020-05-15 03:38:16	INFO	gaincal::::	  Spw 0: 1/1/1
+2020-05-15 03:38:16	INFO	gaincal::::	  Spw 1: 1/1/1
+2020-05-15 03:38:16	INFO	gaincal::::	  Spw 2: 1/1/1
+2020-05-15 03:38:16	INFO	gaincal::::	  Spw 3: 1/1/1
+2020-05-15 03:38:16	INFO	gaincal::::	  Spw 4: 1/1/1
+2020-05-15 03:38:16	INFO	gaincal::::	  Spw 5: 1/1/1
+2020-05-15 03:38:16	INFO	gaincal::::	  Spw 6: 1/1/1
+2020-05-15 03:38:16	INFO	gaincal::::	  Spw 7: 1/1/1
+2020-05-15 03:38:17	INFO	gaincal::::	##### End Task: gaincal              #####
+2020-05-15 03:38:17	INFO	gaincal::::+	##########################################
+2020-05-15 03:38:17	INFO	pipeline.hifv.tasks.semiFinalBPdcals.semiFinalBPdcals::pipeline.hifv.tasks.semiFinalBPdcals.semiFinalBPdcals::	Fraction of flagged solutions = 0.0416666666667
+2020-05-15 03:38:17	INFO	pipeline.hifv.tasks.semiFinalBPdcals.semiFinalBPdcals::pipeline.hifv.tasks.semiFinalBPdcals.semiFinalBPdcals::	Median fraction of flagged solutions per antenna = 0.0
+2020-05-15 03:38:17	INFO	pipeline.hifv.tasks.semiFinalBPdcals.semiFinalBPdcals::pipeline.hifv.tasks.semiFinalBPdcals.semiFinalBPdcals::	Delay calibration complete
+2020-05-15 03:38:17	INFO	pipeline.infrastructure.callibrary::pipeline.infrastructure.callibrary::	Consolidating calibrations for 13A-213_05_15_2013_continuum.ms
+2020-05-15 03:38:17	INFO	pipeline.infrastructure.jobrequest::pipeline.infrastructure.jobrequest::	Executing gaincal(vis='13A-213_05_15_2013_continuum.ms', caltable='13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_3.BPinitialgain.tbl', field='1', spw='0:42~86,1:42~86,2:42~86,3:42~86,4:42~86,5:42~86,6:42~86,7:42~86', selectdata=True, scan='2,3', solint='int', combine='scan', preavg=-1.0, refant='ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea04,ea02,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea25,ea27', minblperant=4, minsnr=3.0, solnorm=False, gaintype='G', smodel=[], calmode='p', append=False, docallib=False, gaintable=['13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl', '13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl', '13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl', '13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl', '13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_2.delay.tbl'], gainfield=[''], interp=[''], spwmap=[], parang=True)
+2020-05-15 03:38:17	INFO	gaincal::::	
+2020-05-15 03:38:17	INFO	gaincal::::+	##########################################
+2020-05-15 03:38:17	INFO	gaincal::::+	##### Begin Task: gaincal            #####
+2020-05-15 03:38:17	INFO	gaincal::::	gaincal(vis="/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms",caltable="13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_3.BPinitialgain.tbl",field="1",spw="0:42~86,1:42~86,2:42~86,3:42~86,4:42~86,5:42~86,6:42~86,7:42~86",intent="",
+2020-05-15 03:38:17	INFO	gaincal::::+	        selectdata=True,timerange="",uvrange="",antenna="",scan="2,3",
+2020-05-15 03:38:17	INFO	gaincal::::+	        observation="",msselect="",solint="int",combine="scan",preavg=-1.0,
+2020-05-15 03:38:17	INFO	gaincal::::+	        refant="ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea04,ea02,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea25,ea27",refantmode="flex",minblperant=4,minsnr=3.0,solnorm=False,
+2020-05-15 03:38:17	INFO	gaincal::::+	        normtype="mean",gaintype="G",smodel=[],calmode="p",solmode="",
+2020-05-15 03:38:17	INFO	gaincal::::+	        rmsthresh=[],append=False,splinetime=3600.0,npointaver=3,phasewrap=180.0,
+2020-05-15 03:38:17	INFO	gaincal::::+	        docallib=False,callib="",gaintable=['/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl', '/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl', '/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl', '/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl', '13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_2.delay.tbl'],gainfield=[''],interp=[''],
+2020-05-15 03:38:17	INFO	gaincal::::+	        spwmap=[],parang=True)
+2020-05-15 03:38:17	INFO	gaincal::calibrater::open	****Using NEW VI2-driven calibrater tool****
+2020-05-15 03:38:17	INFO	gaincal::calibrater::open	Opening MS: /mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms for calibration.
+2020-05-15 03:38:17	INFO	gaincal::Calibrater::	Initializing nominal selection to the whole MS.
+2020-05-15 03:38:17	INFO	gaincal::::	NB: gaincal automatically excludes auto-correlations.
+2020-05-15 03:38:17	INFO	calibrater::setdata	Beginning selectvis--(MSSelection version)-------
+2020-05-15 03:38:17	INFO	calibrater::reset	Reseting solve/apply state
+2020-05-15 03:38:17	INFO	Calibrater::selectvis	Performing selection on MeasurementSet
+2020-05-15 03:38:17	INFO	Calibrater::selectvis+	 Selecting on spw: '0:42~86,1:42~86,2:42~86,3:42~86,4:42~86,5:42~86,6:42~86,7:42~86'
+2020-05-15 03:38:17	INFO	Calibrater::selectvis+	 Selecting on scan: '2,3'
+2020-05-15 03:38:17	INFO	Calibrater::selectvis+	 Selecting on field: '1'
+2020-05-15 03:38:17	INFO	Calibrater::selectvis+	 Selecting with TaQL: 'ANTENNA1!=ANTENNA2'
+2020-05-15 03:38:17	INFO	Calibrater::selectvis	By selection 3967704 rows are reduced to 497016
+2020-05-15 03:38:17	INFO	Calibrater::selectvis	Frequency selection: 
+2020-05-15 03:38:17	INFO	Calibrater::selectvis	.  Spw 0:42~86 (45 channels, step by 1)
+2020-05-15 03:38:17	INFO	Calibrater::selectvis+	.  Spw 1:42~86 (45 channels, step by 1)
+2020-05-15 03:38:17	INFO	Calibrater::selectvis+	.  Spw 2:42~86 (45 channels, step by 1)
+2020-05-15 03:38:17	INFO	Calibrater::selectvis+	.  Spw 3:42~86 (45 channels, step by 1)
+2020-05-15 03:38:17	INFO	Calibrater::selectvis+	.  Spw 4:42~86 (45 channels, step by 1)
+2020-05-15 03:38:17	INFO	Calibrater::selectvis+	.  Spw 5:42~86 (45 channels, step by 1)
+2020-05-15 03:38:17	INFO	Calibrater::selectvis+	.  Spw 6:42~86 (45 channels, step by 1)
+2020-05-15 03:38:17	INFO	Calibrater::selectvis+	.  Spw 7:42~86 (45 channels, step by 1)
+2020-05-15 03:38:17	INFO	calibrater::setdata	chanmode=none nchan=1 start=0 step=1 mStart='0km/s' mStep='0km/s' msSelect='ANTENNA1!=ANTENNA2'
+2020-05-15 03:38:17	INFO	calibrater::setapply	Beginning setapply--(MSSelection version)-------
+2020-05-15 03:38:17	INFO	Calibrater::setapply(type, applypar)	Arranging to APPLY:
+2020-05-15 03:38:17	INFO	Calibrater::setapply(type, applypar)	.   EGainCurve: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl select= interp=linear spwmap=[-1] calWt=true
+2020-05-15 03:38:17	INFO	calibrater::setapply	Beginning setapply--(MSSelection version)-------
+2020-05-15 03:38:17	INFO	Calibrater::setapply(type, applypar)	Arranging to APPLY:
+2020-05-15 03:38:18	INFO	Calibrater::setapply(type, applypar)	.   TOpac: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl select= interp=linear spwmap=[-1] calWt=true
+2020-05-15 03:38:18	INFO	calibrater::setapply	Beginning setapply--(MSSelection version)-------
+2020-05-15 03:38:18	INFO	Calibrater::setapply(type, applypar)	Arranging to APPLY:
+2020-05-15 03:38:29	INFO	Calibrater::setapply(type, applypar)	.   G EVLASWPOW: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl select= interp=linear spwmap=[-1] calWt=true
+2020-05-15 03:38:29	INFO	calibrater::setapply	Beginning setapply--(MSSelection version)-------
+2020-05-15 03:38:29	INFO	Calibrater::setapply(type, applypar)	Arranging to APPLY:
+2020-05-15 03:38:29	INFO		 (KAntPos Jones: Overriding with spwmap=[0] since KAntPos Jones is not spw-dependent)
+2020-05-15 03:38:29	INFO		 (KAntPos Jones: Enforcing calWt()=false for phase/delay-like terms)
+2020-05-15 03:38:29	INFO		No VLATrDelCorr keyword in the antpos caltable; turning trop delay correction OFF.
+2020-05-15 03:38:29	INFO	Calibrater::setapply(type, applypar)	.   KAntPos Jones: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl select= interp=linear spwmap=[0] calWt=false
+2020-05-15 03:38:29	INFO	calibrater::setapply	Beginning setapply--(MSSelection version)-------
+2020-05-15 03:38:29	INFO	Calibrater::setapply(type, applypar)	Arranging to APPLY:
+2020-05-15 03:38:29	INFO		 (K Jones: Enforcing calWt()=false for phase/delay-like terms)
+2020-05-15 03:38:29	INFO	Calibrater::setapply(type, applypar)	.   K Jones: table=13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_2.delay.tbl select= interp=linear spwmap=[-1] calWt=false
+2020-05-15 03:38:29	INFO	calibrater::setapply	Beginning setapply--(MSSelection version)-------
+2020-05-15 03:38:29	INFO	Calibrater::setapply(type, applypar)	Arranging to APPLY:
+2020-05-15 03:38:29	INFO	Calibrater::setapply(type, applypar)	.   P Jones <pre-computed>
+2020-05-15 03:38:29	INFO	calibrater::setsolve	Beginning setsolve--(MSSelection version)-------
+2020-05-15 03:38:29	INFO	Calibrater::setsolve	Arranging to SOLVE:
+2020-05-15 03:38:29	INFO	Calibrater::setsolve	.   G Jones: table=13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_3.BPinitialgain.tbl append=false solint=int refantmode='flex' refant='ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea04,ea02,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea25,ea27' minsnr=3 apmode=P solnorm=false
+2020-05-15 03:38:29	INFO	calibrater::solve	Beginning solve-----------------------------
+2020-05-15 03:38:29	INFO	Calibrater::solve	The following calibration terms are arranged for apply:
+2020-05-15 03:38:29	INFO	Calibrater::solve	.   KAntPos Jones: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl select= interp=linear spwmap=[0] calWt=false
+2020-05-15 03:38:29	INFO	Calibrater::solve	.   K Jones: table=13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_2.delay.tbl select= interp=linear spwmap=[-1] calWt=false
+2020-05-15 03:38:29	INFO	Calibrater::solve	.   G EVLASWPOW: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl select= interp=linear spwmap=[-1] calWt=true
+2020-05-15 03:38:29	INFO	Calibrater::solve	.   P Jones <pre-computed>
+2020-05-15 03:38:29	INFO	Calibrater::solve	.   EGainCurve: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl select= interp=linear spwmap=[-1] calWt=true
+2020-05-15 03:38:29	INFO	Calibrater::solve	.   TOpac: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl select= interp=linear spwmap=[-1] calWt=true
+2020-05-15 03:38:29	INFO	Calibrater::solve	The following calibration term is arranged for solve:
+2020-05-15 03:38:29	INFO	Calibrater::solve	.   G Jones: table=13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_3.BPinitialgain.tbl append=false solint=int refantmode='flex' refant='ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea04,ea02,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea25,ea27' minsnr=3 apmode=P solnorm=false
+2020-05-15 03:38:29	INFO	ChannelAverageTVI::parseConfiguration	Channel bin is [-1, -1, -1, -1, -1, -1, -1, -1]
+2020-05-15 03:38:29	INFO	Calibrater::solve	For solint = int, found 1416 solution intervals.
+2020-05-15 03:38:51	INFO	Calibrater::solve	  Found good G Jones solutions in 954 solution intervals.
+2020-05-15 03:38:51	INFO		Applying refant: ea13 (ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea04,ea02,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea25,ea27) refantmode = flex (hold alternate refants' phase constant) when refant flagged
+2020-05-15 03:38:51	INFO		At 2013/05/15/09:13:17.5 (Spw=0, Fld=1), using refant ea11 (id=10) (alternate)
+2020-05-15 03:38:51	INFO		At 2013/05/15/09:13:17.5 (Spw=1, Fld=1), using refant ea11 (id=10) (alternate)
+2020-05-15 03:38:51	INFO		At 2013/05/15/09:13:17.5 (Spw=2, Fld=1), using refant ea11 (id=10) (alternate)
+2020-05-15 03:38:51	INFO		At 2013/05/15/09:13:17.5 (Spw=3, Fld=1), using refant ea11 (id=10) (alternate)
+2020-05-15 03:38:51	INFO		At 2013/05/15/09:13:22.5 (Spw=4, Fld=1), using refant ea24 (id=22) (alternate)
+2020-05-15 03:38:51	INFO		At 2013/05/15/09:19:17.5 (Spw=4, Fld=1), using refant ea26 (id=24) (alternate)
+2020-05-15 03:38:51	INFO		At 2013/05/15/09:19:32.5 (Spw=4, Fld=1), using refant ea26 (id=24) (alternate)
+2020-05-15 03:38:51	INFO		At 2013/05/15/09:19:47.5 (Spw=4, Fld=1), using refant ea14 (id=13) (alternate)
+2020-05-15 03:38:51	INFO		At 2013/05/15/09:20:07.5 (Spw=4, Fld=1), using refant ea10 (id=9) (alternate)
+2020-05-15 03:38:51	INFO		At 2013/05/15/09:20:12.5 (Spw=4, Fld=1), using refant ea18 (id=17) (alternate)
+2020-05-15 03:38:51	INFO		At 2013/05/15/09:20:37.5 (Spw=4, Fld=1), using refant ea14 (id=13) (alternate)
+2020-05-15 03:38:51	INFO		At 2013/05/15/09:20:52.5 (Spw=4, Fld=1), using refant ea26 (id=24) (alternate)
+2020-05-15 03:38:51	INFO		At 2013/05/15/09:21:27.5 (Spw=4, Fld=1), using refant ea26 (id=24) (alternate)
+2020-05-15 03:38:51	INFO		At 2013/05/15/09:23:02.5 (Spw=4, Fld=1), using refant ea26 (id=24) (alternate)
+2020-05-15 03:38:51	INFO		At 2013/05/15/09:13:17.5 (Spw=5, Fld=1), using refant ea11 (id=10) (alternate)
+2020-05-15 03:38:52	INFO		At 2013/05/15/09:13:17.5 (Spw=6, Fld=1), using refant ea11 (id=10) (alternate)
+2020-05-15 03:38:52	INFO		At 2013/05/15/09:13:17.5 (Spw=7, Fld=1), using refant ea11 (id=10) (alternate)
+2020-05-15 03:38:52	INFO		 NB: An alternate refant was used at least once to maintain
+2020-05-15 03:38:52	INFO	+	  phase continuity where the user's preferred refant drops out.
+2020-05-15 03:38:52	INFO	+	  Alternate refants are held constant in phase (_not_ zeroed)
+2020-05-15 03:38:52	INFO	+	  during these periods, and the preferred refant may return at
+2020-05-15 03:38:52	INFO	+	  a non-zero phase.  This is generally harmless.
+2020-05-15 03:38:52	INFO		Enforcing apmode on solutions.
+2020-05-15 03:39:05	INFO		Writing solutions to table: 13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_3.BPinitialgain.tbl
+2020-05-15 03:39:06	INFO	calibrater::solve	Finished solving.
+2020-05-15 03:39:06	INFO	gaincal::::	Calibration solve statistics per spw:  (expected/attempted/succeeded):
+2020-05-15 03:39:06	INFO	gaincal::::	  Spw 0: 177/120/120
+2020-05-15 03:39:06	INFO	gaincal::::	  Spw 1: 177/120/120
+2020-05-15 03:39:06	INFO	gaincal::::	  Spw 2: 177/120/120
+2020-05-15 03:39:06	INFO	gaincal::::	  Spw 3: 177/120/120
+2020-05-15 03:39:06	INFO	gaincal::::	  Spw 4: 177/116/114
+2020-05-15 03:39:06	INFO	gaincal::::	  Spw 5: 177/120/120
+2020-05-15 03:39:06	INFO	gaincal::::	  Spw 6: 177/120/120
+2020-05-15 03:39:06	INFO	gaincal::::	  Spw 7: 177/120/120
+2020-05-15 03:39:07	INFO	gaincal::::	##### End Task: gaincal              #####
+2020-05-15 03:39:07	INFO	gaincal::::+	##########################################
+2020-05-15 03:39:07	INFO	pipeline.infrastructure.callibrary::pipeline.infrastructure.callibrary::	Consolidating calibrations for 13A-213_05_15_2013_continuum.ms
+2020-05-15 03:39:07	INFO	pipeline.infrastructure.jobrequest::pipeline.infrastructure.jobrequest::	Executing bandpass(vis='13A-213_05_15_2013_continuum.ms', caltable='13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_4.BPcal.tbl', field='1', selectdata=True, scan='2,3', solint='inf', combine='scan', refant='ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea04,ea02,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea25,ea27', minblperant=4, minsnr=5.0, solnorm=False, bandtype='B', smodel=[], append=False, fillgaps=0, docallib=False, gaintable=['13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl', '13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl', '13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl', '13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl', '13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_2.delay.tbl', '13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_3.BPinitialgain.tbl'], gainfield=[''], interp=[''], spwmap=[], parang=True)
+2020-05-15 03:39:07	INFO	bandpass::::	
+2020-05-15 03:39:07	INFO	bandpass::::+	##########################################
+2020-05-15 03:39:07	INFO	bandpass::::+	##### Begin Task: bandpass           #####
+2020-05-15 03:39:07	INFO	bandpass::::	bandpass(vis="/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms",caltable="13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_4.BPcal.tbl",field="1",spw="",intent="",
+2020-05-15 03:39:07	INFO	bandpass::::+	        selectdata=True,timerange="",uvrange="",antenna="",scan="2,3",
+2020-05-15 03:39:07	INFO	bandpass::::+	        observation="",msselect="",solint="inf",combine="scan",refant="ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea04,ea02,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea25,ea27",
+2020-05-15 03:39:07	INFO	bandpass::::+	        minblperant=4,minsnr=5.0,solnorm=False,bandtype="B",smodel=[],
+2020-05-15 03:39:07	INFO	bandpass::::+	        append=False,fillgaps=0,degamp=3,degphase=3,visnorm=False,
+2020-05-15 03:39:07	INFO	bandpass::::+	        maskcenter=0,maskedge=5,docallib=False,callib="",gaintable=['/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl', '/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl', '/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl', '/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl', '13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_2.delay.tbl', '13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_3.BPinitialgain.tbl'],
+2020-05-15 03:39:07	INFO	bandpass::::+	        gainfield=[''],interp=[''],spwmap=[],parang=True)
+2020-05-15 03:39:07	INFO	bandpass::calibrater::open	****Using NEW VI2-driven calibrater tool****
+2020-05-15 03:39:07	INFO	bandpass::calibrater::open	Opening MS: /mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms for calibration.
+2020-05-15 03:39:07	INFO	bandpass::Calibrater::	Initializing nominal selection to the whole MS.
+2020-05-15 03:39:07	INFO	bandpass::calibrater::reset	Reseting solve/apply state
+2020-05-15 03:39:07	INFO	bandpass::::	NB: bandpass automatically excludes auto-correlations.
+2020-05-15 03:39:07	INFO	calibrater::setdata	Beginning selectvis--(MSSelection version)-------
+2020-05-15 03:39:07	INFO	calibrater::reset	Reseting solve/apply state
+2020-05-15 03:39:07	INFO	Calibrater::selectvis	Performing selection on MeasurementSet
+2020-05-15 03:39:07	INFO	Calibrater::selectvis+	 Selecting on scan: '2,3'
+2020-05-15 03:39:07	INFO	Calibrater::selectvis+	 Selecting on field: '1'
+2020-05-15 03:39:07	INFO	Calibrater::selectvis+	 Selecting with TaQL: 'ANTENNA1!=ANTENNA2'
+2020-05-15 03:39:08	INFO	Calibrater::selectvis	By selection 3967704 rows are reduced to 497016
+2020-05-15 03:39:08	INFO	Calibrater::selectvis	Frequency selection: Selecting all channels in all spws.
+2020-05-15 03:39:08	INFO	calibrater::setdata	chanmode=none nchan=1 start=0 step=1 mStart='0km/s' mStep='0km/s' msSelect='ANTENNA1!=ANTENNA2'
+2020-05-15 03:39:08	INFO	calibrater::setapply	Beginning setapply--(MSSelection version)-------
+2020-05-15 03:39:08	INFO	Calibrater::setapply(type, applypar)	Arranging to APPLY:
+2020-05-15 03:39:08	INFO	Calibrater::setapply(type, applypar)	.   EGainCurve: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl select= interp=linear spwmap=[-1] calWt=true
+2020-05-15 03:39:08	INFO	calibrater::setapply	Beginning setapply--(MSSelection version)-------
+2020-05-15 03:39:08	INFO	Calibrater::setapply(type, applypar)	Arranging to APPLY:
+2020-05-15 03:39:08	INFO	Calibrater::setapply(type, applypar)	.   TOpac: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl select= interp=linear spwmap=[-1] calWt=true
+2020-05-15 03:39:08	INFO	calibrater::setapply	Beginning setapply--(MSSelection version)-------
+2020-05-15 03:39:08	INFO	Calibrater::setapply(type, applypar)	Arranging to APPLY:
+2020-05-15 03:39:19	INFO	Calibrater::setapply(type, applypar)	.   G EVLASWPOW: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl select= interp=linear spwmap=[-1] calWt=true
+2020-05-15 03:39:19	INFO	calibrater::setapply	Beginning setapply--(MSSelection version)-------
+2020-05-15 03:39:19	INFO	Calibrater::setapply(type, applypar)	Arranging to APPLY:
+2020-05-15 03:39:19	INFO		 (KAntPos Jones: Overriding with spwmap=[0] since KAntPos Jones is not spw-dependent)
+2020-05-15 03:39:19	INFO		 (KAntPos Jones: Enforcing calWt()=false for phase/delay-like terms)
+2020-05-15 03:39:19	INFO		No VLATrDelCorr keyword in the antpos caltable; turning trop delay correction OFF.
+2020-05-15 03:39:19	INFO	Calibrater::setapply(type, applypar)	.   KAntPos Jones: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl select= interp=linear spwmap=[0] calWt=false
+2020-05-15 03:39:19	INFO	calibrater::setapply	Beginning setapply--(MSSelection version)-------
+2020-05-15 03:39:19	INFO	Calibrater::setapply(type, applypar)	Arranging to APPLY:
+2020-05-15 03:39:19	INFO		 (K Jones: Enforcing calWt()=false for phase/delay-like terms)
+2020-05-15 03:39:19	INFO	Calibrater::setapply(type, applypar)	.   K Jones: table=13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_2.delay.tbl select= interp=linear spwmap=[-1] calWt=false
+2020-05-15 03:39:19	INFO	calibrater::setapply	Beginning setapply--(MSSelection version)-------
+2020-05-15 03:39:19	INFO	Calibrater::setapply(type, applypar)	Arranging to APPLY:
+2020-05-15 03:39:20	INFO	Calibrater::setapply(type, applypar)	.   G Jones: table=13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_3.BPinitialgain.tbl select= interp=linear spwmap=[-1] calWt=true
+2020-05-15 03:39:20	INFO	calibrater::setapply	Beginning setapply--(MSSelection version)-------
+2020-05-15 03:39:20	INFO	Calibrater::setapply(type, applypar)	Arranging to APPLY:
+2020-05-15 03:39:20	INFO	Calibrater::setapply(type, applypar)	.   P Jones <pre-computed>
+2020-05-15 03:39:20	INFO	calibrater::setsolve	Beginning setsolve--(MSSelection version)-------
+2020-05-15 03:39:20	INFO	Calibrater::setsolve	Arranging to SOLVE:
+2020-05-15 03:39:20	INFO	Calibrater::setsolve	.   B Jones: table=13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_4.BPcal.tbl append=false solint=inf,none refantmode='flex' refant='ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea04,ea02,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea25,ea27' minsnr=5 apmode=AP solnorm=false
+2020-05-15 03:39:20	INFO	calibrater::solve	Beginning solve-----------------------------
+2020-05-15 03:39:20	INFO	Calibrater::solve	The following calibration terms are arranged for apply:
+2020-05-15 03:39:20	INFO	Calibrater::solve	.   KAntPos Jones: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl select= interp=linear spwmap=[0] calWt=false
+2020-05-15 03:39:20	INFO	Calibrater::solve	.   K Jones: table=13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_2.delay.tbl select= interp=linear spwmap=[-1] calWt=false
+2020-05-15 03:39:20	INFO	Calibrater::solve	.   G EVLASWPOW: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl select= interp=linear spwmap=[-1] calWt=true
+2020-05-15 03:39:20	INFO	Calibrater::solve	.   G Jones: table=13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_3.BPinitialgain.tbl select= interp=linear spwmap=[-1] calWt=true
+2020-05-15 03:39:20	INFO	Calibrater::solve	.   P Jones <pre-computed>
+2020-05-15 03:39:20	INFO	Calibrater::solve	.   EGainCurve: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl select= interp=linear spwmap=[-1] calWt=true
+2020-05-15 03:39:20	INFO	Calibrater::solve	.   TOpac: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl select= interp=linear spwmap=[-1] calWt=true
+2020-05-15 03:39:20	INFO	Calibrater::solve	The following calibration term is arranged for solve:
+2020-05-15 03:39:20	INFO	Calibrater::solve	.   B Jones: table=13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_4.BPcal.tbl append=false solint=inf,none refantmode='flex' refant='ea13,ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea04,ea02,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea25,ea27' minsnr=5 apmode=AP solnorm=false
+2020-05-15 03:39:20	INFO	Calibrater::solve	For solint = inf, found 8 solution intervals.
+2020-05-15 03:40:05	INFO	Calibrater::solve	  Found good B Jones solutions in 8 solution intervals.
+2020-05-15 03:40:05	INFO		Applying refant: ea13 (ea26,ea14,ea15,ea24,ea22,ea07,ea10,ea28,ea11,ea17,ea04,ea02,ea21,ea05,ea16,ea12,ea23,ea19,ea18,ea03,ea06,ea09,ea01,ea08,ea25,ea27) refantmode = flex (hold alternate refants' phase constant) when refant flagged
+2020-05-15 03:40:05	INFO		Writing solutions to table: 13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_4.BPcal.tbl
+2020-05-15 03:40:05	INFO	calibrater::solve	Finished solving.
+2020-05-15 03:40:06	INFO	bandpass::::	##### End Task: bandpass             #####
+2020-05-15 03:40:06	INFO	bandpass::::+	##########################################
+2020-05-15 03:40:06	INFO	pipeline.infrastructure.callibrary::pipeline.infrastructure.callibrary::	Consolidating calibrations for 13A-213_05_15_2013_continuum.ms
+2020-05-15 03:40:06	INFO	pipeline.hifv.tasks.semiFinalBPdcals.semiFinalBPdcals::pipeline.hifv.tasks.semiFinalBPdcals.semiFinalBPdcals::	Using 'linear,linearflag' for bandpass table
+2020-05-15 03:40:06	INFO	pipeline.hifv.tasks.semiFinalBPdcals.semiFinalBPdcals::pipeline.hifv.tasks.semiFinalBPdcals.semiFinalBPdcals::	Applying semi-final delay and BP calibrations to all calibrators
+2020-05-15 03:40:06	INFO	pipeline.infrastructure.callibrary::pipeline.infrastructure.callibrary::	Consolidating calibrations for 13A-213_05_15_2013_continuum.ms
+2020-05-15 03:40:06	INFO	pipeline.infrastructure.jobrequest::pipeline.infrastructure.jobrequest::	Executing applycal(vis='13A-213_05_15_2013_continuum.ms', selectdata=True, scan='2,3,4,5,9,13,17', docallib=False, gaintable=['13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl', '13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl', '13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl', '13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl', '13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_2.delay.tbl', '13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_4.BPcal.tbl'], gainfield=[''], interp=['', '', '', '', '', 'linear,linearflag'], spwmap=[], calwt=[False, False, False, False, False, False], parang=True, applymode='calflagstrict', flagbackup=True)
+2020-05-15 03:40:06	INFO	applycal::::	
+2020-05-15 03:40:06	INFO	applycal::::+	##########################################
+2020-05-15 03:40:06	INFO	applycal::::+	##### Begin Task: applycal           #####
+2020-05-15 03:40:06	INFO	applycal::::	applycal(vis="/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms",field="",spw="",intent="",selectdata=True,
+2020-05-15 03:40:06	INFO	applycal::::+	        timerange="",uvrange="",antenna="",scan="2,3,4,5,9,13,17",observation="",
+2020-05-15 03:40:06	INFO	applycal::::+	        msselect="",docallib=False,callib="",gaintable=['/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl', '/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl', '/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl', '/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl', '13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_2.delay.tbl', '13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_4.BPcal.tbl'],gainfield=[''],
+2020-05-15 03:40:06	INFO	applycal::::+	        interp=['', '', '', '', '', 'linear,linearflag'],spwmap=[],calwt=[False, False, False, False, False, False],parang=True,applymode="calflagstrict",
+2020-05-15 03:40:06	INFO	applycal::::+	        flagbackup=True)
+2020-05-15 03:40:06	INFO	applycal::calibrater::open	****Using NEW VI2-driven calibrater tool****
+2020-05-15 03:40:06	INFO	applycal::calibrater::open	Opening MS: /mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms for calibration.
+2020-05-15 03:40:06	INFO	applycal::Calibrater::	Initializing nominal selection to the whole MS.
+2020-05-15 03:40:07	INFO	applycal::AgentFlagger::open	Table type is Measurement Set
+2020-05-15 03:40:07	INFO	FlagVersion::saveFlagVersion	Creating new backup flag file called applycal_3
+2020-05-15 03:40:12	INFO	calibrater::setdata	Beginning selectvis--(MSSelection version)-------
+2020-05-15 03:40:12	INFO	calibrater::reset	Reseting solve/apply state
+2020-05-15 03:40:12	INFO	Calibrater::selectvis	Performing selection on MeasurementSet
+2020-05-15 03:40:12	INFO	Calibrater::selectvis+	 Selecting on scan: '2,3,4,5,9,13,17'
+2020-05-15 03:40:12	INFO	Calibrater::selectvis	By selection 3967704 rows are reduced to 1097928
+2020-05-15 03:40:12	INFO	Calibrater::selectvis	Frequency selection: Selecting all channels in all spws.
+2020-05-15 03:40:12	INFO	calibrater::setdata	chanmode=none nchan=1 start=0 step=1 mStart='0km/s' mStep='0km/s' msSelect=''
+2020-05-15 03:40:12	INFO	calibrater::setapply	Beginning setapply--(MSSelection version)-------
+2020-05-15 03:40:12	INFO	Calibrater::setapply(type, applypar)	Arranging to APPLY:
+2020-05-15 03:40:13	INFO	Calibrater::setapply(type, applypar)	.   EGainCurve: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl select= interp=linear spwmap=[-1] calWt=false
+2020-05-15 03:40:13	INFO	calibrater::setapply	Beginning setapply--(MSSelection version)-------
+2020-05-15 03:40:13	INFO	Calibrater::setapply(type, applypar)	Arranging to APPLY:
+2020-05-15 03:40:13	INFO	Calibrater::setapply(type, applypar)	.   TOpac: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl select= interp=linear spwmap=[-1] calWt=false
+2020-05-15 03:40:13	INFO	calibrater::setapply	Beginning setapply--(MSSelection version)-------
+2020-05-15 03:40:13	INFO	Calibrater::setapply(type, applypar)	Arranging to APPLY:
+2020-05-15 03:40:23	INFO	Calibrater::setapply(type, applypar)	.   G EVLASWPOW: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl select= interp=linear spwmap=[-1] calWt=false
+2020-05-15 03:40:23	INFO	calibrater::setapply	Beginning setapply--(MSSelection version)-------
+2020-05-15 03:40:23	INFO	Calibrater::setapply(type, applypar)	Arranging to APPLY:
+2020-05-15 03:40:23	INFO		 (KAntPos Jones: Overriding with spwmap=[0] since KAntPos Jones is not spw-dependent)
+2020-05-15 03:40:23	INFO		No VLATrDelCorr keyword in the antpos caltable; turning trop delay correction OFF.
+2020-05-15 03:40:23	INFO	Calibrater::setapply(type, applypar)	.   KAntPos Jones: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl select= interp=linear spwmap=[0] calWt=false
+2020-05-15 03:40:23	INFO	calibrater::setapply	Beginning setapply--(MSSelection version)-------
+2020-05-15 03:40:23	INFO	Calibrater::setapply(type, applypar)	Arranging to APPLY:
+2020-05-15 03:40:24	INFO	Calibrater::setapply(type, applypar)	.   K Jones: table=13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_2.delay.tbl select= interp=linear spwmap=[-1] calWt=false
+2020-05-15 03:40:24	INFO	calibrater::setapply	Beginning setapply--(MSSelection version)-------
+2020-05-15 03:40:24	INFO	Calibrater::setapply(type, applypar)	Arranging to APPLY:
+2020-05-15 03:40:24	INFO	Calibrater::setapply(type, applypar)	.   B Jones: table=13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_4.BPcal.tbl select= interp=linear,linearflag spwmap=[-1] calWt=false
+2020-05-15 03:40:24	INFO	calibrater::setapply	Beginning setapply--(MSSelection version)-------
+2020-05-15 03:40:24	INFO	Calibrater::setapply(type, applypar)	Arranging to APPLY:
+2020-05-15 03:40:24	INFO	Calibrater::setapply(type, applypar)	.   P Jones <pre-computed>
+2020-05-15 03:40:24	INFO	calibrater::correct	Beginning correct---------------------------
+2020-05-15 03:40:24	INFO	Calibrater::correct2 (VI2/VB2)	The following calibration terms are arranged for apply:
+2020-05-15 03:40:24	INFO	Calibrater::correct2 (VI2/VB2)	.   KAntPos Jones: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl select= interp=linear spwmap=[0] calWt=false
+2020-05-15 03:40:24	INFO	Calibrater::correct2 (VI2/VB2)	.   B Jones: table=13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_4.BPcal.tbl select= interp=linear,linearflag spwmap=[-1] calWt=false
+2020-05-15 03:40:24	INFO	Calibrater::correct2 (VI2/VB2)	.   K Jones: table=13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_2.delay.tbl select= interp=linear spwmap=[-1] calWt=false
+2020-05-15 03:40:24	INFO	Calibrater::correct2 (VI2/VB2)	.   G EVLASWPOW: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl select= interp=linear spwmap=[-1] calWt=false
+2020-05-15 03:40:24	INFO	Calibrater::correct2 (VI2/VB2)	.   P Jones <pre-computed>
+2020-05-15 03:40:24	INFO	Calibrater::correct2 (VI2/VB2)	.   EGainCurve: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl select= interp=linear spwmap=[-1] calWt=false
+2020-05-15 03:40:24	INFO	Calibrater::correct2 (VI2/VB2)	.   TOpac: table=/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl select= interp=linear spwmap=[-1] calWt=false
+2020-05-15 03:41:29	INFO	calibrater::correct	Finished correcting.
+2020-05-15 03:41:29	INFO	applycal::::	Calibration apply flagging statistics (among calibrateable spws):
+2020-05-15 03:41:29	INFO	applycal::::	  Total visibilities selected for correction (ncorr x nchan x nrow summed over spws) = 562139136
+2020-05-15 03:41:29	INFO	applycal::::	  Flags:
+2020-05-15 03:41:29	INFO	applycal::::	   KAntPos Jones: In: 294717590 / 562139136   (52.4278725899%) --> Out: 294717590 / 562139136   (52.4278725899%) (/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl)
+2020-05-15 03:41:29	INFO	applycal::::	   B Jones: In: 294717590 / 562139136   (52.4278725899%) --> Out: 299262351 / 562139136   (53.2363487676%) (13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_4.BPcal.tbl)
+2020-05-15 03:41:29	INFO	applycal::::	   K Jones: In: 299262351 / 562139136   (53.2363487676%) --> Out: 299262351 / 562139136   (53.2363487676%) (13A-213_05_15_2013_continuum.ms.hifv_semiFinalBPdcals.s11_2.delay.tbl)
+2020-05-15 03:41:29	INFO	applycal::::	   G EVLASWPOW: In: 299262351 / 562139136   (53.2363487676%) --> Out: 299262351 / 562139136   (53.2363487676%) (/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl)
+2020-05-15 03:41:29	INFO	applycal::::	   P Jones: In: 299262351 / 562139136   (53.2363487676%) --> Out: 299262351 / 562139136   (53.2363487676%)
+2020-05-15 03:41:29	INFO	applycal::::	   EGainCurve: In: 299262351 / 562139136   (53.2363487676%) --> Out: 299262351 / 562139136   (53.2363487676%) (/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl)
+2020-05-15 03:41:29	INFO	applycal::::	   TOpac: In: 299262351 / 562139136   (53.2363487676%) --> Out: 299262351 / 562139136   (53.2363487676%) (/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl)
+2020-05-15 03:41:30	INFO	applycal::::	CASA Version 5.6.1-8  
+2020-05-15 03:41:30	INFO	applycal::::	
+2020-05-15 03:41:30	INFO	applycal::::	##### End Task: applycal             #####
+2020-05-15 03:41:30	INFO	applycal::::+	##########################################

@@ -1,0 +1,205 @@
+2020-05-15 02:46:21	INFO	hifv_priorcals::pipeline.infrastructure.basetask::	Starting execution for stage 5
+2020-05-15 02:46:21	INFO	hifv_priorcals::pipeline.infrastructure.basetask::	Equivalent CASA call: hifv_priorcals(tecmaps=False)
+2020-05-15 02:46:21	INFO	hifv_priorcals::pipeline.infrastructure.jobrequest::	Executing gencal(vis='13A-213_05_15_2013_continuum.ms', caltable='13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl', caltype='gc', parameter=[])
+2020-05-15 02:46:21	INFO	gencal::::	
+2020-05-15 02:46:21	INFO	gencal::::+	##########################################
+2020-05-15 02:46:21	INFO	gencal::::+	##### Begin Task: gencal             #####
+2020-05-15 02:46:21	INFO	gencal::::	gencal(vis="/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms",caltable="/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl",caltype="gc",infile="",spw="",
+2020-05-15 02:46:21	INFO	gencal::::+	        antenna="",pol="",parameter=[],uniform=True)
+2020-05-15 02:46:21	INFO	calibrater::open	****Using NEW VI2-driven calibrater tool****
+2020-05-15 02:46:21	INFO	calibrater::open	Opening MS: /mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms for calibration.
+2020-05-15 02:46:21	INFO	Calibrater::	Initializing nominal selection to the whole MS.
+2020-05-15 02:46:21	INFO	calibrater::specifycal	Beginning specifycal-----------------------
+2020-05-15 02:46:21	INFO		Using standard VLA gaincurve table from the data repository: /mnt/ufs18/rs-033/ChomiukLab/casa-pipeline-release-5.6.1-8.el7/data/nrao/VLA/GainCurves
+2020-05-15 02:46:21	INFO		Using /mnt/ufs18/rs-033/ChomiukLab/casa-pipeline-release-5.6.1-8.el7/data/nrao/VLA/GainCurves nrow=1442
+2020-05-15 02:46:22	INFO		Writing solutions to table: /mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_2.gc.tbl
+2020-05-15 02:46:22	INFO	gencal::::	##### End Task: gencal               #####
+2020-05-15 02:46:22	INFO	gencal::::+	##########################################
+2020-05-15 02:46:22	INFO	pipeline.hifv.tasks.opcal.opcal::pipeline.hifv.tasks.opcal.opcal::	Using seasonal_weight of 0.5
+2020-05-15 02:46:22	INFO	pipeline.infrastructure.jobrequest::pipeline.infrastructure.jobrequest::	Executing plotweather(vis='13A-213_05_15_2013_continuum.ms', seasonal_weight=0.5, doPlot=True)
+2020-05-15 02:46:22	INFO	plotweather::::	
+2020-05-15 02:46:22	INFO	plotweather::::+	##########################################
+2020-05-15 02:46:22	INFO	plotweather::::+	##### Begin Task: plotweather        #####
+2020-05-15 02:46:22	INFO	plotweather::::	plotweather(vis="/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms",seasonal_weight=0.5,doPlot=True,plotName="")
+2020-05-15 02:46:32	INFO	plotweather::::	SPW : Frequency (GHz) : Zenith opacity (nepers)
+2020-05-15 02:46:32	INFO	plotweather::::	  0  :    0.988  :  0.005
+2020-05-15 02:46:32	INFO	plotweather::::	  1  :    1.116  :  0.005
+2020-05-15 02:46:32	INFO	plotweather::::	  2  :    1.244  :  0.005
+2020-05-15 02:46:32	INFO	plotweather::::	  3  :    1.372  :  0.005
+2020-05-15 02:46:32	INFO	plotweather::::	  4  :    1.500  :  0.005
+2020-05-15 02:46:32	INFO	plotweather::::	  5  :    1.628  :  0.006
+2020-05-15 02:46:32	INFO	plotweather::::	  6  :    1.756  :  0.006
+2020-05-15 02:46:32	INFO	plotweather::::	  7  :    1.884  :  0.006
+2020-05-15 02:46:32	INFO	plotweather::::	wrote weather figure: /mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.plotweather.png
+2020-05-15 02:46:32	INFO	plotweather::::	##### End Task: plotweather          #####
+2020-05-15 02:46:32	INFO	plotweather::::+	##########################################
+2020-05-15 02:46:32	INFO	pipeline.infrastructure.jobrequest::pipeline.infrastructure.jobrequest::	Executing gencal(vis='13A-213_05_15_2013_continuum.ms', caltable='13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl', caltype='opac', spw='0,1,2,3,4,5,6,7', parameter=[0.0051175740330522126, 0.0052499274743767919, 0.0053309657060359892, 0.0054081229554515872, 0.0054590718200621469, 0.0055090611826937421, 0.0055452796810068032, 0.00558095112285784])
+2020-05-15 02:46:32	INFO	gencal::::	
+2020-05-15 02:46:32	INFO	gencal::::+	##########################################
+2020-05-15 02:46:32	INFO	gencal::::+	##### Begin Task: gencal             #####
+2020-05-15 02:46:32	INFO	gencal::::	gencal(vis="/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms",caltable="/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl",caltype="opac",infile="",spw="0,1,2,3,4,5,6,7",
+2020-05-15 02:46:32	INFO	gencal::::+	        antenna="",pol="",parameter=[0.0051175740330522126, 0.0052499274743767919, 0.0053309657060359892, 0.0054081229554515872, 0.0054590718200621469, 0.0055090611826937421, 0.0055452796810068032, 0.00558095112285784],uniform=True)
+2020-05-15 02:46:32	INFO	calibrater::open	****Using NEW VI2-driven calibrater tool****
+2020-05-15 02:46:32	INFO	calibrater::open	Opening MS: /mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms for calibration.
+2020-05-15 02:46:32	INFO	Calibrater::	Initializing nominal selection to the whole MS.
+2020-05-15 02:46:32	INFO	calibrater::specifycal	Beginning specifycal-----------------------
+2020-05-15 02:46:32	INFO		Creating TOpac table from specified parameters.
+2020-05-15 02:46:32	INFO		Generating 'opac' corrections.
+2020-05-15 02:46:32	INFO		Specified parameter(s) (per spw and pol) repeated on all antennas.
+2020-05-15 02:46:32	INFO		Specified parameter(s) (per spw and antenna) repeated on all polarizations.
+2020-05-15 02:46:32	INFO		spwId=0 antId=<all> polId=<all> parameter= 0.00511757   (ip0,ip1 = [0, 0, 0],[0, 0, 26])
+2020-05-15 02:46:32	INFO		spwId=1 antId=<all> polId=<all> parameter= 0.00524993   (ip0,ip1 = [0, 0, 0],[0, 0, 26])
+2020-05-15 02:46:32	INFO		spwId=2 antId=<all> polId=<all> parameter= 0.00533097   (ip0,ip1 = [0, 0, 0],[0, 0, 26])
+2020-05-15 02:46:32	INFO		spwId=3 antId=<all> polId=<all> parameter= 0.00540812   (ip0,ip1 = [0, 0, 0],[0, 0, 26])
+2020-05-15 02:46:32	INFO		spwId=4 antId=<all> polId=<all> parameter= 0.00545907   (ip0,ip1 = [0, 0, 0],[0, 0, 26])
+2020-05-15 02:46:32	INFO		spwId=5 antId=<all> polId=<all> parameter= 0.00550906   (ip0,ip1 = [0, 0, 0],[0, 0, 26])
+2020-05-15 02:46:32	INFO		spwId=6 antId=<all> polId=<all> parameter= 0.00554528   (ip0,ip1 = [0, 0, 0],[0, 0, 26])
+2020-05-15 02:46:32	INFO		spwId=7 antId=<all> polId=<all> parameter= 0.00558095   (ip0,ip1 = [0, 0, 0],[0, 0, 26])
+2020-05-15 02:46:32	INFO		Writing solutions to table: /mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_3.opac.tbl
+2020-05-15 02:46:33	INFO	gencal::::	##### End Task: gencal               #####
+2020-05-15 02:46:33	INFO	gencal::::+	##########################################
+2020-05-15 02:46:33	INFO	pipeline.infrastructure.jobrequest::pipeline.infrastructure.jobrequest::	Executing gencal(vis='13A-213_05_15_2013_continuum.ms', caltable='13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl', caltype='rq', parameter=[])
+2020-05-15 02:46:33	INFO	gencal::::	
+2020-05-15 02:46:33	INFO	gencal::::+	##########################################
+2020-05-15 02:46:33	INFO	gencal::::+	##### Begin Task: gencal             #####
+2020-05-15 02:46:33	INFO	gencal::::	gencal(vis="/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms",caltable="/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl",caltype="rq",infile="",spw="",
+2020-05-15 02:46:33	INFO	gencal::::+	        antenna="",pol="",parameter=[],uniform=True)
+2020-05-15 02:46:33	INFO	calibrater::open	****Using NEW VI2-driven calibrater tool****
+2020-05-15 02:46:33	INFO	calibrater::open	Opening MS: /mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms for calibration.
+2020-05-15 02:46:33	INFO	Calibrater::	Initializing nominal selection to the whole MS.
+2020-05-15 02:46:33	INFO	calibrater::specifycal	Beginning specifycal-----------------------
+2020-05-15 02:46:33	INFO		Creating G EVLASWPOW table from MS SYSPOWER/CALDEVICE subtables.
+2020-05-15 02:46:33	INFO		Filling Tcals from the CALDEVICE table.
+2020-05-15 02:46:33	INFO		Filling switched-power (rq) data from the SYSPOWER table.
+2020-05-15 02:46:36	INFO		Found 57304 TIME/SPW switched-power samples in SYSPOWER table
+2020-05-15 02:47:08	INFO		GOOD gain counts per spw for antenna Ids 0-26:
+2020-05-15 02:47:08	INFO		  Spw 0: [7139, 7156, 7155, 7137, 7151, 7114, 7133, 7146, 7149, 7160, 7161, 7152, 7161, 7162, 7133, 7149, 7158, 7129, 7161, 7161, 7128, 7155, 7118, 7153, 7124, 7138, 7161] (192944)
+2020-05-15 02:47:08	INFO		  Spw 1: [7139, 7156, 7155, 7137, 7151, 7114, 7133, 7146, 7149, 7160, 7161, 7152, 7161, 7162, 7133, 7149, 7158, 7129, 7161, 7161, 7128, 7155, 7118, 7153, 7124, 7138, 7161] (192944)
+2020-05-15 02:47:08	INFO		  Spw 2: [7139, 7156, 7155, 7137, 7151, 7114, 7133, 7146, 7149, 7160, 7161, 7152, 7161, 7162, 7133, 7149, 7158, 7129, 7161, 7161, 7128, 7155, 7118, 7153, 7124, 7138, 7161] (192944)
+2020-05-15 02:47:08	INFO		  Spw 3: [7139, 7156, 7155, 7137, 7151, 7114, 7133, 7146, 7149, 7160, 7161, 7152, 7161, 7162, 7133, 7149, 7158, 7129, 7161, 7161, 7128, 7155, 7118, 7153, 7124, 7138, 7161] (192944)
+2020-05-15 02:47:08	INFO		  Spw 4: [7139, 7156, 7155, 7137, 7152, 7114, 7133, 7146, 7150, 7160, 7161, 7152, 7161, 7162, 7133, 7149, 7158, 7129, 7161, 7161, 7128, 7155, 7118, 7153, 7124, 7138, 7161] (192946)
+2020-05-15 02:47:08	INFO		  Spw 5: [7139, 7156, 7155, 7137, 7152, 7114, 7133, 7146, 7150, 7160, 7161, 7152, 7161, 7162, 7133, 7149, 7158, 7129, 7161, 7161, 7128, 7155, 7118, 7153, 7124, 7138, 7161] (192946)
+2020-05-15 02:47:08	INFO		  Spw 6: [7139, 7156, 7155, 7137, 7152, 7114, 7133, 7146, 7150, 7160, 7161, 7152, 7161, 7162, 7133, 7149, 7158, 7129, 7161, 7161, 7128, 7155, 7118, 7153, 7124, 7138, 7161] (192946)
+2020-05-15 02:47:08	INFO		  Spw 7: [7139, 7156, 7155, 7137, 7152, 7114, 7133, 7146, 7150, 7160, 7161, 7152, 7161, 7162, 7133, 7149, 7158, 7129, 7161, 7161, 7128, 7155, 7118, 7153, 7124, 7138, 7161] (192946)
+2020-05-15 02:47:08	INFO		BAD gain counts per spw for antenna Ids 0-26:
+2020-05-15 02:47:08	INFO		  Spw 0: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0] (2)
+2020-05-15 02:47:08	INFO		  Spw 1: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0] (2)
+2020-05-15 02:47:08	INFO		  Spw 2: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0] (2)
+2020-05-15 02:47:08	INFO		  Spw 3: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0] (2)
+2020-05-15 02:47:08	INFO		  Spw 4: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0] (2)
+2020-05-15 02:47:08	INFO		  Spw 5: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0] (2)
+2020-05-15 02:47:08	INFO		  Spw 6: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0] (2)
+2020-05-15 02:47:08	INFO		  Spw 7: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0] (2)
+2020-05-15 02:47:08	INFO		BAD gain count FRACTION per spw for antenna Ids 0-26:
+2020-05-15 02:47:08	INFO		  Spw 0: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] (0)
+2020-05-15 02:47:08	INFO		  Spw 1: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] (0)
+2020-05-15 02:47:08	INFO		  Spw 2: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] (0)
+2020-05-15 02:47:08	INFO		  Spw 3: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] (0)
+2020-05-15 02:47:08	INFO		  Spw 4: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] (0)
+2020-05-15 02:47:08	INFO		  Spw 5: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] (0)
+2020-05-15 02:47:08	INFO		  Spw 6: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] (0)
+2020-05-15 02:47:08	INFO		  Spw 7: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] (0)
+2020-05-15 02:47:08	INFO		Writing solutions to table: /mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_4.rq.tbl
+2020-05-15 02:47:41	INFO	gencal::::	##### End Task: gencal               #####
+2020-05-15 02:47:41	INFO	gencal::::+	##########################################
+2020-05-15 02:47:42	INFO	ms::summary	================================================================================
+2020-05-15 02:47:42	INFO	ms::summary+	           MeasurementSet Name:  /mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms      MS Version 2
+2020-05-15 02:47:42	INFO	ms::summary+	================================================================================
+2020-05-15 02:47:42	INFO	ms::summary+	   Observer: Adam K. Leroy     Project: uid://evla/pdb/14411137  
+2020-05-15 02:47:42	INFO	ms::summary+	Observation: EVLA(27 antennas)
+2020-05-15 02:47:42	INFO	MSMetaData::_computeScanAndSubScanProperties 	Computing scan and subscan properties...
+2020-05-15 02:47:42	INFO	ms::summary	Data records: 3967704       Total elapsed time = 7160 seconds
+2020-05-15 02:47:42	INFO	ms::summary+	   Observed from   15-May-2013/09:07:40.0   to   15-May-2013/11:07:00.0 (UTC)
+2020-05-15 02:47:42	INFO	ms::summary	
+2020-05-15 02:47:42	INFO	ms::summary	Fields: 6
+2020-05-15 02:47:42	INFO	ms::summary+	  ID   Code Name                RA               Decl           Epoch   SrcId      nRows
+2020-05-15 02:47:42	INFO	ms::summary+	  0    NONE 1331+305=3C286      13:31:08.287984 +30.30.32.95886 J2000   0          22464
+2020-05-15 02:47:42	INFO	ms::summary+	  1    Z    1331+305=3C286      13:31:08.287984 +30.30.32.95886 J2000   1         497016
+2020-05-15 02:47:42	INFO	ms::summary+	  2    D    J1923-2104          19:23:32.189815 -21.04.33.33308 J2000   2         600912
+2020-05-15 02:47:42	INFO	ms::summary+	  3    NONE NGC6822_2           19:43:58.461035 -14.38.09.99656 J2000   3         943488
+2020-05-15 02:47:42	INFO	ms::summary+	  4    NONE NGC6822_1           19:45:57.030418 -14.58.14.00345 J2000   4         951912
+2020-05-15 02:47:42	INFO	ms::summary+	  5    NONE NGC6822_3           19:44:57.700000 -14.48.11.99999 J2000   5         951912
+2020-05-15 02:47:42	INFO	ms::summary	Spectral Windows:  (8 unique spectral windows and 1 unique polarization setups)
+2020-05-15 02:47:42	INFO	ms::summary+	  SpwID  Name          #Chans   Frame   Ch0(MHz)  ChanWid(kHz)  TotBW(kHz) CtrFreq(MHz) BBC Num  Corrs          
+2020-05-15 02:47:42	INFO	ms::summary+	  0      EVLA_L#A0C0#0    128   TOPO     988.000      1000.000    128000.0   1051.5000       12  RR  RL  LR  LL
+2020-05-15 02:47:42	INFO	ms::summary+	  1      EVLA_L#A0C0#1    128   TOPO    1116.000      1000.000    128000.0   1179.5000       12  RR  RL  LR  LL
+2020-05-15 02:47:42	INFO	ms::summary+	  2      EVLA_L#A0C0#2    128   TOPO    1244.000      1000.000    128000.0   1307.5000       12  RR  RL  LR  LL
+2020-05-15 02:47:42	INFO	ms::summary+	  3      EVLA_L#A0C0#3    128   TOPO    1372.000      1000.000    128000.0   1435.5000       12  RR  RL  LR  LL
+2020-05-15 02:47:42	INFO	ms::summary+	  4      EVLA_L#A0C0#4    128   TOPO    1500.000      1000.000    128000.0   1563.5000       12  RR  RL  LR  LL
+2020-05-15 02:47:42	INFO	ms::summary+	  5      EVLA_L#A0C0#5    128   TOPO    1628.000      1000.000    128000.0   1691.5000       12  RR  RL  LR  LL
+2020-05-15 02:47:42	INFO	ms::summary+	  6      EVLA_L#A0C0#6    128   TOPO    1756.000      1000.000    128000.0   1819.5000       12  RR  RL  LR  LL
+2020-05-15 02:47:42	INFO	ms::summary+	  7      EVLA_L#A0C0#7    128   TOPO    1884.000      1000.000    128000.0   1947.5000       12  RR  RL  LR  LL
+2020-05-15 02:47:42	INFO	ms::summary	Antennas: 27 'name'='station' 
+2020-05-15 02:47:42	INFO	ms::summary+	   ID=   0-3: 'ea01'='N14', 'ea02'='N06', 'ea03'='N10', 'ea04'='E06', 
+2020-05-15 02:47:42	INFO	ms::summary+	   ID=   4-7: 'ea05'='W08', 'ea06'='N12', 'ea07'='E03', 'ea08'='N16', 
+2020-05-15 02:47:42	INFO	ms::summary+	   ID=  8-11: 'ea09'='W01', 'ea10'='E04', 'ea11'='W06', 'ea12'='E08', 
+2020-05-15 02:47:42	INFO	ms::summary+	   ID= 12-15: 'ea13'='W02', 'ea14'='E01', 'ea15'='E02', 'ea16'='N08', 
+2020-05-15 02:47:42	INFO	ms::summary+	   ID= 16-19: 'ea17'='E05', 'ea18'='E09', 'ea19'='W07', 'ea21'='E07', 
+2020-05-15 02:47:42	INFO	ms::summary+	   ID= 20-23: 'ea22'='N02', 'ea23'='W09', 'ea24'='W04', 'ea25'='W05', 
+2020-05-15 02:47:42	INFO	ms::summary+	   ID= 24-26: 'ea26'='W03', 'ea27'='N18', 'ea28'='N04'
+2020-05-15 02:47:42	INFO	pipeline.infrastructure.jobrequest::pipeline.infrastructure.jobrequest::	Executing gencal(vis='13A-213_05_15_2013_continuum.ms', caltable='13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_5.swpow.tbl', caltype='swpow', parameter=[])
+2020-05-15 02:47:42	INFO	gencal::::	
+2020-05-15 02:47:42	INFO	gencal::::+	##########################################
+2020-05-15 02:47:42	INFO	gencal::::+	##### Begin Task: gencal             #####
+2020-05-15 02:47:42	INFO	gencal::::	gencal(vis="/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms",caltable="/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_5.swpow.tbl",caltype="swpow",infile="",spw="",
+2020-05-15 02:47:42	INFO	gencal::::+	        antenna="",pol="",parameter=[],uniform=True)
+2020-05-15 02:47:42	INFO	calibrater::open	****Using NEW VI2-driven calibrater tool****
+2020-05-15 02:47:42	INFO	calibrater::open	Opening MS: /mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms for calibration.
+2020-05-15 02:47:42	INFO	Calibrater::	Initializing nominal selection to the whole MS.
+2020-05-15 02:47:42	INFO	calibrater::specifycal	Beginning specifycal-----------------------
+2020-05-15 02:47:42	INFO		Creating G EVLASWPOW table from MS SYSPOWER/CALDEVICE subtables.
+2020-05-15 02:47:42	INFO		Filling Tcals from the CALDEVICE table.
+2020-05-15 02:47:42	INFO		Filling switched-power (swpow) data from the SYSPOWER table.
+2020-05-15 02:47:45	INFO		Found 57304 TIME/SPW switched-power samples in SYSPOWER table
+2020-05-15 02:48:19	INFO		GOOD gain counts per spw for antenna Ids 0-26:
+2020-05-15 02:48:19	INFO		  Spw 0: [6460, 6915, 6665, 6518, 6173, 6109, 6843, 5521, 6962, 5895, 6597, 6750, 6164, 6447, 6439, 5858, 6309, 6377, 6192, 6096, 5901, 6807, 6474, 5407, 6357, 6214, 6405] (170855)
+2020-05-15 02:48:19	INFO		  Spw 1: [7108, 7117, 7116, 7114, 7110, 7108, 7111, 7008, 7115, 7112, 7116, 7115, 7115, 7117, 7106, 7034, 7066, 7088, 7021, 7111, 7108, 7114, 7109, 6708, 7109, 7085, 7115] (191256)
+2020-05-15 02:48:19	INFO		  Spw 2: [7111, 7117, 7110, 7115, 7114, 7091, 7111, 6969, 7114, 7070, 7115, 7115, 7099, 7120, 7111, 7056, 7053, 7112, 7105, 7059, 7083, 7114, 7106, 6542, 7110, 7106, 7116] (191044)
+2020-05-15 02:48:19	INFO		  Spw 3: [7110, 7116, 7117, 7115, 7114, 7109, 7111, 7103, 7117, 7119, 7120, 7115, 7118, 7120, 7110, 7113, 7118, 7112, 7114, 7119, 7111, 7114, 7106, 6483, 7109, 7107, 7116] (191436)
+2020-05-15 02:48:19	INFO		  Spw 4: [6875, 6808, 6901, 6855, 6853, 6821, 6972, 6637, 6736, 6428, 6815, 6888, 6660, 6820, 6663, 6821, 6783, 6626, 6867, 6838, 6641, 6719, 6404, 5975, 6692, 6779, 6684] (181561)
+2020-05-15 02:48:19	INFO		  Spw 5: [7049, 6924, 7031, 7055, 7017, 6999, 7072, 6962, 7005, 6980, 7034, 7039, 6977, 7030, 6918, 7003, 7014, 6984, 7035, 7037, 6986, 6958, 6975, 5668, 6996, 6996, 7029] (187773)
+2020-05-15 02:48:19	INFO		  Spw 6: [7108, 7117, 7115, 7115, 7114, 7110, 7111, 7102, 7117, 7120, 7120, 7115, 7117, 7118, 7110, 7113, 7116, 7112, 7119, 7119, 7111, 7114, 7106, 5735, 7107, 7107, 7106] (190674)
+2020-05-15 02:48:19	INFO		  Spw 7: [7108, 7116, 7116, 7115, 7114, 7108, 7111, 7100, 7116, 7116, 7119, 7115, 7115, 7117, 7108, 7096, 7114, 7112, 7109, 7117, 7111, 7113, 7106, 4929, 7107, 7102, 7107] (189817)
+2020-05-15 02:48:19	INFO		BAD gain counts per spw for antenna Ids 0-26:
+2020-05-15 02:48:19	INFO		  Spw 0: [679, 241, 490, 619, 978, 1005, 290, 1625, 187, 1265, 564, 402, 997, 715, 694, 1291, 849, 752, 969, 1066, 1227, 348, 644, 1746, 767, 925, 756] (22091)
+2020-05-15 02:48:19	INFO		  Spw 1: [31, 39, 39, 23, 41, 6, 22, 138, 34, 48, 45, 37, 46, 45, 27, 115, 92, 41, 140, 51, 20, 41, 9, 445, 15, 54, 46] (1690)
+2020-05-15 02:48:19	INFO		  Spw 2: [28, 39, 45, 22, 37, 23, 22, 177, 35, 90, 46, 37, 62, 42, 22, 93, 105, 17, 56, 103, 45, 41, 12, 611, 14, 33, 45] (1902)
+2020-05-15 02:48:19	INFO		  Spw 3: [29, 40, 38, 22, 37, 5, 22, 43, 32, 41, 41, 37, 43, 42, 23, 36, 40, 17, 47, 43, 17, 41, 12, 670, 15, 32, 45] (1510)
+2020-05-15 02:48:19	INFO		  Spw 4: [264, 348, 254, 282, 299, 293, 161, 509, 414, 732, 346, 264, 501, 342, 470, 328, 375, 503, 294, 324, 487, 436, 714, 1178, 432, 360, 477] (11387)
+2020-05-15 02:48:19	INFO		  Spw 5: [90, 232, 124, 82, 135, 115, 61, 184, 145, 180, 127, 113, 184, 132, 215, 146, 144, 145, 126, 125, 142, 197, 143, 1485, 128, 143, 132] (5175)
+2020-05-15 02:48:19	INFO		  Spw 6: [31, 39, 40, 22, 38, 4, 22, 44, 33, 40, 41, 37, 44, 44, 23, 36, 42, 17, 42, 43, 17, 41, 12, 1418, 17, 32, 55] (2274)
+2020-05-15 02:48:19	INFO		  Spw 7: [31, 40, 39, 22, 38, 6, 22, 46, 34, 44, 42, 37, 46, 45, 25, 53, 44, 17, 52, 45, 17, 42, 12, 2224, 17, 37, 54] (3131)
+2020-05-15 02:48:19	INFO		BAD gain count FRACTION per spw for antenna Ids 0-26:
+2020-05-15 02:48:19	INFO		  Spw 0: [0.095, 0.033, 0.068, 0.086, 0.136, 0.141, 0.04, 0.227, 0.026, 0.176, 0.078, 0.056, 0.139, 0.099, 0.097, 0.18, 0.118, 0.105, 0.135, 0.148, 0.172, 0.048, 0.09, 0.244, 0.107, 0.129, 0.105] (0.114)
+2020-05-15 02:48:19	INFO		  Spw 1: [0.004, 0.005, 0.005, 0.003, 0.005, 0, 0.003, 0.019, 0.004, 0.006, 0.006, 0.005, 0.006, 0.006, 0.003, 0.016, 0.012, 0.005, 0.019, 0.007, 0.002, 0.005, 0.001, 0.062, 0.002, 0.007, 0.006] (0.008)
+2020-05-15 02:48:19	INFO		  Spw 2: [0.003, 0.005, 0.006, 0.003, 0.005, 0.003, 0.003, 0.024, 0.004, 0.012, 0.006, 0.005, 0.008, 0.005, 0.003, 0.013, 0.014, 0.002, 0.007, 0.014, 0.006, 0.005, 0.001, 0.085, 0.001, 0.004, 0.006] (0.009)
+2020-05-15 02:48:19	INFO		  Spw 3: [0.004, 0.005, 0.005, 0.003, 0.005, 0, 0.003, 0.006, 0.004, 0.005, 0.005, 0.005, 0.006, 0.005, 0.003, 0.005, 0.005, 0.002, 0.006, 0.006, 0.002, 0.005, 0.001, 0.093, 0.002, 0.004, 0.006] (0.007)
+2020-05-15 02:48:19	INFO		  Spw 4: [0.036, 0.048, 0.035, 0.039, 0.041, 0.041, 0.022, 0.071, 0.057, 0.102, 0.048, 0.036, 0.069, 0.047, 0.065, 0.045, 0.052, 0.07, 0.041, 0.045, 0.068, 0.06, 0.1, 0.164, 0.06, 0.05, 0.066] (0.059)
+2020-05-15 02:48:19	INFO		  Spw 5: [0.012, 0.032, 0.017, 0.011, 0.018, 0.016, 0.008, 0.025, 0.02, 0.025, 0.017, 0.015, 0.025, 0.018, 0.03, 0.02, 0.02, 0.02, 0.017, 0.017, 0.019, 0.027, 0.02, 0.207, 0.017, 0.02, 0.018] (0.026)
+2020-05-15 02:48:19	INFO		  Spw 6: [0.004, 0.005, 0.005, 0.003, 0.005, 0, 0.003, 0.006, 0.004, 0.005, 0.005, 0.005, 0.006, 0.006, 0.003, 0.005, 0.005, 0.002, 0.005, 0.006, 0.002, 0.005, 0.001, 0.198, 0.002, 0.004, 0.007] (0.011)
+2020-05-15 02:48:19	INFO		  Spw 7: [0.004, 0.005, 0.005, 0.003, 0.005, 0, 0.003, 0.006, 0.004, 0.006, 0.005, 0.005, 0.006, 0.006, 0.003, 0.007, 0.006, 0.002, 0.007, 0.006, 0.002, 0.005, 0.001, 0.31, 0.002, 0.005, 0.007] (0.016)
+2020-05-15 02:48:19	INFO		Writing solutions to table: /mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_5.swpow.tbl
+2020-05-15 02:48:53	INFO	gencal::::	##### End Task: gencal               #####
+2020-05-15 02:48:53	INFO	gencal::::+	##########################################
+2020-05-15 02:48:53	INFO	pipeline.infrastructure.jobrequest::pipeline.infrastructure.jobrequest::	Executing gencal(vis='13A-213_05_15_2013_continuum.ms', caltable='13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl', caltype='antpos', parameter=[])
+2020-05-15 02:48:53	INFO	gencal::::	
+2020-05-15 02:48:53	INFO	gencal::::+	##########################################
+2020-05-15 02:48:53	INFO	gencal::::+	##### Begin Task: gencal             #####
+2020-05-15 02:48:53	INFO	gencal::::	gencal(vis="/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms",caltable="/mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl",caltype="antpos",infile="",spw="",
+2020-05-15 02:48:53	INFO	gencal::::+	        antenna="",pol="",parameter=[],uniform=True)
+2020-05-15 02:48:53	INFO	calibrater::open	****Using NEW VI2-driven calibrater tool****
+2020-05-15 02:48:53	INFO	calibrater::open	Opening MS: /mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms for calibration.
+2020-05-15 02:48:53	INFO	Calibrater::	Initializing nominal selection to the whole MS.
+2020-05-15 02:48:53	INFO	gencal::::	 Determine antenna position offsets from the baseline correction database
+2020-05-15 02:48:54	INFO	gencal::::	offsets for antenna ea05 : -0.00100   0.00000   0.00290
+2020-05-15 02:48:54	INFO	gencal::::	offsets for antenna ea08 :  0.00000   0.00100  -0.00100
+2020-05-15 02:48:54	INFO	gencal::::	offsets for antenna ea10 : -0.00140  -0.00270   0.00300
+2020-05-15 02:48:54	INFO	gencal::::	offsets for antenna ea16 : -0.00310   0.00000   0.00100
+2020-05-15 02:48:54	INFO	gencal::::	offsets for antenna ea24 : -0.00130  -0.00130   0.00240
+2020-05-15 02:48:54	INFO	calibrater::specifycal	Beginning specifycal-----------------------
+2020-05-15 02:48:54	INFO		Creating KAntPos Jones table from specified parameters.
+2020-05-15 02:48:54	INFO		Writing solutions to table: /mnt/ufs18/rs-033/ChomiukLab/LocalGroupX/NGC6822/13A-213_05_15_2013_continuum.ms.hifv_priorcals.s5_6.ants.tbl
+2020-05-15 02:48:55	INFO	gencal::::	##### End Task: gencal               #####
+2020-05-15 02:48:55	INFO	gencal::::+	##########################################
+2020-05-15 02:48:55	INFO	pipeline.hifv.tasks.priorcals.priorcals::pipeline.hifv.tasks.priorcals.priorcals::	Start antenna position corrections
+2020-05-15 02:48:56	INFO	pipeline.hifv.tasks.priorcals.priorcals::pipeline.hifv.tasks.priorcals.priorcals::	End antenna position corrections
